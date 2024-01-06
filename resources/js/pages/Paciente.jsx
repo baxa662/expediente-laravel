@@ -177,7 +177,7 @@ export const Paciente = () => {
 
   return data != null && data != false ? (
     <div className="lg:w-[90vw]" style={{ margin: "0 auto 50px auto" }}>
-      <PacienteCard paciente={data.paciente} />
+      <PacienteCard paciente={data.paciente} medida={data.medidas[0]} />
       <PacienteToolbar
         handleOnChange={handleOnChange}
         handleOnChangeNota={handleOnChangeNota}

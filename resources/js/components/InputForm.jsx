@@ -28,7 +28,7 @@ export const InputForm = ({
         type={type}
         placeholder={label}
         defaultValue={value}
-        className="input input-bordered"
+        className="input input-bordered w-full"
         onChange={() => console.log("a")}
         {...register(id, { required: required })}
         disabled={disabled}
