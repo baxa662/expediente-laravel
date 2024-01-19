@@ -46,7 +46,7 @@ Route::middleware('auth:sanctum')->controller(PacienteController::class)->group(
 });
 
 Route::middleware('auth:sanctum')->controller(MedidaController::class)->group(function () {
-    Route::post('medidas/create', 'store');
+    Route::post('medidas/create', 'storeV2');
     Route::post('medidas/update', 'update');
     Route::post('medidas/delete/{id}', 'destroy');
 });

@@ -10,7 +10,7 @@ import { AlertComponent } from "../../components/AlertComponent";
 function AltaUsuarios() {
   const [openModal, setOpenModal] = useState(false);
   const [openDelete, setOpenDelete] = useState(false);
-  const [users, setUsers] = useState([]);
+  const [users, setUsers] = useState(null);
   const [error, setError] = useState(null);
   const [edit, setEdit] = useState(false);
 
@@ -23,7 +23,7 @@ function AltaUsuarios() {
   } = useForm();
 
   useEffect(() => {
-    if (users.length == 0) {
+    if (users == null) {
       getUsers();
     }
   }, [users]);
@@ -127,7 +127,7 @@ function AltaUsuarios() {
             </tr>
           </thead>
           <tbody>
-            {users.length != 0
+            {users != null
               ? users.map((user, index) => {
                   return (
                     <tr key={index}>

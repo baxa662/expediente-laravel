@@ -11,6 +11,8 @@ import NotasServices from "../services/NotasServices";
 import { Modal } from "../components/Modal";
 import { useForm } from "react-hook-form";
 import { AlertComponent } from "../components/AlertComponent";
+import { FormMedidasV1 } from "../components/paciente/FormMedidasV1";
+import { FormMedidasV2 } from "../components/paciente/FormMedidasV2";
 
 export const Paciente = () => {
   const { id } = useParams();
@@ -226,90 +228,20 @@ export const Paciente = () => {
         isChecked={isChecked}
         setIsChecked={setIsChecked}
       >
-        <form onSubmit={medSubmit(onSubmit)} className="flex flex-col">
-          <InputForm
-            id={"id_paciente"}
-            type={"hidden"}
-            register={medRegister}
-            value={data.paciente.id}
-          />
-          <InputForm id={"id_medidas"} type={"hidden"} register={medRegister} />
-          <InputForm
-            label={"Altura"}
-            id={"altura"}
-            required={true}
-            type={"number"}
-            register={medRegister}
-            errors={errorsMed}
-          />
-          <InputForm
-            label={"Fecha"}
-            id={"fecha"}
-            required={true}
-            type={"date"}
-            register={medRegister}
-            errors={errorsMed}
-          />
-          <InputForm
-            label={"Peso"}
-            id={"peso"}
-            required={true}
-            type={"number"}
-            register={medRegister}
-            errors={errorsMed}
-          />
-          <InputForm
-            label={"IMC"}
-            id={"imc"}
-            required={true}
-            type={"number"}
-            register={medRegister}
-            errors={errorsMed}
-          />
-          <InputForm
-            label={"Grasa Corporal"}
-            id={"grasa_corporal"}
-            required={true}
-            type={"number"}
-            register={medRegister}
-            errors={errorsMed}
-          />
-          <InputForm
-            label={"Musculo Corporal"}
-            id={"musculo"}
-            required={true}
-            type={"number"}
-            register={medRegister}
-            errors={errorsMed}
-          />
-          <InputForm
-            label={"Kilocalorias"}
-            id={"kilocalorias"}
-            required={true}
-            type={"number"}
-            register={medRegister}
-            errors={errorsMed}
-          />
-          <InputForm
-            label={"Edad Corporal"}
-            id={"edad_corporal"}
-            required={true}
-            type={"number"}
-            register={medRegister}
-            errors={errorsMed}
-          />
-          <InputForm
-            label={"Grasa Visceral"}
-            id={"grasa_visceral"}
-            required={true}
-            type={"number"}
-            register={medRegister}
-            errors={errorsMed}
-          />
-          <div className="sticky bottom-0 bg-white p-1">
-            <input type="submit" className="btn w-full" />
-          </div>
-        </form>
+        <FormMedidasV2
+          errorsMed={errorsMed}
+          idPaciente={data.paciente.id}
+          medRegister={medRegister}
+          medSubmit={medSubmit}
+          onSubmit={onSubmit}
+        />
+        {/* <FormMedidasV1
+          medRegister={medRegister}
+          onSubmit={onSubmit}
+          errorsMed={errorsMed}
+          idPaciente={data.paciente.id}
+          medSubmit={medSubmit}
+        /> */}
       </Modal>
 
       <Modal

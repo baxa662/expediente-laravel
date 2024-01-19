@@ -60,6 +60,37 @@ class MedidaController extends Controller
         }
     }
 
+    public function storeV2(Request $request)
+    {
+        $data = $request->all();
+
+        $porGracaCorporal =  ($data['grasa_corporal'] * 100) / $data['peso'];
+        $porMasaMusculo =  ($data['masa_musculoes'] * 100) / $data['peso'];
+
+        $insert = DB::table('medidas')
+            ->insert([
+                'altura' => $data['altura'],
+                'peso' => $data['peso'],
+                'imc' => $data['imc'],
+                'gc' => $data['grasa_corporal'],
+                'ec' => $data['edad_corporal'],
+                'fecha' => $data['fecha'],
+                'id_paciente' => $data['id_paciente'],
+                'grasaCorporalPor' => $porGracaCorporal,
+                'masaMusculoes' => $data['masa_musculoes'],
+                'masaMusculoesPor' => $porMasaMusculo,
+                'masaLibreGrasa' => $data['masa_libre'],
+                'tasaMetabolica' => $data['tasa_metabolica'],
+                'obesidadPor' => $data['por_obesidad']
+            ]);
+
+        if ($insert) {
+            return response()->json(true, 200);
+        } else {
+            return response()->json(false, 204);
+        }
+    }
+
     /**
      * Display the specified resource.
      *
