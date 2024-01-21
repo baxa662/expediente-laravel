@@ -91,7 +91,7 @@ class PacienteController extends Controller
         $idMedico = $user->id_medico ?? $user->id_usuario;
 
         $paciente = DB::table('pacientes AS A')
-            ->select('A.id_paciente as id', 'nombres', 'apellidos', 'B.nombre as sexo', 'A.edad', 'C.nombre as edo_civil', 'A.ocupacion', 'A.fecha_inicio', 'A.email', 'A.nacimiento', 'A.alergias', 'A.numero', 'A.ant_pat', 'A.ant_per_no_pat', 'A.ant_here')
+            ->select('A.id_paciente as id', 'B.idSexo', 'nombres', 'apellidos', 'B.nombre as sexo', 'A.edad', 'C.nombre as edo_civil', 'A.ocupacion', 'A.fecha_inicio', 'A.email', 'A.nacimiento', 'A.alergias', 'A.numero', 'A.ant_pat', 'A.ant_per_no_pat', 'A.ant_here')
             ->leftJoin('paciente_sexo AS B', 'B.idSexo', 'A.sexo')
             ->leftJoin('paciente_edo_civil AS C', 'C.idEdoCivil', 'A.edo_civil')
             ->where('id_paciente', $id)

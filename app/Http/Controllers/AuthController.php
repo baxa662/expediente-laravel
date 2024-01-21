@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Usuario;
+use Illuminate\Foundation\Auth\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
@@ -20,11 +21,14 @@ class AuthController extends Controller
         ]);
 
         if (Auth::attempt($credentials)) {
-            $user = Usuario::find(Auth::id());
-            $token = $user->createToken('tokenUser', ['*'], Carbon::now()->addDays(1))->plainTextToken;
-            $userPermission = base64_encode($user->rolid);
-            $token = "$userPermission.$token";
-            return response(["token" => $token, 'success' => true], Response::HTTP_OK);
+            $user = Auth::user();
+            if (!empty($user) && $user->estado == 1) {
+                $token = $user->createToken('tokenUser', ['*'], Carbon::now()->addDays(1))->plainTextToken;
+                $userPermission = base64_encode($user->rolid);
+                $token = "$userPermission.$token";
+                return response(["token" => $token, 'success' => true], Response::HTTP_OK);
+            }
+            return response(["msg" => "Credenciales no validas"], Response::HTTP_ACCEPTED);
         } else {
             return response(["msg" => "Credenciales no validas"], Response::HTTP_ACCEPTED);
         }

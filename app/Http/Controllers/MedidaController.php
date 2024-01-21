@@ -69,18 +69,18 @@ class MedidaController extends Controller
 
         $insert = DB::table('medidas')
             ->insert([
+                'id_paciente' => $data['id_paciente'],
                 'altura' => $data['altura'],
                 'peso' => $data['peso'],
                 'imc' => $data['imc'],
                 'gc' => $data['grasa_corporal'],
-                'ec' => $data['edad_corporal'],
+                'gv' => $data['grasa_visceral'],
+                'kcal' => $data['tasa_metabolica'],
                 'fecha' => $data['fecha'],
-                'id_paciente' => $data['id_paciente'],
-                'grasaCorporalPor' => $porGracaCorporal,
-                'masaMusculoes' => $data['masa_musculoes'],
-                'masaMusculoesPor' => $porMasaMusculo,
+                'msc' => $data['masa_musculoes'],
+                'grasaCorporalPor' => round($porGracaCorporal),
+                'masaMusculoesPor' => round($porMasaMusculo),
                 'masaLibreGrasa' => $data['masa_libre'],
-                'tasaMetabolica' => $data['tasa_metabolica'],
                 'obesidadPor' => $data['por_obesidad']
             ]);
 
@@ -135,6 +135,29 @@ class MedidaController extends Controller
         $medida->save();
         return response()->json(true, 200);
     }
+
+    public function updateV2(Request $request)
+    {
+        $porGracaCorporal =  ($request->grasa_corporal * 100) / $request->peso;
+        $porMasaMusculo =  ($request->masa_musculoes * 100) / $request->peso;
+
+        $medida = Medida::find($request->id_medidas);
+        $medida->altura = $request->altura;
+        $medida->fecha = $request->fecha;
+        $medida->gv = $request->grasa_visceral;
+        $medida->gc = $request->grasa_corporal;
+        $medida->imc = $request->imc;
+        $medida->kcal = $request->tasa_metabolica;
+        $medida->msc = $request->masa_musculoes;
+        $medida->peso = $request->peso;
+        $medida->grasaCorporalPor = round($porGracaCorporal);
+        $medida->masaMusculoesPor = round($porMasaMusculo);
+        $medida->masaLibreGrasa = $request->masa_libre;
+        $medida->obesidadPor = $request->por_obesidad;
+        $medida->save();
+        return response()->json(true, 200);
+    }
+
 
     /**
      * Remove the specified resource from storage.

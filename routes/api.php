@@ -47,7 +47,7 @@ Route::middleware('auth:sanctum')->controller(PacienteController::class)->group(
 
 Route::middleware('auth:sanctum')->controller(MedidaController::class)->group(function () {
     Route::post('medidas/create', 'storeV2');
-    Route::post('medidas/update', 'update');
+    Route::post('medidas/update', 'updateV2');
     Route::post('medidas/delete/{id}', 'destroy');
 });
 
@@ -71,6 +71,7 @@ Route::middleware('auth:sanctum')->controller(UsuarioController::class)->group(f
     Route::post('users/create', 'store');
     Route::post('users/update/{id}', 'update');
     Route::post('users/delete/{id}', 'destroy');
+    Route::post('users/password/reset/{id}', 'resetPassword');
 });
 
 Route::middleware('auth:sanctum')->controller(ServicioController::class)->group(function () {

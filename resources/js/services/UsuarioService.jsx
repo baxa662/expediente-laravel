@@ -24,9 +24,16 @@ function destroy(params) {
   return response;
 }
 
+function resetPassword(params) {
+  const url = `users/password/reset/${params.idPass}`;
+  const response = peticion(params, url);
+  return response;
+}
+
 export default {
   getUsers,
   saveUser,
   update,
   destroy,
+  resetPassword,
 };

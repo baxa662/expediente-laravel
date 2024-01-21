@@ -65,6 +65,7 @@ export const Paciente = () => {
   } = useForm();
 
   const handleOnChange = (idMedida, data) => {
+    medReset();
     if (idMedida) {
       medSetValue("id_medidas", idMedida);
       medSetValue("altura", data.altura);
@@ -72,10 +73,27 @@ export const Paciente = () => {
       medSetValue("peso", data.peso);
       medSetValue("imc", data.imc);
       medSetValue("grasa_corporal", data.gc);
-      medSetValue("musculo", data.msc);
-      medSetValue("kilocalorias", data.kcal);
-      medSetValue("edad_corporal", data.ec);
       medSetValue("grasa_visceral", data.gv);
+      medSetValue("masa_musculoes", data.msc);
+      medSetValue("masa_libre", data.masaLibreGrasa);
+      medSetValue("tasa_metabolica", data.kcal);
+      medSetValue("por_obesidad", data.obesidadPor);
+      // medSetValue("edad_corporal", data.ec);
+    } else {
+      let dateObj = new Date();
+      let year = dateObj.getFullYear();
+      let month = dateObj.getMonth() + 1;
+      let day = dateObj.getDate();
+
+      if (month < 10) {
+        month = `0${month}`;
+      }
+
+      if (day < 10) {
+        day = `0${day}`;
+      }
+
+      medSetValue("fecha", `${year}-${month}-${day}`);
     }
     setIsChecked(!isChecked);
   };
@@ -90,17 +108,7 @@ export const Paciente = () => {
     if (response == true) {
       getDataPaciente();
       handleOnChange();
-      medReset({
-        altura: "",
-        fecha: "",
-        edad_corporal: "",
-        grasa_corporal: "",
-        grasa_visceral: "",
-        imc: "",
-        kilocalorias: "",
-        musculo: "",
-        peso: "",
-      });
+      medReset();
     }
   };
 
@@ -192,13 +200,15 @@ export const Paciente = () => {
           <div className="flex gap-2 flex-wrap justify-center">
             {data.medidas.map((e, key) => {
               const html = (
-                <div className="flex-initial max-lg:w-56 w-52">
+                <div className="flex-initial max-lg:w-56 w-56">
                   <MedidasPaciente
                     data={e}
                     oldValue={oldValue}
                     handleOnChange={handleOnChange}
                     onPresDelMed={onPressDelMed}
                     key={key}
+                    edad={data.paciente.edad}
+                    idSexo={data.paciente.idSexo}
                   />
                 </div>
               );
@@ -207,10 +217,10 @@ export const Paciente = () => {
             })}
           </div>
         </div>
-        <div className="flex-1 w-1/2">
+        <div className="flex-1 gap-2 w-1/2">
           <div className="flex gap-2 flex-wrap justify-center">
             {notas.map((e, key) => (
-              <div className="flex-initial max-lg:w-56 w-52" key={key}>
+              <div className="flex-initial max-lg:w-56 w-56" key={key}>
                 <NotaPaciente
                   data={e}
                   handleOnChange={handleOnChangeNota}
