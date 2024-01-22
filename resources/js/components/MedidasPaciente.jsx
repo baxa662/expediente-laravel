@@ -26,7 +26,9 @@ export const MedidasPaciente = ({
     masaLibreGrasa,
     obesidadPor,
   } = data;
-  const indicador = peso - oldValue < 0 ? 0 : 1;
+  console.log(`${peso} - ${oldValue} = ${peso - oldValue}`);
+  const pesoDif = round(peso - oldValue, 2);
+  const indicador = pesoDif < 0 ? 0 : 1;
   let harrisBenedict, mafflinJeor;
   if (idSexo == 1) {
     harrisBenedict = round(66 + 13.7 * peso + 5 * altura - 6.8 * edad, 2);
@@ -69,6 +71,7 @@ export const MedidasPaciente = ({
           medida={peso}
           indicador={indicador}
           unidad={"Kg"}
+          pesoDif={pesoDif}
         />
         <MedidaItem title={"IMC"} medida={imc} />
         <MedidaItem title={"Grasa corporal"} medida={gc} />

@@ -27,13 +27,14 @@ export const Paciente = () => {
 
   var oldValue = 0;
   useEffect(() => {
+    console.log(notas === null);
     if (notas === null) {
       getNotas();
     }
     if (data === null) {
       getDataPaciente();
     }
-  }, [data, id]);
+  }, [data, id, notas]);
 
   const getDataPaciente = async () => {
     const response = await pacienteService.getPaciente(id);
@@ -198,36 +199,38 @@ export const Paciente = () => {
       <div className="flex gap-2 mt-10 w-full">
         <div className="flex-1 w-1/2">
           <div className="flex gap-2 flex-wrap justify-center">
-            {data.medidas.map((e, key) => {
-              const html = (
-                <div className="flex-initial max-lg:w-56 w-56">
-                  <MedidasPaciente
-                    data={e}
-                    oldValue={oldValue}
-                    handleOnChange={handleOnChange}
-                    onPresDelMed={onPressDelMed}
-                    key={key}
-                    edad={data.paciente.edad}
-                    idSexo={data.paciente.idSexo}
-                  />
-                </div>
-              );
-              oldValue = e.peso;
-              return html;
-            })}
+            {data &&
+              data.medidas.map((e, key) => {
+                const html = (
+                  <div className="flex-initial max-lg:w-56 w-56">
+                    <MedidasPaciente
+                      data={e}
+                      oldValue={oldValue}
+                      handleOnChange={handleOnChange}
+                      onPresDelMed={onPressDelMed}
+                      key={key}
+                      edad={data.paciente.edad}
+                      idSexo={data.paciente.idSexo}
+                    />
+                  </div>
+                );
+                oldValue = e.peso;
+                return html;
+              })}
           </div>
         </div>
         <div className="flex-1 gap-2 w-1/2">
           <div className="flex gap-2 flex-wrap justify-center">
-            {notas.map((e, key) => (
-              <div className="flex-initial max-lg:w-56 w-56" key={key}>
-                <NotaPaciente
-                  data={e}
-                  handleOnChange={handleOnChangeNota}
-                  delNota={onPressDelNota}
-                />
-              </div>
-            ))}
+            {notas !== null &&
+              notas.map((e, key) => (
+                <div className="flex-initial max-lg:w-56 w-56" key={key}>
+                  <NotaPaciente
+                    data={e}
+                    handleOnChange={handleOnChangeNota}
+                    delNota={onPressDelNota}
+                  />
+                </div>
+              ))}
           </div>
         </div>
       </div>

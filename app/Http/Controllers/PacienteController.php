@@ -100,7 +100,7 @@ class PacienteController extends Controller
 
         $medidas = DB::table('medidas')
             ->where('id_paciente', $id)
-            ->orderBy('fecha', 'desc')
+            ->orderBy('fecha', 'asc')
             ->where('estado', 1)
             ->get();
 
