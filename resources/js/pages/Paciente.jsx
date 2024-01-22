@@ -198,7 +198,7 @@ export const Paciente = () => {
       </div>
       <div className="flex gap-2 mt-10 w-full">
         <div className="flex-1 w-1/2">
-          <div className="flex gap-2 flex-wrap justify-center">
+          <div className="flex gap-2 flex-wrap-reverse justify-center">
             {data &&
               data.medidas.map((e, key) => {
                 const html = (
