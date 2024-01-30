@@ -16,10 +16,11 @@ export const PacienteCard = ({ paciente, medida }) => {
     ocupacion,
     sexo,
     numero,
+    idSexo,
   } = paciente;
 
   let pesoIdeal = medida
-    ? (Math.pow(medida.altura / 100, 2) * 24).toFixed(2)
+    ? (Math.pow(medida.altura / 100, 2) * (idSexo == 1 ? 23 : 21.5)).toFixed(2)
     : 0;
   let gramosProteina = (2.2 * pesoIdeal).toFixed(2);
   let equivalentes = (gramosProteina / 7).toFixed(2);
