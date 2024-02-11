@@ -10,6 +10,9 @@ export const SelectInputForm = ({ label, id, required, register, options }) => {
         className="select select-bordered"
         {...register(id, { required: required })}
       >
+        <option value="" disabled>
+          Seleccione una opcion
+        </option>
         {options.map((element) => (
           <option value={element.id} key={element.id}>
             {element.name}

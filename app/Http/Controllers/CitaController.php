@@ -6,6 +6,7 @@ use App\Models\Cita;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Symfony\Component\HttpFoundation\Response;
 
 class CitaController extends Controller
 {
@@ -125,17 +126,6 @@ class CitaController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource. 
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -167,5 +157,29 @@ class CitaController extends Controller
         $cita->save();
 
         return response()->json('La cita ha sido cancelada!', 200);
+    }
+
+    public function getResumeDate($id)
+    {
+        $services = DB::table('citas_servicio as A')
+            ->select('B.id_servicio as id', 'B.nombre as name', 'B.costo as cost', DB::raw('"item" as type'))
+            ->join('servicios as B', 'A.idServicio', 'B.id_servicio')
+            ->where('A.idCita', $id)
+            ->get();
+
+        $total = 0;
+
+        foreach ($services as $key => $service) {
+            $total += $service->cost;
+        }
+
+        $services[] = (object)[
+            'id' => 0,
+            'name' => 'Total',
+            'type' => 'total',
+            'cost' => $total,
+        ];
+
+        return response()->json($services, Response::HTTP_OK);
     }
 }

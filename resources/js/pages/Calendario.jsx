@@ -5,6 +5,9 @@ import { Modal } from "../components/Modal";
 import { CitaFormComponent } from "../components/CitaFormComponent";
 import { useForm } from "react-hook-form";
 import { InputForm } from "../components/InputForm";
+import { PaymentResume } from "../components/payment/PaymentResume";
+import { SelectInputForm } from "../components/SelectInputForm";
+import { PaymentForm } from "../components/payment/PaymentForm.1";
 
 export const Calendario = () => {
   var daysMonth = [];
@@ -17,9 +20,16 @@ export const Calendario = () => {
   const [citasDay, setCitasDay] = useState(null);
   const [modalCitas, setModalCitas] = useState(false);
   const [modalCancel, setModalCancel] = useState(false);
+  const [modalTicket, setModalTicket] = useState(false);
   const [modalReschedule, setModalReschedule] = useState(false);
+  const [isLoadingTicket, setLoadingTicket] = useState(false);
+  const [resumeDate, setResumeDate] = useState(null);
+  const [toast, setToast] = useState(false);
+  const [toastMessage, setToastMessage] = useState("");
   const selectPacienteRef = useRef();
   const selectServicioRef = useRef();
+
+  const useFormPayment = useForm();
 
   var date = new Date(year, month, 0).getDate();
   const meses = [
@@ -201,6 +211,23 @@ export const Calendario = () => {
     }
   };
 
+  const handleClickPayBtn = async (idCita) => {
+    setLoadingTicket(true);
+    setModalTicket(true);
+    const response = await CalendarioService.resume(idCita);
+    useFormPayment.setValue("idCitaPayment", idCita);
+    setResumeDate(response);
+    setLoadingTicket(false);
+  };
+
+  const toastVisible = (msg) => {
+    setToast(true);
+    setToastMessage(msg);
+    setTimeout(() => {
+      setToast(false);
+    }, 1500);
+  };
+
   return (
     <div className="w-full h-5/6 lg:max-w-[70vw] mx-auto">
       <div className="flex text-center p-0 m-1 my-2 text-lg">
@@ -230,7 +257,7 @@ export const Calendario = () => {
         </div>
       </div>
       {citas != null ? (
-        <div className="h-full max-h-96">
+        <div className="h-full max-h-96 ">
           <div className="flex text-center">
             <div className="max-md:hidden flex-1 p-1">Domingo</div>
             <div className="max-md:hidden flex-1 p-1">Lunes</div>
@@ -307,6 +334,7 @@ export const Calendario = () => {
                               <IconButton
                                 icon={"attach_money"}
                                 clase={"text-success"}
+                                onclick={() => handleClickPayBtn(cita.id_cita)}
                               />
                               <IconButton
                                 icon={"edit"}
@@ -427,6 +455,29 @@ export const Calendario = () => {
           />
         </form>
       </Modal>
+
+      <Modal
+        id={"ticketModal"}
+        title={"Ticket"}
+        isChecked={modalTicket}
+        setIsChecked={setModalTicket}
+      >
+        <PaymentForm
+          isLoadingTicket={isLoadingTicket}
+          resumeDate={resumeDate}
+          useFormPayment={useFormPayment}
+          setModalPayment={setModalTicket}
+          toastVisible={toastVisible}
+        />
+      </Modal>
+
+      {toast && (
+        <div className="toast toast-top toast-end" style={{ zIndex: "9999" }}>
+          <div className="alert alert-success">
+            <span>{toastMessage}</span>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
