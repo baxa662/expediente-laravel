@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Cita;
+use App\Models\Servicio;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -167,10 +168,27 @@ class CitaController extends Controller
             ->where('A.idCita', $id)
             ->get();
 
+        $request = new Request();
+        $request->merge(['idCita' => $id]);
+
+        $paymentController = new PaymentController();
+        $payments = $paymentController->show($request, null);
+
         $total = 0;
 
         foreach ($services as $key => $service) {
             $total += $service->cost;
+        }
+
+        foreach ($payments->getData()->data as $key => $payment) {
+            $total -= $payment->monto;
+            $services[] = (object)[
+                'id' => 0,
+                'name' => "Pago " . $key + 1,
+                'date' => date('Y-m-d', strtotime($payment->fechaPago)),
+                'type' => 'payment',
+                'cost' => $payment->monto,
+            ];
         }
 
         $services[] = (object)[

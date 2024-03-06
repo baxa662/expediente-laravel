@@ -94,6 +94,7 @@ Route::middleware('auth:sanctum')->controller(PaymentMethodsController::class)->
 Route::middleware('auth:sanctum')->controller(PaymentController::class)->group(function () {
     Route::post('payment/show/{id?}', 'show');
     Route::post('payment/create', 'store');
+    Route::post('payment/total/day/{day}', 'getTotalMount');
     // Route::post('paymentMethods/update/{id}', 'update');
     // Route::post('paymentMethods/delete/{id}', 'destroy');
 });

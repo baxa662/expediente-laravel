@@ -1,13 +1,19 @@
 import peticion from "./GlobalService";
 
 function get(params) {
-  const url = `paymentMethods/show/${params ?? ""}`;
+  const url = `payment/show/${params.idCita ?? ""}`;
   const response = peticion(params, url);
   return response;
 }
 
 function save(params) {
   const url = "payment/create";
+  const response = peticion(params, url);
+  return response;
+}
+
+function totalization(params) {
+  const url = `payment/total/day/${params.fechaTotal}`;
   const response = peticion(params, url);
   return response;
 }
@@ -27,6 +33,7 @@ function save(params) {
 export default {
   get,
   save,
+  totalization,
   // update,
   // destroy,
 };

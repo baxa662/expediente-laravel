@@ -5,9 +5,7 @@ import { Modal } from "../components/Modal";
 import { CitaFormComponent } from "../components/CitaFormComponent";
 import { useForm } from "react-hook-form";
 import { InputForm } from "../components/InputForm";
-import { PaymentResume } from "../components/payment/PaymentResume";
-import { SelectInputForm } from "../components/SelectInputForm";
-import { PaymentForm } from "../components/payment/PaymentForm.1";
+import { PaymentForm } from "../components/payment/PaymentForm";
 
 export const Calendario = () => {
   var daysMonth = [];
@@ -20,8 +18,8 @@ export const Calendario = () => {
   const [citasDay, setCitasDay] = useState(null);
   const [modalCitas, setModalCitas] = useState(false);
   const [modalCancel, setModalCancel] = useState(false);
-  const [modalTicket, setModalTicket] = useState(false);
   const [modalReschedule, setModalReschedule] = useState(false);
+  const [modalTicket, setModalTicket] = useState(false);
   const [isLoadingTicket, setLoadingTicket] = useState(false);
   const [resumeDate, setResumeDate] = useState(null);
   const [toast, setToast] = useState(false);
@@ -211,7 +209,7 @@ export const Calendario = () => {
     }
   };
 
-  const handleClickPayBtn = async (idCita) => {
+  const handleClickPayBtn = async (idCita, total) => {
     setLoadingTicket(true);
     setModalTicket(true);
     const response = await CalendarioService.resume(idCita);
