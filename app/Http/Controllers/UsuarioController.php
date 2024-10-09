@@ -96,4 +96,26 @@ class UsuarioController extends Controller
 
         return response(true, Response::HTTP_ACCEPTED);
     }
+
+    public function resetPassword(Request $request, $id)
+    {
+        $validator = Validator::make(
+            $request->all(),
+            [
+                'password' => 'required',
+            ]
+        );
+
+        if (!$validator->fails()) {
+            $data = $validator->validate();
+            $user = Usuario::find($id);
+            $hash = Hash::make($data['password']);
+            $user->password = $hash;
+            $user->save();
+
+            return response(true, Response::HTTP_ACCEPTED);
+        }
+
+        return response(true, Response::HTTP_BAD_REQUEST);
+    }
 }

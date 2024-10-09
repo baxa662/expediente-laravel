@@ -26,9 +26,17 @@ async function update(id, newDate) {
   const response = await peticion(params, url);
   return response;
 }
+
 async function cancel(id) {
   const params = {};
   const url = `citas/delete/${id}`;
+  const response = await peticion(params, url);
+  return response;
+}
+
+async function resume(id) {
+  const params = {};
+  const url = `citas/resume/${id}`;
   const response = await peticion(params, url);
   return response;
 }
@@ -39,4 +47,5 @@ export default {
   create,
   cancel,
   update,
+  resume,
 };

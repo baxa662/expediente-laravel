@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Cita;
+use App\Models\Servicio;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Symfony\Component\HttpFoundation\Response;
 
 class CitaController extends Controller
 {
@@ -125,17 +127,6 @@ class CitaController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource. 
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -167,5 +158,46 @@ class CitaController extends Controller
         $cita->save();
 
         return response()->json('La cita ha sido cancelada!', 200);
+    }
+
+    public function getResumeDate($id)
+    {
+        $services = DB::table('citas_servicio as A')
+            ->select('B.id_servicio as id', 'B.nombre as name', 'B.costo as cost', DB::raw('"item" as type'))
+            ->join('servicios as B', 'A.idServicio', 'B.id_servicio')
+            ->where('A.idCita', $id)
+            ->get();
+
+        $request = new Request();
+        $request->merge(['idCita' => $id]);
+
+        $paymentController = new PaymentController();
+        $payments = $paymentController->show($request, null);
+
+        $total = 0;
+
+        foreach ($services as $key => $service) {
+            $total += $service->cost;
+        }
+
+        foreach ($payments->getData()->data as $key => $payment) {
+            $total -= $payment->monto;
+            $services[] = (object)[
+                'id' => 0,
+                'name' => "Pago " . $key + 1,
+                'date' => date('Y-m-d', strtotime($payment->fechaPago)),
+                'type' => 'payment',
+                'cost' => $payment->monto,
+            ];
+        }
+
+        $services[] = (object)[
+            'id' => 0,
+            'name' => 'Total',
+            'type' => 'total',
+            'cost' => $total,
+        ];
+
+        return response()->json($services, Response::HTTP_OK);
     }
 }

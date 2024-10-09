@@ -5,6 +5,8 @@ use App\Http\Controllers\CitaController;
 use App\Http\Controllers\MedidaController;
 use App\Http\Controllers\NotaController;
 use App\Http\Controllers\PacienteController;
+use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\PaymentMethodsController;
 use App\Http\Controllers\ServicioController;
 use App\Http\Controllers\UsuarioController;
 use App\Models\Medico;
@@ -46,8 +48,8 @@ Route::middleware('auth:sanctum')->controller(PacienteController::class)->group(
 });
 
 Route::middleware('auth:sanctum')->controller(MedidaController::class)->group(function () {
-    Route::post('medidas/create', 'store');
-    Route::post('medidas/update', 'update');
+    Route::post('medidas/create', 'storeV2');
+    Route::post('medidas/update', 'updateV2');
     Route::post('medidas/delete/{id}', 'destroy');
 });
 
@@ -64,6 +66,7 @@ Route::middleware('auth:sanctum')->controller(CitaController::class)->group(func
     Route::post('citas/create', 'store');
     Route::post('citas/update/{id}', 'update');
     Route::post('citas/delete/{id}', 'destroy');
+    Route::post('citas/resume/{id}', 'getResumeDate');
 });
 
 Route::middleware('auth:sanctum')->controller(UsuarioController::class)->group(function () {
@@ -71,6 +74,7 @@ Route::middleware('auth:sanctum')->controller(UsuarioController::class)->group(f
     Route::post('users/create', 'store');
     Route::post('users/update/{id}', 'update');
     Route::post('users/delete/{id}', 'destroy');
+    Route::post('users/password/reset/{id}', 'resetPassword');
 });
 
 Route::middleware('auth:sanctum')->controller(ServicioController::class)->group(function () {
@@ -78,6 +82,21 @@ Route::middleware('auth:sanctum')->controller(ServicioController::class)->group(
     Route::post('services/create', 'store');
     Route::post('services/update/{id}', 'update');
     Route::post('services/delete/{id}', 'destroy');
+});
+
+Route::middleware('auth:sanctum')->controller(PaymentMethodsController::class)->group(function () {
+    Route::post('paymentMethods/show/{id?}', 'show');
+    // Route::post('paymentMethods/create', 'store');
+    // Route::post('paymentMethods/update/{id}', 'update');
+    // Route::post('paymentMethods/delete/{id}', 'destroy');
+});
+
+Route::middleware('auth:sanctum')->controller(PaymentController::class)->group(function () {
+    Route::post('payment/show/{id?}', 'show');
+    Route::post('payment/create', 'store');
+    Route::post('payment/total/day/{day}', 'getTotalMount');
+    // Route::post('paymentMethods/update/{id}', 'update');
+    // Route::post('paymentMethods/delete/{id}', 'destroy');
 });
 
 Route::post('/tokens/create', function (Request $request) {

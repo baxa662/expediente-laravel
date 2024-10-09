@@ -9,8 +9,9 @@ import { AlertComponent } from "../../components/AlertComponent";
 
 function AltaUsuarios() {
   const [openModal, setOpenModal] = useState(false);
+  const [openPass, setOpenPass] = useState(false);
   const [openDelete, setOpenDelete] = useState(false);
-  const [users, setUsers] = useState([]);
+  const [users, setUsers] = useState(null);
   const [error, setError] = useState(null);
   const [edit, setEdit] = useState(false);
 
@@ -22,8 +23,17 @@ function AltaUsuarios() {
     formState: { errors },
   } = useForm();
 
+  const {
+    register: registerPass,
+    handleSubmit: handleSubmitPass,
+    reset: resetPass,
+    setValue: setValuePass,
+    resetField: resetFieldPass,
+    formState: { errors: errorsPass },
+  } = useForm();
+
   useEffect(() => {
-    if (users.length == 0) {
+    if (users == null) {
       getUsers();
     }
   }, [users]);
@@ -78,6 +88,7 @@ function AltaUsuarios() {
       surname: user.apellido,
       rol: user.rolid,
     });
+    setValuePass("idPass", user.id_usuario);
     setOpenModal(true);
   };
 
@@ -92,6 +103,15 @@ function AltaUsuarios() {
     if (response) {
       getUsers();
       setOpenDelete(false);
+    }
+  };
+
+  const handleChangePassword = (data) => {
+    var response = UsuarioService.resetPassword(data);
+    if (response) {
+      console.log(response);
+      setOpenPass(false);
+      resetFieldPass("password");
     }
   };
 
@@ -127,7 +147,7 @@ function AltaUsuarios() {
             </tr>
           </thead>
           <tbody>
-            {users.length != 0
+            {users != null
               ? users.map((user, index) => {
                   return (
                     <tr key={index}>
@@ -188,16 +208,13 @@ function AltaUsuarios() {
             required={true}
             register={register}
           />
-          {!edit && (
-            <InputForm
-              id={"password"}
-              label={"Contraseña"}
-              errors={errors}
-              required={true}
-              register={register}
-              type={"password"}
-            />
-          )}
+          <button
+            type="button"
+            className="btn btn-primary mt-2 btn-sm w-full"
+            onClick={() => setOpenPass(true)}
+          >
+            Cambiar password
+          </button>
           <InputForm
             id={"celNumber"}
             label={"Numero Celular"}
@@ -247,6 +264,33 @@ function AltaUsuarios() {
             </a>
           </div>
         </div>
+      </Modal>
+
+      <Modal
+        isChecked={openPass}
+        setIsChecked={setOpenPass}
+        title={"Cambiar contraseña"}
+        id={"modalPassword"}
+      >
+        <form onSubmit={handleSubmitPass(handleChangePassword)}>
+          <InputForm
+            id={"idPass"}
+            errors={errorsPass}
+            register={registerPass}
+            type={"hidden"}
+          />
+          <InputForm
+            id={"password"}
+            errors={errorsPass}
+            label={"Contraseña"}
+            register={registerPass}
+            required={true}
+            type={"password"}
+          />
+          <button type="submit" className="btn btn-success w-full mt-3">
+            Guardar Usuario
+          </button>
+        </form>
       </Modal>
     </div>
   );

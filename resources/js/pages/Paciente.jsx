@@ -11,6 +11,8 @@ import NotasServices from "../services/NotasServices";
 import { Modal } from "../components/Modal";
 import { useForm } from "react-hook-form";
 import { AlertComponent } from "../components/AlertComponent";
+import { FormMedidasV1 } from "../components/paciente/FormMedidasV1";
+import { FormMedidasV2 } from "../components/paciente/FormMedidasV2";
 
 export const Paciente = () => {
   const { id } = useParams();
@@ -25,13 +27,14 @@ export const Paciente = () => {
 
   var oldValue = 0;
   useEffect(() => {
+    console.log(notas === null);
     if (notas === null) {
       getNotas();
     }
     if (data === null) {
       getDataPaciente();
     }
-  }, [data, id]);
+  }, [data, id, notas]);
 
   const getDataPaciente = async () => {
     const response = await pacienteService.getPaciente(id);
@@ -63,6 +66,7 @@ export const Paciente = () => {
   } = useForm();
 
   const handleOnChange = (idMedida, data) => {
+    medReset();
     if (idMedida) {
       medSetValue("id_medidas", idMedida);
       medSetValue("altura", data.altura);
@@ -70,10 +74,27 @@ export const Paciente = () => {
       medSetValue("peso", data.peso);
       medSetValue("imc", data.imc);
       medSetValue("grasa_corporal", data.gc);
-      medSetValue("musculo", data.msc);
-      medSetValue("kilocalorias", data.kcal);
-      medSetValue("edad_corporal", data.ec);
       medSetValue("grasa_visceral", data.gv);
+      medSetValue("masa_musculoes", data.msc);
+      medSetValue("masa_libre", data.masaLibreGrasa);
+      medSetValue("tasa_metabolica", data.kcal);
+      medSetValue("por_obesidad", data.obesidadPor);
+      // medSetValue("edad_corporal", data.ec);
+    } else {
+      let dateObj = new Date();
+      let year = dateObj.getFullYear();
+      let month = dateObj.getMonth() + 1;
+      let day = dateObj.getDate();
+
+      if (month < 10) {
+        month = `0${month}`;
+      }
+
+      if (day < 10) {
+        day = `0${day}`;
+      }
+
+      medSetValue("fecha", `${year}-${month}-${day}`);
     }
     setIsChecked(!isChecked);
   };
@@ -88,17 +109,7 @@ export const Paciente = () => {
     if (response == true) {
       getDataPaciente();
       handleOnChange();
-      medReset({
-        altura: "",
-        fecha: "",
-        edad_corporal: "",
-        grasa_corporal: "",
-        grasa_visceral: "",
-        imc: "",
-        kilocalorias: "",
-        musculo: "",
-        peso: "",
-      });
+      medReset();
     }
   };
 
@@ -177,7 +188,7 @@ export const Paciente = () => {
 
   return data != null && data != false ? (
     <div className="lg:w-[90vw]" style={{ margin: "0 auto 50px auto" }}>
-      <PacienteCard paciente={data.paciente} />
+      <PacienteCard paciente={data.paciente} medida={data.medidas[0]} />
       <PacienteToolbar
         handleOnChange={handleOnChange}
         handleOnChangeNota={handleOnChangeNota}
@@ -187,35 +198,39 @@ export const Paciente = () => {
       </div>
       <div className="flex gap-2 mt-10 w-full">
         <div className="flex-1 w-1/2">
-          <div className="flex gap-2 flex-wrap justify-center">
-            {data.medidas.map((e, key) => {
-              const html = (
-                <div className="flex-initial max-lg:w-56 w-52">
-                  <MedidasPaciente
-                    data={e}
-                    oldValue={oldValue}
-                    handleOnChange={handleOnChange}
-                    onPresDelMed={onPressDelMed}
-                    key={key}
-                  />
-                </div>
-              );
-              oldValue = e.peso;
-              return html;
-            })}
+          <div className="flex gap-2 flex-wrap-reverse flex-row-reverse justify-center">
+            {data &&
+              data.medidas.map((e, key) => {
+                const html = (
+                  <div className="flex-initial max-lg:w-56 w-56">
+                    <MedidasPaciente
+                      data={e}
+                      oldValue={oldValue}
+                      handleOnChange={handleOnChange}
+                      onPresDelMed={onPressDelMed}
+                      key={key}
+                      edad={data.paciente.edad}
+                      idSexo={data.paciente.idSexo}
+                    />
+                  </div>
+                );
+                oldValue = e.peso;
+                return html;
+              })}
           </div>
         </div>
-        <div className="flex-1 w-1/2">
+        <div className="flex-1 gap-2 w-1/2">
           <div className="flex gap-2 flex-wrap justify-center">
-            {notas.map((e, key) => (
-              <div className="flex-initial max-lg:w-56 w-52" key={key}>
-                <NotaPaciente
-                  data={e}
-                  handleOnChange={handleOnChangeNota}
-                  delNota={onPressDelNota}
-                />
-              </div>
-            ))}
+            {notas !== null &&
+              notas.map((e, key) => (
+                <div className="flex-initial max-lg:w-56 w-56" key={key}>
+                  <NotaPaciente
+                    data={e}
+                    handleOnChange={handleOnChangeNota}
+                    delNota={onPressDelNota}
+                  />
+                </div>
+              ))}
           </div>
         </div>
       </div>
@@ -226,90 +241,20 @@ export const Paciente = () => {
         isChecked={isChecked}
         setIsChecked={setIsChecked}
       >
-        <form onSubmit={medSubmit(onSubmit)} className="flex flex-col">
-          <InputForm
-            id={"id_paciente"}
-            type={"hidden"}
-            register={medRegister}
-            value={data.paciente.id}
-          />
-          <InputForm id={"id_medidas"} type={"hidden"} register={medRegister} />
-          <InputForm
-            label={"Altura"}
-            id={"altura"}
-            required={true}
-            type={"number"}
-            register={medRegister}
-            errors={errorsMed}
-          />
-          <InputForm
-            label={"Fecha"}
-            id={"fecha"}
-            required={true}
-            type={"date"}
-            register={medRegister}
-            errors={errorsMed}
-          />
-          <InputForm
-            label={"Peso"}
-            id={"peso"}
-            required={true}
-            type={"number"}
-            register={medRegister}
-            errors={errorsMed}
-          />
-          <InputForm
-            label={"IMC"}
-            id={"imc"}
-            required={true}
-            type={"number"}
-            register={medRegister}
-            errors={errorsMed}
-          />
-          <InputForm
-            label={"Grasa Corporal"}
-            id={"grasa_corporal"}
-            required={true}
-            type={"number"}
-            register={medRegister}
-            errors={errorsMed}
-          />
-          <InputForm
-            label={"Musculo Corporal"}
-            id={"musculo"}
-            required={true}
-            type={"number"}
-            register={medRegister}
-            errors={errorsMed}
-          />
-          <InputForm
-            label={"Kilocalorias"}
-            id={"kilocalorias"}
-            required={true}
-            type={"number"}
-            register={medRegister}
-            errors={errorsMed}
-          />
-          <InputForm
-            label={"Edad Corporal"}
-            id={"edad_corporal"}
-            required={true}
-            type={"number"}
-            register={medRegister}
-            errors={errorsMed}
-          />
-          <InputForm
-            label={"Grasa Visceral"}
-            id={"grasa_visceral"}
-            required={true}
-            type={"number"}
-            register={medRegister}
-            errors={errorsMed}
-          />
-          <div className="sticky bottom-0 bg-white p-1">
-            <input type="submit" className="btn w-full" />
-          </div>
-        </form>
+        <FormMedidasV2
+          errorsMed={errorsMed}
+          idPaciente={data.paciente.id}
+          medRegister={medRegister}
+          medSubmit={medSubmit}
+          onSubmit={onSubmit}
+        />
+        {/* <FormMedidasV1
+          medRegister={medRegister}
+          onSubmit={onSubmit}
+          errorsMed={errorsMed}
+          idPaciente={data.paciente.id}
+          medSubmit={medSubmit}
+        /> */}
       </Modal>
 
       <Modal

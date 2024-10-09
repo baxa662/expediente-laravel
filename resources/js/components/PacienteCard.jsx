@@ -1,6 +1,6 @@
 import React from "react";
 
-export const PacienteCard = ({ paciente }) => {
+export const PacienteCard = ({ paciente, medida }) => {
   const {
     nombres,
     apellidos,
@@ -16,7 +16,14 @@ export const PacienteCard = ({ paciente }) => {
     ocupacion,
     sexo,
     numero,
+    idSexo,
   } = paciente;
+
+  let pesoIdeal = medida
+    ? (Math.pow(medida.altura / 100, 2) * (idSexo == 1 ? 23 : 21.5)).toFixed(2)
+    : 0;
+  let gramosProteina = (2.2 * pesoIdeal).toFixed(2);
+  let equivalentes = (gramosProteina / 7).toFixed(2);
 
   return (
     <div className="card sm:w-auto shadow-md">
@@ -38,9 +45,9 @@ export const PacienteCard = ({ paciente }) => {
             <div>Antecedentes patologicos: {ant_pat}</div>
             <div>Antecedentes personales no patologicos: {ant_per_no_pat}</div>
             <div>Antecedentes hereditarios: {ant_here}</div>
-            <div>Peso ideal:</div>
-            <div>Equivalentes de proteina:</div>
-            <div>Gramos de proteina:</div>
+            <div>Peso ideal: {pesoIdeal} KG</div>
+            <div>Equivalentes de proteina: {equivalentes} equivalentes</div>
+            <div>Gramos de proteina: {gramosProteina} gr</div>
           </div>
         </div>
       </div>

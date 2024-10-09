@@ -2,7 +2,7 @@ export const NotaPaciente = ({ data, handleOnChange, delNota }) => {
   const { nota, fecha_not, id_nota } = data;
 
   return (
-    <div className="shadow-md rounded-md card h-96">
+    <div className="shadow-md rounded-md card h-[42rem]">
       <div className="card-actions flex justify-between p-2">
         <div>
           <p>{fecha_not}</p>
