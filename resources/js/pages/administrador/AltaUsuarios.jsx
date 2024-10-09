@@ -62,7 +62,6 @@ function AltaUsuarios() {
 
   const handleSaveUser = async (data) => {
     let response;
-    console.log(data);
     if (data.id) {
       response = await UsuarioService.update(data);
     } else {
@@ -208,13 +207,24 @@ function AltaUsuarios() {
             required={true}
             register={register}
           />
-          <button
-            type="button"
-            className="btn btn-primary mt-2 btn-sm w-full"
-            onClick={() => setOpenPass(true)}
-          >
-            Cambiar password
-          </button>
+          {edit ? (
+            <button
+              type="button"
+              className="btn btn-primary mt-2 btn-sm w-full"
+              onClick={() => setOpenPass(true)}
+            >
+              Cambiar password
+            </button>
+          ) : (
+            <InputForm
+              id={"password"}
+              label={"Contraseña"}
+              errors={errors}
+              required={true}
+              register={register}
+              type={"password"}
+            />
+          )}
           <InputForm
             id={"celNumber"}
             label={"Numero Celular"}
