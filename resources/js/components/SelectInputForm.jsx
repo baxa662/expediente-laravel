@@ -1,6 +1,15 @@
+import { ErrorMessage } from "@hookform/error-message";
 import React from "react";
 
-export const SelectInputForm = ({ label, id, required, register, options }) => {
+export const SelectInputForm = ({
+  label,
+  id,
+  required,
+  register,
+  options,
+  errors,
+  onChange,
+}) => {
   return (
     <div className="form-control w-full">
       <label className="label">
@@ -9,8 +18,10 @@ export const SelectInputForm = ({ label, id, required, register, options }) => {
       <select
         className="select select-bordered"
         {...register(id, { required: required })}
+        defaultValue={"null"}
+        onChange={onChange}
       >
-        <option value="" disabled>
+        <option value="null" disabled>
           Seleccione una opcion
         </option>
         {options.map((element) => (
@@ -19,6 +30,13 @@ export const SelectInputForm = ({ label, id, required, register, options }) => {
           </option>
         ))}
       </select>
+      <ErrorMessage
+        errors={errors ?? []}
+        name={id}
+        render={({ message }) => (
+          <p className="text-red-500 text-xs">{message}</p>
+        )}
+      />
     </div>
   );
 };

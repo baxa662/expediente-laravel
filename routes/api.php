@@ -1,14 +1,20 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CitaController;
+use App\Http\Controllers\IngredientController;
+use App\Http\Controllers\IngredientUnitController;
 use App\Http\Controllers\MedidaController;
 use App\Http\Controllers\NotaController;
+use App\Http\Controllers\NutrientController;
 use App\Http\Controllers\PacienteController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\PaymentMethodsController;
+use App\Http\Controllers\RecipeController;
 use App\Http\Controllers\ServicioController;
 use App\Http\Controllers\UsuarioController;
+use App\Models\ingredientUnit;
 use App\Models\Medico;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -97,6 +103,45 @@ Route::middleware('auth:sanctum')->controller(PaymentController::class)->group(f
     Route::post('payment/total/day/{day}', 'getTotalMount');
     // Route::post('paymentMethods/update/{id}', 'update');
     // Route::post('paymentMethods/delete/{id}', 'destroy');
+});
+
+Route::middleware('auth:sanctum')->controller(IngredientController::class)->group(function () {
+    Route::post('ingredient/show/{id?}', 'show');
+    Route::post('ingredient/create', 'save');
+    Route::post('ingredient/nutrient/set', 'setNutrient');
+    Route::post('ingredient/nutrient/delete', 'deleteNutrient');
+    Route::post('ingredient/detail/{idIngredient}', 'getIngredientDetail');
+    Route::post('ingredient/update/{id}', 'update');
+    // Route::post('paymentMethods/update/{id}', 'update');
+    Route::delete('ingredient/delete/{id}', 'delete');
+});
+
+Route::middleware('auth:sanctum')->controller(CategoryController::class)->group(function () {
+    Route::post('ingredient/category/show/{id?}', 'show');
+    Route::post('ingredient/category/create', 'save');
+    // Route::post('paymentMethods/update/{id}', 'update');
+    // Route::post('paymentMethods/delete/{id}', 'destroy');
+});
+
+Route::middleware('auth:sanctum')->controller(NutrientController::class)->group(function () {
+    Route::post('nutrient/show/{id?}', 'show');
+    Route::post('nutrient/create', 'save');
+    // Route::post('paymentMethods/update/{id}', 'update');
+    // Route::post('paymentMethods/delete/{id}', 'destroy');
+});
+
+Route::middleware('auth:sanctum')->controller(IngredientUnitController::class)->group(function () {
+    Route::post('ingredient/unit/show', 'show');
+    Route::post('ingredient/unit/create', 'save');
+    // Route::post('paymentMethods/update/{id}', 'update');
+    // Route::post('paymentMethods/delete/{id}', 'destroy');
+});
+
+Route::middleware('auth:sanctum')->controller(RecipeController::class)->group(function () {
+    Route::post('recipes/show', 'show');
+    Route::post('recipes/create', 'save');
+    Route::post('recipes/update/{id}', 'update');
+    Route::post('recipes/delete/{id}', 'destroy');
 });
 
 Route::post('/tokens/create', function (Request $request) {

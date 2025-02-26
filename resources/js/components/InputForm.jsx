@@ -18,7 +18,7 @@ export const InputForm = ({
         <label htmlFor={id} className="label">
           <span className="label-text">
             {label}
-            {required ? "*" : ""}
+            {required ? " *" : ""}
           </span>
         </label>
       ) : (

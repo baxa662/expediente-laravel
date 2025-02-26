@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import LoginServices from "../services/LoginServices";
+import DropdownMenu from "./navigation/DropdownMenu";
 
 export const Navbar = ({ clase, idNav }) => {
   const cerraNav = () => {
@@ -15,7 +16,7 @@ export const Navbar = ({ clase, idNav }) => {
   };
 
   return (
-    <ul className={clase}>
+    <ul className={`${clase} z-50`}>
       {localStorage.getItem("sessionToken") ? (
         <>
           <li>
@@ -28,37 +29,43 @@ export const Navbar = ({ clase, idNav }) => {
               Calendario
             </Link>
           </li>
-          {atob(localStorage.getItem("rol")) == 1 && (
+          {atob(localStorage.getItem("rol")) == 1 && [
             <li>
-              <div className="collapse collapse-arrow p-0 grid-cols-1 gap-1">
-                <input
-                  type="checkbox"
-                  name="my-accordion-1"
-                  className="min-h-[2rem]"
-                />
-                <div className="collapse-title w-full py-2 min-h-0">
-                  Administrador
-                </div>
-                <div className="ml-3 collapse-content">
-                  <div className="my-2">
-                    <Link to={"/admin/users"} onClick={cerraNav}>
-                      Usuarios
-                    </Link>
-                  </div>
-                  <div className="my-2">
-                    <Link to={"/admin/services"} onClick={cerraNav}>
-                      Servicios
-                    </Link>
-                  </div>
-                  <div className="my-2">
-                    <Link to={"/admin/payments"} onClick={cerraNav}>
-                      Lista de pagos
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </li>
-          )}
+              <DropdownMenu label={"Administrador"}>
+                <li>
+                  <Link to={"/admin/users"} onClick={cerraNav}>
+                    Usuarios
+                  </Link>
+                </li>
+                <li>
+                  <Link to={"/admin/services"} onClick={cerraNav}>
+                    Servicios
+                  </Link>
+                </li>
+                <li>
+                  <Link to={"/admin/payments"} onClick={cerraNav}>
+                    Lista de pagos
+                  </Link>
+                </li>
+              </DropdownMenu>
+            </li>,
+          ]}
+          {atob(localStorage.getItem("rol")) == 1 && [
+            <li>
+              <DropdownMenu label={"Nutricion"}>
+                <li>
+                  <Link to={"/nutricion/ingredients"} onClick={cerraNav}>
+                    Alimentos
+                  </Link>
+                </li>
+                <li>
+                  <Link to={"/nutricion/recipes"} onClick={cerraNav}>
+                    Recetas
+                  </Link>
+                </li>
+              </DropdownMenu>
+            </li>,
+          ]}
           <li className="">
             <Link to={"/login"} onClick={logout}>
               Cerrar Sesión
