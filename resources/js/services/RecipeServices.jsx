@@ -12,6 +12,12 @@ function saveRecipe(params) {
   return response;
 }
 
+function saveRecipeIngredient(params) {
+  const url = "recipes/ingredient";
+  const response = peticion(params, url, "POST");
+  return response;
+}
+
 function update(params) {
   const url = `recipes/update/${params.id}`;
   const response = peticion(params, url);
@@ -24,9 +30,17 @@ function destroy(params) {
   return response;
 }
 
+function getRecipeDetail(id) {
+  const url = `recipes/detail/${id}`;
+  const response = peticion({}, url, "GET");
+  return response;
+}
+
 export default {
   getRecipes,
   saveRecipe,
+  saveRecipeIngredient,
   update,
   destroy,
+  getRecipeDetail,
 };

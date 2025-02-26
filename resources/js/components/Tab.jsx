@@ -7,7 +7,7 @@ const Tab = ({ name, label, children, checked }) => {
         role="tab"
         className="tab"
         aria-label={label}
-        checked={checked}
+        defaultChecked={checked}
       />
       <div
         role="tabpanel"

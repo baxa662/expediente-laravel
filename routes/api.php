@@ -142,6 +142,8 @@ Route::middleware('auth:sanctum')->controller(RecipeController::class)->group(fu
     Route::post('recipes/create', 'save');
     Route::post('recipes/update/{id}', 'update');
     Route::post('recipes/delete/{id}', 'destroy');
+    Route::post('recipes/ingredient', 'addIngredientToRecipe');
+    Route::get('recipes/detail/{id}', 'getRecipeDetail');
 });
 
 Route::post('/tokens/create', function (Request $request) {

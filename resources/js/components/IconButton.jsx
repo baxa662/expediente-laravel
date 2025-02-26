@@ -8,9 +8,10 @@ export const IconButton = ({
   onclick,
   children,
   isLaoding,
+  type
 }) => {
   if (!children) {
-    clase = clase + " btn-square";
+    clase = clase + " btn-square btn-ghost";
   }
 
   const getBody = () => {
@@ -27,18 +28,21 @@ export const IconButton = ({
     <div>
       {ruta ? (
         <a
-          className={"btn btn-ghost btn-sm " + clase}
+          className={"btn btn-sm " + clase}
           href={ruta}
           id={id}
           onClick={onclick}
+          type={type}
         >
           {getBody()}
         </a>
       ) : (
         <button
-          className={"btn btn-ghost btn-sm " + clase}
+          className={"btn btn-sm " + clase}
           id={id}
           onClick={onclick}
+          disabled={isLaoding}
+          type={type}
         >
           {getBody()}
         </button>

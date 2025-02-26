@@ -10,4 +10,10 @@ class Recipe extends Model
     use HasFactory;
 
     protected $table = 'nutrition_recipe';
+
+    public function ingredients()
+    {
+        return $this->belongsToMany(Ingredient::class, 'nutrition_recipe_ingredient', 'idRecipe', 'idIngredient')
+            ->withPivot('equivalent');
+    }
 }

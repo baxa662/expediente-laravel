@@ -1,17 +1,59 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Tab from "../../../components/Tab";
 import { IconButton } from "../../../components/IconButton";
 import ModalAddIngredientRecipe from "./components/ModalAddIngredientRecipe";
+import AlertModal from "../../../components/global/AlertModal";
+import RecipeServices from "../../../services/RecipeServices";
+import { useParams } from "react-router-dom";
 
 const RecipeDetail = () => {
+  const [showAlert, setShowAlert] = useState(false);
+  const [alertMessage, setalertMessage] = useState('');
+  const [alertType, setalertType] = useState('');
+  const [recipe, setRecipe] = useState(null);
+  const { id } = useParams();
+
+  const refreshRecipeDetail = async () => {
+    const response = await RecipeServices.getRecipeDetail(id);
+    if (response.success) {
+      setRecipe(response.data);
+    } else {
+      setalertMessage(response.message || 'Error fetching recipe details');
+      setalertType('error');
+      setShowAlert(true);
+    }
+  };
+
+  useEffect(() => {
+    const fetchRecipeDetail = async () => {
+      const response = await RecipeServices.getRecipeDetail(id);
+      if (response.success) {
+        setRecipe(response.data);
+      } else {
+        setalertMessage(response.message || 'Error fetching recipe details');
+        setalertType('error');
+        setShowAlert(true);
+      }
+    };
+
+    fetchRecipeDetail();
+  }, [id]);
+
+  const onSuccessAddIngredient = async (response) => {
+    console.log(response);
+    setalertMessage(response.success ? response.msg : response.message ? response.message : 'Ocurrio un error al asignar el ingrediente');
+    setalertType(response.success ? 'success' : 'error');
+    setShowAlert(true);
+    refreshRecipeDetail()
+  };
+
   return (
     <div className="px-4">
       <div className="card shadow-md">
         <div className="p-5 flex flex-col md:flex-row justify-around">
           <div className="md:ml-5 mt-5 md:mt-0">
-            <h2 className="text-2xl font-bold">Recipe Name</h2>
-            <p>Created on: 2023-01-01</p>
-            <p>Updated on: 2023-01-10</p>
+            <h2 className="text-2xl font-bold">{recipe?.name}</h2>
+            <p>Creada en: {new Date(recipe?.created_at).toISOString().split('T')[0]}</p>
           </div>
           <div className="">
             <img
@@ -27,40 +69,32 @@ const RecipeDetail = () => {
       <div role="tablist" className="tabs tabs-lifted mt-5">
         <Tab name="tabRecipe" label="Ingredientes" checked>
           <div className="flex mb-4">
-            <ModalAddIngredientRecipe />
+            <ModalAddIngredientRecipe 
+              onSuccess={onSuccessAddIngredient}
+            />
           </div>
-          <div className="collapse collapse-plus bg-base-200">
-            <input type="radio" name="my-accordion-3" defaultChecked />
-            <div className="collapse-title text-xl font-medium">
-              Click to open this one and close others
+          {recipe?.ingredients.map((ingredient) => (
+            <div key={ingredient.id} className="collapse collapse-plus bg-base-200">
+              <input type="radio" name="my-accordion-3" />
+              <div className="collapse-title text-xl font-medium">
+                {ingredient.name}
+              </div>
+              <div className="collapse-content">
+                <p>Equivalente: {ingredient.equivalent}</p>
+              </div>
             </div>
-            <div className="collapse-content">
-              <p>hello</p>
-            </div>
-          </div>
-          <div className="collapse collapse-plus bg-base-200">
-            <input type="radio" name="my-accordion-3" />
-            <div className="collapse-title text-xl font-medium">
-              Click to open this one and close others
-            </div>
-            <div className="collapse-content">
-              <p>hello</p>
-            </div>
-          </div>
-          <div className="collapse collapse-plus bg-base-200">
-            <input type="radio" name="my-accordion-3" />
-            <div className="collapse-title text-xl font-medium">
-              Click to open this one and close others
-            </div>
-            <div className="collapse-content">
-              <p>hello</p>
-            </div>
-          </div>
+          ))}
         </Tab>
         <Tab name="tabRecipe" label="Preparación">
           Prep
         </Tab>
       </div>
+      <AlertModal
+        isChecked={showAlert}
+        setIsChecked={setShowAlert}
+        message={alertMessage}
+        type={alertType}
+      />
     </div>
   );
 };

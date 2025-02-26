@@ -31,7 +31,7 @@ export const InputForm = ({
         defaultValue={value}
         step={0.01}
         className="input input-bordered w-full"
-        onChange={() => onChange}
+        onInput={onChange}
         {...register(id, { required: required })}
         disabled={disabled}
       />

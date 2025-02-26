@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Recipe;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class RecipeController extends Controller
 {
@@ -101,6 +102,46 @@ class RecipeController extends Controller
         return response()->json([
             'success' => true,
             'msg' => 'La receta fue eliminada exitosamente!'
+        ], 200);
+    }
+
+    public function addIngredientToRecipe(Request $request)
+    {
+        $request->validate([
+            'idRecipe' => 'required|int',
+            'idIngredient' => 'required|int',
+            'equivalent' => 'required'
+        ]);
+
+        DB::table('nutrition_recipe_ingredient')
+            ->insert([
+                'idRecipe' => $request->idRecipe,
+                'idIngredient' => $request->idIngredient,
+                'equivalent' => $request->equivalent,
+            ]);
+
+        return response()->json([
+            'success' => true,
+            'msg' => 'Ingrediente añadido a la receta exitosamente!'
+        ], 200);
+    }
+
+    public function getRecipeDetail($id)
+    {
+        $recipe = Recipe::with(['ingredients' => function ($query) {
+            $query->select('nutrition_ingredients.id', 'nutrition_ingredients.name', 'nutrition_recipe_ingredient.equivalent');
+        }])->findOrFail($id);
+
+        if ($recipe->idMedico != $this->idMedico) {
+            return response()->json([
+                'success' => false,
+                'msg' => 'Unauthorized'
+            ], 403);
+        }
+
+        return response()->json([
+            'success' => true,
+            'data' => $recipe,
         ], 200);
     }
 }
