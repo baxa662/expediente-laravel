@@ -5,6 +5,8 @@ import ModalAddIngredientRecipe from "./components/ModalAddIngredientRecipe";
 import AlertModal from "../../../components/global/AlertModal";
 import RecipeServices from "../../../services/RecipeServices";
 import { useParams } from "react-router-dom";
+import IngredientConvertions from "../../../helpers/IngredientConvertions";
+import IngredientCollapse from "./components/IngredientCollapse";
 
 const RecipeDetail = () => {
   const [showAlert, setShowAlert] = useState(false);
@@ -25,26 +27,14 @@ const RecipeDetail = () => {
   };
 
   useEffect(() => {
-    const fetchRecipeDetail = async () => {
-      const response = await RecipeServices.getRecipeDetail(id);
-      if (response.success) {
-        setRecipe(response.data);
-      } else {
-        setalertMessage(response.message || 'Error fetching recipe details');
-        setalertType('error');
-        setShowAlert(true);
-      }
-    };
-
-    fetchRecipeDetail();
+    refreshRecipeDetail();
   }, [id]);
 
   const onSuccessAddIngredient = async (response) => {
-    console.log(response);
     setalertMessage(response.success ? response.msg : response.message ? response.message : 'Ocurrio un error al asignar el ingrediente');
     setalertType(response.success ? 'success' : 'error');
     setShowAlert(true);
-    refreshRecipeDetail()
+    refreshRecipeDetail();
   };
 
   return (
@@ -53,7 +43,7 @@ const RecipeDetail = () => {
         <div className="p-5 flex flex-col md:flex-row justify-around">
           <div className="md:ml-5 mt-5 md:mt-0">
             <h2 className="text-2xl font-bold">{recipe?.name}</h2>
-            <p>Creada en: {new Date(recipe?.created_at).toISOString().split('T')[0]}</p>
+            {/* <p>Creada en: {new Date(recipe?.created_at).toISOString().split('T')[0]}</p> */}
           </div>
           <div className="">
             <img
@@ -73,17 +63,11 @@ const RecipeDetail = () => {
               onSuccess={onSuccessAddIngredient}
             />
           </div>
-          {recipe?.ingredients.map((ingredient) => (
-            <div key={ingredient.id} className="collapse collapse-plus bg-base-200">
-              <input type="radio" name="my-accordion-3" />
-              <div className="collapse-title text-xl font-medium">
-                {ingredient.name}
-              </div>
-              <div className="collapse-content">
-                <p>Equivalente: {ingredient.equivalent}</p>
-              </div>
-            </div>
-          ))}
+          {recipe?.ingredients.map((ingredient) => { 
+            return (
+               <IngredientCollapse ingredient={ingredient} idRecipe={id}/>
+          )}
+          )}
         </Tab>
         <Tab name="tabRecipe" label="Preparación">
           Prep

@@ -143,6 +143,8 @@ Route::middleware('auth:sanctum')->controller(RecipeController::class)->group(fu
     Route::post('recipes/update/{id}', 'update');
     Route::post('recipes/delete/{id}', 'destroy');
     Route::post('recipes/ingredient', 'addIngredientToRecipe');
+    Route::post('recipes/ingredient/update', 'updateIngredientInRecipe');
+    Route::post('recipes/ingredient/delete', 'deleteIngredientFromRecipe');
     Route::get('recipes/detail/{id}', 'getRecipeDetail');
 });
 

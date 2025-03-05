@@ -36,6 +36,18 @@ function getRecipeDetail(id) {
   return response;
 }
 
+function updateRecipeIngredient(params) {
+  const url = "recipes/ingredient/update";
+  const response = peticion(params, url, "POST");
+  return response;
+}
+
+function deleteRecipeIngredient(params) {
+  const url = "recipes/ingredient/delete";
+  const response = peticion(params, url, "POST");
+  return response;
+}
+
 export default {
   getRecipes,
   saveRecipe,
@@ -43,4 +55,6 @@ export default {
   update,
   destroy,
   getRecipeDetail,
+  updateRecipeIngredient,
+  deleteRecipeIngredient,
 };

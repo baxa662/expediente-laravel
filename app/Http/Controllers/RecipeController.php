@@ -126,10 +126,50 @@ class RecipeController extends Controller
         ], 200);
     }
 
+    public function updateIngredientInRecipe(Request $request)
+    {
+        $request->validate([
+            'idRecipe' => 'required|int',
+            'idIngredient' => 'required|int',
+            'equivalent' => 'required'
+        ]);
+
+        DB::table('nutrition_recipe_ingredient')
+            ->where('idRecipe', $request->idRecipe)
+            ->where('idIngredient', $request->idIngredient)
+            ->update([
+                'equivalent' => $request->equivalent,
+            ]);
+
+        return response()->json([
+            'success' => true,
+            'msg' => 'Ingrediente actualizado en la receta exitosamente!'
+        ], 200);
+    }
+
+    public function deleteIngredientFromRecipe(Request $request)
+    {
+        $request->validate([
+            'idRecipe' => 'required|int',
+            'idIngredient' => 'required|int',
+        ]);
+
+        DB::table('nutrition_recipe_ingredient')
+            ->where('idRecipe', $request->idRecipe)
+            ->where('idIngredient', $request->idIngredient)
+            ->delete();
+
+        return response()->json([
+            'success' => true,
+            'msg' => 'Ingrediente eliminado de la receta exitosamente!'
+        ], 200);
+    }
+
     public function getRecipeDetail($id)
     {
         $recipe = Recipe::with(['ingredients' => function ($query) {
-            $query->select('nutrition_ingredients.id', 'nutrition_ingredients.name', 'nutrition_recipe_ingredient.equivalent');
+            $query->join('nutrition_unit as nu', 'nutrition_ingredients.idUnit', 'nu.id')
+                ->select('nutrition_ingredients.id', 'nutrition_ingredients.name', 'nutrition_recipe_ingredient.equivalent', 'nutrition_ingredients.portionUnit', 'nutrition_ingredients.portionQuantity', 'nu.name as unit');
         }])->findOrFail($id);
 
         if ($recipe->idMedico != $this->idMedico) {
