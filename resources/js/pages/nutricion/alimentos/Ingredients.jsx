@@ -28,7 +28,15 @@ const Ingredients = () => {
       };
 
       const response = await IngredientService.getIngredient(params);
-      setIngredients(response["data"]);
+
+      const ingredients = response['data'].map((e) => ({
+        'id': e.id,
+        'name': e.name,
+        'category': e.category,
+        'unit': e.unit,
+      }))
+
+      setIngredients(ingredients);
       setLoading(false);
     } catch (error) {
       console.log(error);
@@ -36,7 +44,7 @@ const Ingredients = () => {
     }
   };
 
-  const headers = ["ID", "Nombre", "Categoria", "Acciones"];
+  const headers = ["ID", "Nombre", "Categoria", "Unidad","Acciones"];
 
   // Función de debounce para ejecutar la búsqueda
   const debounce = (func, delay) => {

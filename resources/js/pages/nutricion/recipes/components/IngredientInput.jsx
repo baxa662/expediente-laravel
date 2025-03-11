@@ -1,20 +1,18 @@
 import React from "react";
 import { InputForm } from "../../../../components/InputForm";
 
-const IngredientInput = ({ value, isEditing, onChange, register, errors }) => {
-  console.log(isEditing);
-
+const IngredientInput = ({ value, isEditing, onChange, register, errors, id, label }) => {
   return (
     <p>
-      Equivalente:{" "}
+      {`${label}: `}
       {isEditing ? (
         <InputForm
           label={""}
-          id={"equivalent"}
+          id={id}
           register={register}
           errors={errors}
           value={value}
-          onChange={onChange}
+          onChange={(e) => onChange(e.target.value)}
         />
       ) : (
         value

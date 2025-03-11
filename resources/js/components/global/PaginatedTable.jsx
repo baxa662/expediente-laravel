@@ -55,7 +55,7 @@ const PaginatedTable = ({
           <progress className="progress w-56"></progress>
         </div>
       ) : (
-        <table className="table w-full my-2 table-zebra table-compact">
+        <table className="table w-full my-2 table-zebra table-sm">
           <thead>
             <tr>
               {headers.map((header, index) => (

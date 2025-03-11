@@ -70,7 +70,7 @@ const RecipeDetail = () => {
             <ModalAddIngredientRecipe onSuccess={onSuccessAddIngredient} />
           </div>
           {recipe?.ingredients.map((ingredient) => {
-            return <IngredientCollapse ingredient={ingredient} idRecipe={id} />;
+            return <IngredientCollapse ingredient={ingredient} idRecipe={id} onSave={onSuccessAddIngredient}/>;
           })}
         </Tab>
         <Tab name="tabRecipe" label="Preparación">

@@ -1,13 +1,18 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import IngredientConvertions from "../../../../helpers/IngredientConvertions";
 import { IconButton } from "../../../../components/IconButton";
 import IngredientInput from "./IngredientInput";
 import { useForm } from "react-hook-form";
+import RecipeServices from "../../../../services/RecipeServices";
+import AlertModal from "../../../../components/global/AlertModal"
 
-const IngredientCollapse = ({ ingredient, idRecipe }) => {
+const IngredientCollapse = ({ ingredient, idRecipe, onSave }) => {
   const [isEditing, setIsEditing] = useState(false);
-  const [equivalent, setEquivalent] = useState(0);
-  const [amoun, setAmount] = useState(0);
+  const [equivalentState, setEquivalent] = useState(0);
+  const [amountState, setAmount] = useState(0);
+  const [measure, setMeasure] = useState(0);
+  const [isSaving, setIsSaving] = useState(false);
+  const [isDeleting, setIsDeleting] = useState(false);
 
   const {
     register,
@@ -17,56 +22,58 @@ const IngredientCollapse = ({ ingredient, idRecipe }) => {
     formState: { errors },
   } = useForm();
 
+
+  useEffect(() => {
+    const { amount, measure } = IngredientConvertions.equivalentToAmount(ingredient, ingredient.equivalent);
+    setAmount(amount);
+    setEquivalent(ingredient.equivalent);
+    setMeasure(measure);
+  }, [ingredient]);
+
   const onChangeEquivalent = (equivalent) => {
     const { amount, measure } = IngredientConvertions.equivalentToAmount(
       ingredient,
       equivalent
     );
+    
+    setValue('amount', amount);
+    setMeasure(measure)
   };
-
-  const { amount, measure } = IngredientConvertions.equivalentToAmount(
-    ingredient,
-    ingredient.equivalent
-  );
-
+  
+  const onChangeAmount = (amount) =>{
+    const { equivalent, measure } = IngredientConvertions.equivalentToAmount(
+      ingredient,
+      amount
+    );
+   
+    setValue('equivalent', equivalent)
+    setMeasure(measure)
+  }
+  
   const onDeleteIngredient = async (ingredientId) => {
+    setIsDeleting(true)
     const params = {
-      idRecipe: id,
+      idRecipe: idRecipe,
       idIngredient: ingredientId,
     };
     const response = await RecipeServices.deleteRecipeIngredient(params);
-    setalertMessage(
-      response.success
-        ? response.msg
-        : response.message
-        ? response.message
-        : "Ocurrio un error al eliminar el ingrediente"
-    );
-    setalertType(response.success ? "success" : "error");
-    setShowAlert(true);
-    refreshRecipeDetail();
+    setIsDeleting(false)
+    onSave(response);
   };
 
-  const onUpdateIngredient = async (ingredientId) => {
+  const onUpdateIngredient = async (data) => {
     if (isEditing) {
+      setIsSaving(true)
       const params = {
         idRecipe: idRecipe,
-        idIngredient: ingredientId,
-        equivalent: newEquivalent,
+        idIngredient: ingredient.id,
+        equivalent: data.equivalent,
       };
       const response = await RecipeServices.updateRecipeIngredient(params);
-      setalertMessage(
-        response.success
-          ? response.msg
-          : response.message
-          ? response.message
-          : "Ocurrio un error al actualizar el ingrediente"
-      );
-      setalertType(response.success ? "success" : "error");
-      setShowAlert(true);
-      setEditingIngredientId(null);
-      refreshRecipeDetail();
-    } else {
+      onSave(response);
+      setIsEditing(false);
+      setIsSaving(false)
+    }else{
       setIsEditing(true);
     }
   };
@@ -78,20 +85,30 @@ const IngredientCollapse = ({ ingredient, idRecipe }) => {
         {ingredient.name} - {measure}(s)
       </div>
       <div className="collapse-content">
-        <form action="" onChange={handleSubmit(onUpdateIngredient)}>
+        <form action="" onSubmit={handleSubmit(onUpdateIngredient)}>
           <div className="flex flex-col gap-2">
             <IngredientInput
-              value={ingredient.equivalent}
+              value={equivalentState}
               isEditing={isEditing}
-              onChange={onUpdateIngredient}
+              onChange={onChangeEquivalent}
               errors={errors}
               register={register}
+              id={'equivalent'}
+              label={"Equivalente"}
             />
-            <p>Gramos: {amount}</p>
+            <IngredientInput
+              value={amountState}
+              isEditing={isEditing}
+              onChange={onChangeAmount}
+              errors={errors}
+              register={register}
+              id={'amount'}
+              label={"Gramos"}
+            />
           </div>
           <div className="flex gap-2 mt-2">
             <IconButton
-              onclick={() => onUpdateIngredient(ingredient.id)}
+              isLaoding={isSaving}
               clase={"btn-success"}
               icon={isEditing ? "save" : null}
               type={"submit"}
@@ -99,6 +116,7 @@ const IngredientCollapse = ({ ingredient, idRecipe }) => {
               {isEditing ? "Guardar" : "Actualizar"}
             </IconButton>
             <IconButton
+              isLaoding={isDeleting}
               onclick={() => onDeleteIngredient(ingredient.id)}
               clase={"btn-error"}
             >
@@ -107,6 +125,7 @@ const IngredientCollapse = ({ ingredient, idRecipe }) => {
           </div>
         </form>
       </div>
+      <AlertModal></AlertModal>
     </div>
   );
 };
