@@ -9,7 +9,7 @@ import RecipeServices from "../../../../services/RecipeServices";
 import { useParams } from "react-router-dom";
 import IngredientConvertions from "../../../../helpers/IngredientConvertions";
 
-const ModalAddIngredientRecipe = ({onSuccess}) => {
+const ModalAddIngredientRecipe = ({ onSuccess }) => {
   const [showed, setShowed] = useState(false);
   const [isLaoding, setIsLoading] = useState(false);
   const [ingredients, setIngredients] = useState([]);
@@ -37,53 +37,64 @@ const ModalAddIngredientRecipe = ({onSuccess}) => {
   }, []);
 
   const onSubmitAddIngredient = async (data) => {
-    setIsLoading(true)
+    setIsLoading(true);
 
     const params = {
       idRecipe: id,
       idIngredient: data.ingredient,
-      equivalent: data.equivalent
-    }
+      equivalent: data.equivalent,
+    };
 
     const response = await RecipeServices.saveRecipeIngredient(params);
-    setIsLoading(false)
-    setShowed(false)
-    onSuccess(response)
+    setIsLoading(false);
+    setShowed(false);
+    onSuccess(response);
   };
 
   const onIngredientChange = async (idIngredient) => {
     const ingredientFound = ingredients.find((e) => e.id == idIngredient);
 
     if (ingredientFound) {
-      const equivalent = ingredientFound.portionQuantity / ingredientFound.portionUnit;
+      const equivalent =
+        ingredientFound.portionQuantity / ingredientFound.portionUnit;
       const portionQuantity = ingredientFound.portionQuantity;
       const portionUnit = ingredientFound.portionUnit;
 
       setSelectedIngredient(ingredientFound);
       setValue("amount", portionQuantity);
-      setValue("equivalent", (portionQuantity / (equivalent * portionUnit)).toFixed(1));
-      setValue('measure', `${formatAmount(portionQuantity / portionUnit)} ${ingredientFound.unit}`);
+      setValue(
+        "equivalent",
+        (portionQuantity / (equivalent * portionUnit)).toFixed(1)
+      );
+      setValue(
+        "measure",
+        `${formatAmount(portionQuantity / portionUnit)} ${ingredientFound.unit}`
+      );
     }
   };
 
   const onAmountChange = (value) => {
-    const {equivalent, measure} = IngredientConvertions.amountToEquivalent(selectedIngredient, value);
+    const { equivalent, measure } = IngredientConvertions.amountToEquivalent(
+      selectedIngredient,
+      value
+    );
 
-    setValue('equivalent', equivalent)
-    setValue('measure', measure);
-  }
-  
+    setValue("equivalent", equivalent);
+    setValue("measure", measure);
+  };
+
   const onEquivalentChange = (value) => {
-    const {amount, measure} = IngredientConvertions.equivalentToAmount(selectedIngredient, value);
+    const { amount, measure } = IngredientConvertions.equivalentToAmount(
+      selectedIngredient,
+      value
+    );
 
-    console.log(measure)
+    console.log(measure);
 
-    setValue('amount', amount);
-    setValue('measure', measure);
-  }
+    setValue("amount", amount);
+    setValue("measure", measure);
+  };
 
-
-  
   return (
     <>
       <IconButton
@@ -112,7 +123,7 @@ const ModalAddIngredientRecipe = ({onSuccess}) => {
             onChange={(e) => onIngredientChange(e.target.value)}
           />
           <div className="flex gap-4">
-          <InputForm
+            <InputForm
               register={register}
               errors={errors}
               label={"Equivalente"}
@@ -138,7 +149,13 @@ const ModalAddIngredientRecipe = ({onSuccess}) => {
             label={"Medida"}
             disabled
           />
-          <IconButton type={"submit"} clase={"w-full mt-4 btn-success h-10 text-white"} isLaoding={isLaoding}>Guardar</IconButton>
+          <IconButton
+            type={"submit"}
+            clase={"w-full mt-4 btn-success h-10 text-white"}
+            isLaoding={isLaoding}
+          >
+            Guardar
+          </IconButton>
         </form>
       </Modal>
     </>

@@ -8,7 +8,7 @@ export const IconButton = ({
   onclick,
   children,
   isLaoding,
-  type
+  type,
 }) => {
   if (!children) {
     clase = clase + " btn-square btn-ghost";
