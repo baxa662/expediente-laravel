@@ -6,6 +6,8 @@ use App\Models\Recipe;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
+use Intervention\Image\Facades\Image;
 
 class RecipeController extends Controller
 {
@@ -178,6 +180,78 @@ class RecipeController extends Controller
                 'msg' => 'Unauthorized'
             ], 403);
         }
+
+        $recipe->image_path = asset(Storage::url($recipe->image_path));
+        $recipe->pdf_path = asset(Storage::url($recipe->pdf_path));
+
+        return response()->json([
+            'success' => true,
+            'data' => $recipe,
+        ], 200);
+    }
+
+    public function updateRecipeImage(Request $request)
+    {
+        $request->validate([
+            'id' => 'required|int',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+        ]);
+
+        $recipe = Recipe::findOrFail($request->id);
+        if ($recipe->idMedico != $this->idMedico) {
+            return response()->json([
+                'success' => false,
+                'msg' => 'Unauthorized'
+            ], 403);
+        }
+
+        // Borrar la imagen actual si existe
+        if ($recipe->image_path) {
+            Storage::disk('public')->delete($recipe->image_path);
+        }
+
+        // Convertir la imagen a webp y guardarla
+        $image = $request->file('image');
+        $imagePath = "img/recipes/{$recipe->id}/" . time() . '.webp';
+        $webpImage = Image::make($image)->encode('webp', 50);
+        Storage::disk('public')->put($imagePath, $webpImage);
+
+        $recipe->image_path = $imagePath;
+        $recipe->save();
+
+        return response()->json([
+            'success' => true,
+            'data' => $recipe,
+        ], 200);
+    }
+
+    public function updateRecipePdf(Request $request)
+    {
+        $request->validate([
+            'id' => 'required|int',
+            'pdf' => 'required|mimes:pdf|max:2048',
+        ]);
+
+        $recipe = Recipe::findOrFail($request->id);
+        if ($recipe->idMedico != $this->idMedico) {
+            return response()->json([
+                'success' => false,
+                'msg' => 'Unauthorized'
+            ], 403);
+        }
+
+        // Borrar el PDF actual si existe
+        if ($recipe->pdf_path) {
+            Storage::disk('public')->delete($recipe->pdf_path);
+        }
+
+        // Guardar el nuevo PDF
+        $pdf = $request->file('pdf');
+        $pdfPath = "pdf/recipes/{$recipe->id}/" . time() . '.pdf';
+        Storage::disk('public')->put($pdfPath, file_get_contents($pdf));
+
+        $recipe->pdf_path = $pdfPath;
+        $recipe->save();
 
         return response()->json([
             'success' => true,

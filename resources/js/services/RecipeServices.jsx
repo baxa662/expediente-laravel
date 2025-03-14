@@ -48,6 +48,18 @@ function deleteRecipeIngredient(params) {
   return response;
 }
 
+function updateRecipeImage(formData) {
+  const url = "recipes/update-image";
+  const response = peticion(formData, url, "POST", true);
+  return response;
+}
+
+function updateRecipePdf(formData) {
+  const url = "recipes/update-pdf";
+  const response = peticion(formData, url, "POST", true);
+  return response;
+}
+
 export default {
   getRecipes,
   saveRecipe,
@@ -57,4 +69,6 @@ export default {
   getRecipeDetail,
   updateRecipeIngredient,
   deleteRecipeIngredient,
+  updateRecipeImage,
+  updateRecipePdf,
 };
