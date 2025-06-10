@@ -1,7 +1,9 @@
-/** @type {import('tailwindcss').Config} */
+/* @type {import('tailwindcss').Config} */
+import daisyui from 'daisyui'
+
 module.exports = {
   content: ["./welcome.blade", "./resources/js/**/*.{js,ts,jsx,tsx}"],
-  plugins: [require("daisyui")],
+  plugins: [daisyui],
   daisyui: {
     themes: ["fantasy"],
   },

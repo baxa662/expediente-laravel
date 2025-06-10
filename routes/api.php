@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CitaController;
+use App\Http\Controllers\DietController;
 use App\Http\Controllers\IngredientController;
 use App\Http\Controllers\IngredientUnitController;
 use App\Http\Controllers\MedidaController;
@@ -148,6 +149,17 @@ Route::middleware('auth:sanctum')->controller(RecipeController::class)->group(fu
     Route::get('recipes/detail/{id}', 'getRecipeDetail');
     Route::post('recipes/update-image', 'updateRecipeImage');
     Route::post('recipes/update-pdf', 'updateRecipePdf');
+});
+
+Route::middleware('auth:sanctum')->controller(DietController::class)->group(function () {
+    Route::post('diets', 'index');
+    Route::post('diets/create', 'store');
+    Route::post('diets/update/{id}', 'update');
+    Route::post('diets/delete', 'destroy');
+    Route::get('diets/detail/{id}', 'getDietDetail');
+    Route::post('diets/{dietId}/add-recipe', 'addRecipeToDiet');
+    Route::post('diets/{dietId}/add-ingredient', 'addIngredientToDiet');
+    Route::post('diets/{dietId}/add-time', 'addTimeToDiet');
 });
 
 Route::post('/tokens/create', function (Request $request) {

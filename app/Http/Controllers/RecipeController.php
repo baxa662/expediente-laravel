@@ -44,7 +44,7 @@ class RecipeController extends Controller
         return response()->json([
             'success' => true,
             'data' => $recipes,
-            'msg' => "Receta creada exitosamente!"
+            'msg' => ""
         ], 200);
     }
 

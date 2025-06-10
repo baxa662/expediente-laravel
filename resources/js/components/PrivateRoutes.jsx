@@ -9,6 +9,8 @@ import Ingredients from "../pages/nutricion/alimentos/Ingredients";
 import IngredientDetail from "../pages/nutricion/alimentos/IngredientDetail";
 import Recipes from "../pages/nutricion/recipes/Recipes";
 import RecipeDetail from "../pages/nutricion/recipes/RecipeDetail";
+import Diets from "../pages/nutricion/diet/Diets";
+import DietDetail from "../pages/nutricion/diet/DietDetail";
 
 export const PrivateRoutes = () => {
   return (
@@ -23,6 +25,8 @@ export const PrivateRoutes = () => {
       <Route path="/nutricion/ingredients/:id" element={<IngredientDetail />} />
       <Route path="/nutricion/recipes" element={<Recipes />} />
       <Route path="/nutricion/recipes/:id" element={<RecipeDetail />} />
+      <Route path="/nutricion/diets" element={<Diets />} />
+      <Route path="/nutricion/diets/:id" element={<DietDetail />} />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );

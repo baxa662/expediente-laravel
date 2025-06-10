@@ -63,6 +63,11 @@ export const Navbar = ({ clase, idNav }) => {
                     Recetas
                   </Link>
                 </li>
+                <li>
+                  <Link to={"/nutricion/diets"} onClick={cerraNav}>
+                    Dietas
+                  </Link>
+                </li>
               </DropdownMenu>
             </li>,
           ]}
