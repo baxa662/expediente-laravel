@@ -160,6 +160,9 @@ Route::middleware('auth:sanctum')->controller(DietController::class)->group(func
     Route::post('diets/{dietId}/add-recipe', 'addRecipeToDiet');
     Route::post('diets/{dietId}/add-ingredient', 'addIngredientToDiet');
     Route::post('diets/{dietId}/add-time', 'addTimeToDiet');
+    Route::post('diets/{dietId}/remove-recipe', 'removeRecipeFromDiet');
+    Route::post('diets/{dietId}/remove-ingredient', 'removeIngredientFromDiet');
+    Route::delete('diets/{dietId}/remove-time/{timeId}', 'removeTimeFromDiet');
 });
 
 Route::post('/tokens/create', function (Request $request) {

@@ -187,7 +187,7 @@ const RecipeDetail = () => {
                         {isEditingName ? (
                             <IconButton
                                 onclick={handleSaveName}
-                                isLaoding={isUpdating}
+                                isLoading={isUpdating}
                                 clase={"btn-success text-white"}
                                 icon={"save"}
                             >

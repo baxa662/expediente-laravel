@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { IconButton } from "../../../../components/IconButton";
 import IngredientConvertions from "../../../../helpers/IngredientConvertions";
 import { InputForm } from "../../../../components/InputForm";
@@ -24,10 +24,14 @@ const IngredientRow = ({ ingredient }) => {
         setIsEditing(false);
     };
 
-    // const { amount, measure } = IngredientConvertions.equivalentToAmount(
-    //     ingredient,
-    //     ingredient.pivot.equivalent
-    // );
+    useEffect(() => {
+        const { amount, measure } = IngredientConvertions.equivalentToAmount(
+            ingredient,
+            ingredient.pivot.equivalent
+        );
+        setAmount(amount);
+        setMeasure(measure);
+    }, [ingredient]);
 
     return (
         <li className="list-row">
@@ -36,18 +40,34 @@ const IngredientRow = ({ ingredient }) => {
                 <span className="text-sm"> - {measure}</span>
             </div>
             <div></div>
-            <div>
-                {isEditing ? (
-                    <input
-                        type="number"
-                        value={equivalent}
-                        onChange={(e) => setEquivalent(e.target.value)}
-                        className="input input-bordered input-sm w-24 text-center"
-                    />
-                ) : (
-                    <span className="text-xs">{equivalent}</span>
-                )}
-                <span className="text-xs"> Equivalentes</span>
+            <div className="flex gap-2 items-center">
+                <div>
+                    {isEditing ? (
+                        <input
+                            type="number"
+                            value={equivalent}
+                            onChange={(e) => setEquivalent(e.target.value)}
+                            className="input input-bordered input-sm w-24 text-center"
+                        />
+                    ) : (
+                        <span className="text-xs">{equivalent}</span>
+                    )}
+                    <span className="text-xs"> Equivalentes</span>
+                </div>
+                <div>-</div>
+                <div>
+                    {isEditing ? (
+                        <input
+                            type="number"
+                            value={amount}
+                            onChange={(e) => setAmount(e.target.value)}
+                            className="input input-bordered input-sm w-24 text-center"
+                        />
+                    ) : (
+                        <span className="text-xs">{amount}</span>
+                    )}
+                    <span className="text-xs"> Gramos</span>
+                </div>
             </div>
             <IconButton
                 icon={isEditing ? "save" : "edit"}

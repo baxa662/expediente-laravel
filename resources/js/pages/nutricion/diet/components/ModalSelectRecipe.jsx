@@ -2,14 +2,14 @@ import React, { useState, useEffect } from "react";
 import { Modal } from "../../../../components/Modal";
 import RecipeServices from "../../../../services/RecipeServices";
 import { IconButton } from "../../../../components/IconButton";
+import debounce from "../../../../helpers/Debounce";
 
 const ModalSelectRecipe = ({ onRecipeSelected }) => {
     const [showed, setShowed] = useState(false);
     const [recipes, setRecipes] = useState([]);
-    const [searchTerm, setSearchTerm] = useState("");
     const [loading, setLoading] = useState(false);
 
-    const fetchRecipes = async () => {
+    const fetchRecipes = async (searchTerm) => {
         setLoading(true);
         const response = await RecipeServices.getRecipes({
             search: searchTerm,
@@ -20,9 +20,11 @@ const ModalSelectRecipe = ({ onRecipeSelected }) => {
         setLoading(false);
     };
 
-    useEffect(() => {
-        fetchRecipes();
-    }, [searchTerm]);
+    const debouncedFetchRecipes = debounce(fetchRecipes, 500);
+
+    const handleSearch = (searchTerm) => {
+        debouncedFetchRecipes(searchTerm);
+    };
 
     return (
         <>
@@ -44,9 +46,8 @@ const ModalSelectRecipe = ({ onRecipeSelected }) => {
                         <input
                             type="text"
                             placeholder="Buscar receta..."
-                            className="input input-bordered"
-                            value={searchTerm}
-                            onChange={(e) => setSearchTerm(e.target.value)}
+                            className="input input-bordered w-full"
+                            onChange={(e) => handleSearch(e.target.value)}
                         />
                     </div>
 

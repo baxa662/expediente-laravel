@@ -93,6 +93,13 @@ class DietController extends Controller
         return response()->json(['success' => true, 'msg' => 'Tiempo agregado exitosamente']);
     }
 
+    public function removeTimeFromDiet($idDiet, $timeId)
+    {
+        $time = Time::find($timeId);
+        $time->delete();
+
+        return response()->json(['success' => true, 'msg' => 'Tiempo eliminado exitosamente']);
+    }
 
     public function saveRecipeToDiet(Request $request)
     {
@@ -107,5 +114,23 @@ class DietController extends Controller
         ]);
 
         return response()->json(['success' => true, 'msg' => 'Receta guardada exitosamente']);
+    }
+
+    public function removeRecipeFromDiet(Request $request, $dietId)
+    {
+        $diet = Diet::find($dietId);
+        $recipe = Recipe::find($request->id);
+        $diet->recipes()->detach($recipe);
+
+        return response()->json(['success' => true, 'msg' => 'Receta eliminada exitosamente']);
+    }
+
+    public function removeIngredientFromDiet(Request $request, $dietId)
+    {
+        $diet = Diet::find($dietId);
+        $ingredient = Ingredient::find($request->id);
+        $diet->ingredients()->detach($ingredient);
+
+        return response()->json(['success' => true, 'msg' => 'Ingrediente eliminado exitosamente']);
     }
 }

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback, useRef } from "react";
 import DietServices from "../../../services/DietServices";
 import RecipeServices from "../../../services/RecipeServices";
 import IngredientService from "../../../services/IngredientService";
@@ -21,6 +21,8 @@ const DietDetail = () => {
     const [alertMessage, setAlertMessage] = useState("");
     const [alertType, setAlertType] = useState("success");
     const [alertTitle, setAlertTitle] = useState("Success");
+    const [loadingDelete, setLoadingDelete] = useState(false);
+    const effectRan = useRef(false);
     const [newIngredient, setNewIngredient] = useState({
         id: "",
         time: "desayuno",
@@ -45,15 +47,17 @@ const DietDetail = () => {
         }
     };
 
-    const getDietDetail = async () => {
+    const getDietDetail = useCallback(async () => {
         const response = await DietServices.getDietDetail(id);
         if (response.success) {
             setDiet(response.data);
         }
-    };
+    }, [id]);
 
     const handleRemoveTime = async (timeId) => {
+        setLoadingDelete(true);
         const response = await DietServices.removeTimeFromDiet(id, timeId);
+        setLoadingDelete(false);
         if (response.success) {
             setShowAlert(true);
             setAlertMessage(response.msg);
@@ -69,37 +73,32 @@ const DietDetail = () => {
     };
 
     useEffect(() => {
-        const fetchDiet = async () => {
-            const response = await DietServices.getDietDetail(id);
-            if (response.success) {
-                setDiet(response.data);
-            }
-        };
-        if (!diet.id) {
-            fetchDiet();
-        }
+        if (!effectRan.current) {
+            getDietDetail();
 
-        const fetchRecipes = async () => {
-            const response = await RecipeServices.getRecipes({});
-            if (response.success) {
-                setRecipes(response.data);
-            }
-        };
+            const fetchRecipes = async () => {
+                const response = await RecipeServices.getRecipes({});
+                if (response.success) {
+                    setRecipes(response.data);
+                }
+            };
 
-        if (!recipes.length) {
-            fetchRecipes();
-        }
-
-        const fetchIngredients = async () => {
-            const response = await IngredientService.getIngredient({});
-            if (response.success) {
-                setIngredients(response.data);
+            if (!recipes.length) {
+                fetchRecipes();
             }
-        };
-        if (!ingredients.length) {
-            fetchIngredients();
+
+            const fetchIngredients = async () => {
+                const response = await IngredientService.getIngredient({});
+                if (response.success) {
+                    setIngredients(response.data);
+                }
+            };
+            if (!ingredients.length) {
+                fetchIngredients();
+            }
+            effectRan.current = true;
         }
-    }, [id]);
+    }, [getDietDetail]);
 
     const handleAddRecipe = async () => {
         const response = await DietServices.addRecipeToDiet(id, newRecipe);
@@ -176,15 +175,18 @@ const DietDetail = () => {
                                     name="tabRecipes"
                                     label={time.label}
                                     checked={index === 0}
+                                    key={index}
                                 >
-                                    <div className="flex justify-end">
+                                    <div className="flex justify-end gap-2">
                                         <ModalSelectRecipe
                                             onSubmitRecipe={handleAddRecipe}
                                             dietId={id}
                                             time={time}
                                         />
                                         <IconButton
+                                            isLoading={loadingDelete}
                                             icon="delete"
+                                            clase="link-error"
                                             onclick={() =>
                                                 handleRemoveTime(time.id)
                                             }
@@ -193,9 +195,14 @@ const DietDetail = () => {
                                     <div className="flex flex-col gap-2 mt-2">
                                         {time.recipes &&
                                         time.recipes.length > 0 ? (
-                                            time.recipes.map((recipe) => (
-                                                <RecipeRow recipe={recipe} />
-                                            ))
+                                            time.recipes.map(
+                                                (recipe, indexRecipe) => (
+                                                    <RecipeRow
+                                                        recipe={recipe}
+                                                        key={indexRecipe}
+                                                    />
+                                                )
+                                            )
                                         ) : (
                                             <p>
                                                 No hay recetas agregadas a esta

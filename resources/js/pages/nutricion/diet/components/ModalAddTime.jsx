@@ -41,7 +41,7 @@ const ModalAddTime = ({ onSubmitTime }) => {
                         icon="breakfast_dining"
                         clase="btn btn-primary"
                         onclick={() => onSubmit({ name: "Desayuno" })}
-                        isLaoding={isSaving}
+                        isLoading={isSaving}
                     >
                         Agregar Desayuno
                     </IconButton>
@@ -49,7 +49,7 @@ const ModalAddTime = ({ onSubmitTime }) => {
                         icon="lunch_dining"
                         clase="btn btn-primary"
                         onclick={() => onSubmit({ name: "Almuerzo" })}
-                        isLaoding={isSaving}
+                        isLoading={isSaving}
                     >
                         Agregar Almuerzo
                     </IconButton>
@@ -57,7 +57,7 @@ const ModalAddTime = ({ onSubmitTime }) => {
                         icon="dinner_dining"
                         clase="btn btn-primary"
                         onclick={() => onSubmit({ name: "Cena" })}
-                        isLaoding={isSaving}
+                        isLoading={isSaving}
                     >
                         Agregar Cena
                     </IconButton>
@@ -80,7 +80,7 @@ const ModalAddTime = ({ onSubmitTime }) => {
                             icon="add"
                             clase="btn w-full btn-primary"
                             type="submit"
-                            isLaoding={isSaving}
+                            isLoading={isSaving}
                         >
                             Crear
                         </IconButton>

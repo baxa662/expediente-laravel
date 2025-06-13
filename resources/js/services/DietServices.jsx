@@ -83,6 +83,49 @@ const DietServices = {
             return { success: false, msg: "Error adding time to diet" };
         }
     },
+
+    removeTimeFromDiet: async (dietId, timeId) => {
+        try {
+            const response = await peticion(
+                {},
+                `diets/${dietId}/remove-time/${timeId}`,
+                "DELETE"
+            );
+            return response;
+        } catch (error) {
+            console.error("Error removing time from diet:", error);
+            return { success: false, msg: "Error removing time from diet" };
+        }
+    },
+
+    removeRecipeFromDiet: async (dietId, recipeId) => {
+        try {
+            const response = await peticion(
+                { recipeId },
+                `diets/${dietId}/remove-recipe`
+            );
+            return response;
+        } catch (error) {
+            console.error("Error removing recipe from diet:", error);
+            return { success: false, msg: "Error removing recipe from diet" };
+        }
+    },
+
+    removeIngredientFromDiet: async (dietId, ingredientId) => {
+        try {
+            const response = await peticion(
+                { ingredientId },
+                `diets/${dietId}/remove-ingredient`
+            );
+            return response;
+        } catch (error) {
+            console.error("Error removing ingredient from diet:", error);
+            return {
+                success: false,
+                msg: "Error removing ingredient from diet",
+            };
+        }
+    },
 };
 
 export default DietServices;
