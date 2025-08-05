@@ -1,33 +1,58 @@
 import React, { useEffect, useState } from "react";
 import { IconButton } from "../../../../components/IconButton";
 import IngredientConvertions from "../../../../helpers/IngredientConvertions";
-import { InputForm } from "../../../../components/InputForm";
+import DietServices from "../../../../services/DietServices";
 
-const IngredientRow = ({ ingredient }) => {
+const IngredientRow = ({ ingredient, onSave, idDiet, idRecipe, idTime }) => {
     const [isEditing, setIsEditing] = useState(false);
-    const [equivalent, setEquivalent] = useState(ingredient.pivot.equivalent);
-    const [amount, setAmount] = useState(ingredient.pivot.amount);
-    const [measure, setMeasure] = useState(ingredient.pivot.measure);
+    const [equivalent, setEquivalent] = useState(ingredient.equivalent);
+    const [amount, setAmount] = useState(ingredient.amount);
+    const [measure, setMeasure] = useState(ingredient.measure);
+    const [isSaving, setIsSaving] = useState(false);
+
+    const onChangeAmount = (newAmount) => {
+        setAmount(newAmount);
+        const { equivalent, measure } =
+            IngredientConvertions.amountToEquivalent(ingredient, newAmount);
+
+        setEquivalent(equivalent);
+        setMeasure(measure);
+    };
+
+    const onChangeEquivalent = (newEquivalent) => {
+        const { amount, measure } = IngredientConvertions.equivalentToAmount(
+            ingredient,
+            newEquivalent
+        );
+
+        setEquivalent(newEquivalent);
+        setAmount(amount);
+        setMeasure(measure);
+    };
 
     const handleEditIngredient = () => {
         setIsEditing(true);
     };
 
-    const handleSaveIngredient = () => {
-        const { amount, measure } = IngredientConvertions.equivalentToAmount(
-            ingredient,
-            equivalent
-        );
+    const handleSaveIngredient = async () => {
+        setIsSaving(true);
+        const success = await onSave({
+            equivalent: equivalent,
+            idTime: idTime,
+            idIngredient: ingredient.id,
+            idRecipe: idRecipe,
+        });
 
-        setAmount(amount);
-        setMeasure(measure);
-        setIsEditing(false);
+        if (success) {
+            setIsEditing(false);
+        }
+        setIsSaving(false);
     };
 
     useEffect(() => {
         const { amount, measure } = IngredientConvertions.equivalentToAmount(
             ingredient,
-            ingredient.pivot.equivalent
+            ingredient.equivalent
         );
         setAmount(amount);
         setMeasure(measure);
@@ -46,7 +71,7 @@ const IngredientRow = ({ ingredient }) => {
                         <input
                             type="number"
                             value={equivalent}
-                            onChange={(e) => setEquivalent(e.target.value)}
+                            onChange={(e) => onChangeEquivalent(e.target.value)}
                             className="input input-bordered input-sm w-24 text-center"
                         />
                     ) : (
@@ -60,7 +85,7 @@ const IngredientRow = ({ ingredient }) => {
                         <input
                             type="number"
                             value={amount}
-                            onChange={(e) => setAmount(e.target.value)}
+                            onChange={(e) => onChangeAmount(e.target.value)}
                             className="input input-bordered input-sm w-24 text-center"
                         />
                     ) : (
@@ -70,6 +95,7 @@ const IngredientRow = ({ ingredient }) => {
                 </div>
             </div>
             <IconButton
+                isLoading={isSaving}
                 icon={isEditing ? "save" : "edit"}
                 clase={isEditing ? "link-success" : "link-info"}
                 onclick={

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Modal } from "../../../../components/Modal";
 import { IconButton } from "../../../../components/IconButton";
 import { useForm } from "react-hook-form";
@@ -8,12 +8,15 @@ import IngredientService from "../../../../services/IngredientService";
 import RecipeServices from "../../../../services/RecipeServices";
 import { useParams } from "react-router-dom";
 import IngredientConvertions from "../../../../helpers/IngredientConvertions";
+import { LiveSearchComponent } from "../../../../components/liveSearchComponent";
 
 const ModalAddIngredientRecipe = ({ onSuccess }) => {
     const [showed, setShowed] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
-    const [ingredients, setIngredients] = useState([]);
+    // const [ingredients, setIngredients] = useState([]);
     const [selectedIngredient, setSelectedIngredient] = useState(null);
+    const selectIngredientRef = useRef();
+    let timer;
 
     const { id } = useParams();
 
@@ -27,13 +30,12 @@ const ModalAddIngredientRecipe = ({ onSuccess }) => {
 
     useEffect(() => {
         // Simulación de llamada a API para obtener ingredientes
-        const fetchIngredients = async () => {
-            const response = await IngredientService.getIngredient();
-            const data = response.data;
-            setIngredients(data);
-        };
-
-        fetchIngredients();
+        // const fetchIngredients = async () => {
+        //     const response = await IngredientService.getIngredient();
+        //     const data = response.data;
+        //     setIngredients(data);
+        // };
+        // fetchIngredients();
     }, []);
 
     const onSubmitAddIngredient = async (data) => {
@@ -68,9 +70,9 @@ const ModalAddIngredientRecipe = ({ onSuccess }) => {
             );
             setValue(
                 "measure",
-                `${formatAmount(portionQuantity / portionUnit)} ${
-                    ingredientFound.unit
-                }`
+                `${IngredientConvertions.formatAmount(
+                    portionQuantity / portionUnit
+                )} ${ingredientFound.unit}`
             );
         }
     };
@@ -89,11 +91,33 @@ const ModalAddIngredientRecipe = ({ onSuccess }) => {
             value
         );
 
-        console.log(measure);
-
         setValue("amount", amount);
         setValue("measure", measure);
     };
+
+    const searchIngredient = (inputValue) =>
+        new Promise(async (resolve) => {
+            var params = {
+                query: inputValue,
+                limit: 10,
+                offset: 0,
+            };
+
+            if (timer) {
+                clearTimeout(timer);
+            }
+
+            timer = setTimeout(async () => {
+                const response = await IngredientService.getIngredient(params);
+                const services = response.data.map((element) => {
+                    return {
+                        value: element.id,
+                        label: `${element.name} - ${element.unit}`,
+                    };
+                });
+                resolve(services);
+            }, 800);
+        });
 
     return (
         <>
@@ -110,17 +134,17 @@ const ModalAddIngredientRecipe = ({ onSuccess }) => {
                 title={"Añadir ingrediente"}
             >
                 <form onSubmit={handleSubmit(onSubmitAddIngredient)}>
-                    <SelectInputForm
-                        register={register}
+                    <LiveSearchComponent
+                        onChange={(e) => onIngredientChange(e?.value)}
+                        placeholder="Buscar ingrediente"
+                        loadOptions={searchIngredient}
+                        label="Ingrediente"
+                        id="ingredient"
                         required={"Este campo es obligatorio"}
                         errors={errors}
-                        options={ingredients.map((e) => ({
-                            id: e.id,
-                            name: `${e.name} - ${e.unit}`,
-                        }))}
-                        label={"Ingrediente"}
-                        id={"ingredient"}
-                        onChange={(e) => onIngredientChange(e.target.value)}
+                        register={register}
+                        setValue={setValue}
+                        inputRef={selectIngredientRef}
                     />
                     <div className="flex gap-4">
                         <InputForm

@@ -157,10 +157,10 @@ Route::middleware('auth:sanctum')->controller(DietController::class)->group(func
     Route::post('diets/update/{id}', 'update');
     Route::post('diets/delete', 'destroy');
     Route::get('diets/detail/{id}', 'getDietDetail');
-    Route::post('diets/{dietId}/add-recipe', 'addRecipeToDiet');
+    Route::post('diets/{dietId}/add-recipe/{idTime}', 'addRecipeToDiet');
     Route::post('diets/{dietId}/add-ingredient', 'addIngredientToDiet');
     Route::post('diets/{dietId}/add-time', 'addTimeToDiet');
-    Route::post('diets/{dietId}/remove-recipe', 'removeRecipeFromDiet');
+    Route::post('diets/{dietId}/remove-recipe/{idTime}', 'removeRecipeFromDiet');
     Route::post('diets/{dietId}/remove-ingredient', 'removeIngredientFromDiet');
     Route::delete('diets/{dietId}/remove-time/{timeId}', 'removeTimeFromDiet');
 });

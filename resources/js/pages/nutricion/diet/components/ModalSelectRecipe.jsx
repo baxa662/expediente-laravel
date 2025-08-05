@@ -1,18 +1,20 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Modal } from "../../../../components/Modal";
 import RecipeServices from "../../../../services/RecipeServices";
 import { IconButton } from "../../../../components/IconButton";
 import debounce from "../../../../helpers/Debounce";
+import { RecipeModalRow } from "./RecipeModalRow";
 
-const ModalSelectRecipe = ({ onRecipeSelected }) => {
+const ModalSelectRecipe = ({ onRecipeSelected, time }) => {
     const [showed, setShowed] = useState(false);
     const [recipes, setRecipes] = useState([]);
     const [loading, setLoading] = useState(false);
+    const [isLoadingRecipe, setIsLoadingRecipe] = useState(false);
 
     const fetchRecipes = async (searchTerm) => {
         setLoading(true);
         const response = await RecipeServices.getRecipes({
-            search: searchTerm,
+            name: searchTerm,
         });
         if (response.success) {
             setRecipes(response.data);
@@ -26,12 +28,17 @@ const ModalSelectRecipe = ({ onRecipeSelected }) => {
         debouncedFetchRecipes(searchTerm);
     };
 
+    const showModalRecipes = () => {
+        fetchRecipes();
+        setShowed(true);
+    };
+
     return (
         <>
             <IconButton
                 icon={"restaurant_menu"}
                 clase={"btn btn-primary"}
-                onclick={() => setShowed(true)}
+                onclick={() => showModalRecipes()}
             >
                 Seleccionar Receta
             </IconButton>
@@ -64,24 +71,15 @@ const ModalSelectRecipe = ({ onRecipeSelected }) => {
                             ) : (
                                 <div className="space-y-2">
                                     {recipes.map((recipe) => (
-                                        <div
-                                            key={recipe.id}
-                                            className="p-3 border rounded-lg hover:bg-base-100 cursor-pointer"
-                                            onClick={() => {
-                                                onRecipeSelected(recipe);
-                                                setShowed(false);
+                                        <RecipeModalRow
+                                            recipe={recipe}
+                                            onClick={async (recipe) => {
+                                                await onRecipeSelected(
+                                                    recipe,
+                                                    time.id
+                                                );
                                             }}
-                                        >
-                                            <h3 className="font-semibold">
-                                                {recipe.name}
-                                            </h3>
-                                            <p className="text-sm text-gray-600">
-                                                Creado el:{" "}
-                                                {new Date(
-                                                    recipe.created_at
-                                                ).toLocaleDateString()}
-                                            </p>
-                                        </div>
+                                        />
                                     ))}
                                 </div>
                             )}

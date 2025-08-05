@@ -8,6 +8,9 @@
 }
 
 label{
-    color: black !important;
+    color: grey !important;
 }
-  
+
+select{
+    width: 100% !important;
+}

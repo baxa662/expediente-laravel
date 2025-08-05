@@ -30,7 +30,7 @@ class RecipeController extends Controller
         $offset = $request->offset ?? 0;
         $nameQuery = $request->name;
 
-        $sql = Recipe::select('id', 'name')
+        $sql = Recipe::select('id', 'name', 'created_at')
             ->take($limit)
             ->offset($offset)
             ->where('idMedico', $this->idMedico);

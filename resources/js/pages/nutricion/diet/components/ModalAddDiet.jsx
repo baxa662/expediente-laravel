@@ -32,18 +32,19 @@ const ModalAddDiet = ({ onSaved }) => {
                 title="Agregar Dieta"
             >
                 <form onSubmit={handleSubmit(onSubmit)}>
-                    <div className="form-group">
-                        <label htmlFor="name">Nombre</label>
+                    <div className="input-group">
+                        <label htmlFor="name">Nombre: *</label>
                         <input
+                            placeholder="Nombre de la dieta"
                             type="text"
                             id="name"
                             {...register("name", { required: true })}
-                            className="form-control"
+                            className="input input-bordered w-full"
                         />
                     </div>
                     <IconButton
                         icon={"save"}
-                        clase={"link-primary mt-2"}
+                        clase={"btn btn-success mt-2 w-full"}
                         type="submit"
                         isLoading={isLoading}
                     >

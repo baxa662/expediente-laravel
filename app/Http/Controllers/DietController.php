@@ -61,26 +61,36 @@ class DietController extends Controller
 
     public function getDietDetail($id)
     {
-        $diet = Diet::with('times')->find($id);
+        $diet = Diet::find($id);
+        $diet->times = $diet->getTimesWithRecipes();
         return response()->json(['success' => true, 'data' => $diet]);
     }
 
-    public function addRecipeToDiet(Request $request, $dietId)
+    public function addRecipeToDiet(Request $request, $dietId, $idTime)
     {
         $diet = Diet::find($dietId);
-        $recipe = Recipe::find($request->id);
-        $diet->recipes()->attach($recipe, ['idTime' => $request->time]);
+        $recipe = Recipe::with('ingredients')->find($request->id);
+        $diet->recipes()->attach($recipe, ['idTime' => $idTime]);
+
+        // foreach ($recipe->ingredients as $ingredient) {
+        //     $diet->ingredients()->attach($ingredient, ['idTime' => $idTime, 'equivalent' => $ingredient->pivot->equivalent, 'idRecipe' => $recipe->id]);
+        // }
 
         return response()->json(['success' => true, 'msg' => 'Receta agregada exitosamente']);
     }
 
     public function addIngredientToDiet(Request $request, $dietId)
     {
-        $diet = Diet::find($dietId);
-        $ingredient = Ingredient::find($request->id);
-        $diet->ingredients()->attach($ingredient, ['time' => $request->time]);
+        DB::table('nutrition_diet_recipe_ingredients')->updateOrInsert([
+            'idDiet' => $dietId,
+            'idRecipe' => $request->idRecipe,
+            'idIngredient' => $request->idIngredient,
+            'idTime' => $request->idTime,
+        ], [
+            'equivalent' => $request->equivalent,
+        ]);
 
-        return response()->json(['success' => true, 'msg' => 'Ingrediente agregado exitosamente']);
+        return response()->json(['success' => true, 'msg' => 'Ingrediente actualizado exitosamente']);
     }
 
     public function addTimeToDiet(Request $request, $dietId)
@@ -116,21 +126,31 @@ class DietController extends Controller
         return response()->json(['success' => true, 'msg' => 'Receta guardada exitosamente']);
     }
 
-    public function removeRecipeFromDiet(Request $request, $dietId)
+    public function removeRecipeFromDiet(Request $request, $dietId, $idTime)
     {
-        $diet = Diet::find($dietId);
-        $recipe = Recipe::find($request->id);
-        $diet->recipes()->detach($recipe);
+        $recipeId = $request->recipeId;
 
-        return response()->json(['success' => true, 'msg' => 'Receta eliminada exitosamente']);
+        $this->removeIngredientsFromDiet($dietId, $recipeId, $idTime);
+
+        $delete = DB::table('nutrition_diet_recipe')
+            ->where('idDiet', $dietId)
+            ->where('idRecipe', $recipeId)
+            ->where('idTime', $idTime)
+            ->delete();
+
+        if ($delete) {
+            return response()->json(['success' => true, 'msg' => 'Receta eliminada exitosamente']);
+        }
+
+        return response()->json(['success' => false, 'msg' => 'Receta no eliminada']);
     }
 
-    public function removeIngredientFromDiet(Request $request, $dietId)
+    public function removeIngredientsFromDiet($dietId, $recipeId, $idTime)
     {
-        $diet = Diet::find($dietId);
-        $ingredient = Ingredient::find($request->id);
-        $diet->ingredients()->detach($ingredient);
-
-        return response()->json(['success' => true, 'msg' => 'Ingrediente eliminado exitosamente']);
+        DB::table('nutrition_diet_recipe_ingredients')
+            ->where('idDiet', $dietId)
+            ->where('idRecipe', $recipeId)
+            ->where('idTime', $idTime)
+            ->delete();
     }
 }

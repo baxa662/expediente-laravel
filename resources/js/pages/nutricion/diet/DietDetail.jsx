@@ -75,72 +75,87 @@ const DietDetail = () => {
     useEffect(() => {
         if (!effectRan.current) {
             getDietDetail();
-
-            const fetchRecipes = async () => {
-                const response = await RecipeServices.getRecipes({});
-                if (response.success) {
-                    setRecipes(response.data);
-                }
-            };
-
-            if (!recipes.length) {
-                fetchRecipes();
-            }
-
-            const fetchIngredients = async () => {
-                const response = await IngredientService.getIngredient({});
-                if (response.success) {
-                    setIngredients(response.data);
-                }
-            };
-            if (!ingredients.length) {
-                fetchIngredients();
-            }
             effectRan.current = true;
         }
     }, [getDietDetail]);
 
-    const handleAddRecipe = async () => {
-        const response = await DietServices.addRecipeToDiet(id, newRecipe);
+    const handleAddRecipe = async (recipe, idTime) => {
+        const response = await DietServices.addRecipeToDiet(id, recipe, idTime);
         if (response.success) {
             // Buscar la receta seleccionada para mostrar su nombre
-            const selectedRecipe = recipes.find((r) => r.id === newRecipe.id);
-            setDiet((prevDiet) => ({
-                ...prevDiet,
-                recipes: [
-                    ...prevDiet.recipes,
-                    {
-                        id: newRecipe.id,
-                        name: selectedRecipe?.name || "Receta no encontrada",
-                        time: newRecipe.time,
-                    },
-                ],
-            }));
+            // const selectedRecipe = recipes.find((r) => r.id === recipe.id);
+            getDietDetail();
+            // setDiet((prevDiet) => ({
+            //     ...prevDiet,
+            //     times: prevDiet.times.map((time) => {
+            //         if (time.id === idTime) {
+            //             return {
+            //                 ...time,
+            //                 recipes: [
+            //                     ...time.recipes,
+            //                     {
+            //                         id: recipe.id,
+            //                         name:
+            //                             selectedRecipe?.name ||
+            //                             "Receta no encontrada",
+            //                         time: recipe.time,
+            //                         ingredients: recipe.ingredients,
+            //                     },
+            //                 ],
+            //             };
+            //         }
+            //         return time;
+            //     }),
+            // }));
         }
     };
 
-    const handleRemoveRecipe = async (recipeId) => {
-        const response = await DietServices.removeRecipeFromDiet(id, recipeId);
+    const handleRemoveRecipe = async (response) => {
+        setShowAlert(true);
+        setAlertMessage(response.msg);
         if (response.success) {
-            setDiet((prevDiet) => ({
-                ...prevDiet,
-                recipes: prevDiet.recipes.filter(
-                    (recipe) => recipe.id !== recipeId
-                ),
-            }));
+            setAlertType("success");
+            setAlertTitle("Success");
+            getDietDetail();
+        } else {
+            setAlertType("error");
+            setAlertTitle("Error");
         }
     };
 
-    const handleAddIngredient = async () => {
-        const response = await DietServices.addIngredientToDiet(
-            id,
-            newIngredient
-        );
-        if (response.success) {
-            setDiet((prevDiet) => ({
-                ...prevDiet,
-                ingredients: [...prevDiet.ingredients, newIngredient],
-            }));
+    const handleAddIngredient = async ({
+        equivalent,
+        idTime,
+        idIngredient,
+        idRecipe,
+    }) => {
+        const data = {
+            equivalent: equivalent,
+            idTime: idTime,
+            idIngredient: idIngredient,
+            idRecipe: idRecipe,
+        };
+
+        try {
+            const response = await DietServices.addIngredientToDiet(id, data);
+            setAlertMessage(response.msg);
+            if (response.success) {
+                setShowAlert(true);
+                setAlertType("success");
+                setAlertTitle("Success");
+                getDietDetail();
+                return true;
+            }
+            setAlertType("error");
+            setAlertTitle("Error");
+            return false;
+        } catch (error) {
+            console.error("Error adding ingredient to diet:", error);
+            setShowAlert(true);
+            setAlertMessage("Error adding ingredient to diet");
+            setAlertType("error");
+            setAlertTitle("Error");
+            return false;
         }
     };
 
@@ -179,8 +194,7 @@ const DietDetail = () => {
                                 >
                                     <div className="flex justify-end gap-2">
                                         <ModalSelectRecipe
-                                            onSubmitRecipe={handleAddRecipe}
-                                            dietId={id}
+                                            onRecipeSelected={handleAddRecipe}
                                             time={time}
                                         />
                                         <IconButton
@@ -200,6 +214,14 @@ const DietDetail = () => {
                                                     <RecipeRow
                                                         recipe={recipe}
                                                         key={indexRecipe}
+                                                        idDiet={id}
+                                                        idTime={time.id}
+                                                        onSaveIngredient={
+                                                            handleAddIngredient
+                                                        }
+                                                        onDeleteRecipe={
+                                                            handleRemoveRecipe
+                                                        }
                                                     />
                                                 )
                                             )

@@ -51,9 +51,12 @@ const DietServices = {
         }
     },
 
-    addRecipeToDiet: async (dietId, data) => {
+    addRecipeToDiet: async (dietId, data, idTime) => {
         try {
-            const response = await peticion(data, `diets/${dietId}/add-recipe`);
+            const response = await peticion(
+                data,
+                `diets/${dietId}/add-recipe/${idTime}`
+            );
             return response;
         } catch (error) {
             console.error("Error adding recipe to diet:", error);
@@ -98,11 +101,11 @@ const DietServices = {
         }
     },
 
-    removeRecipeFromDiet: async (dietId, recipeId) => {
+    removeRecipeFromDiet: async (dietId, recipeId, idTime) => {
         try {
             const response = await peticion(
                 { recipeId },
-                `diets/${dietId}/remove-recipe`
+                `diets/${dietId}/remove-recipe/${idTime}`
             );
             return response;
         } catch (error) {

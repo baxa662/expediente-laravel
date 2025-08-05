@@ -6,6 +6,7 @@ use App\Models\Time;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Recipe;
+use Illuminate\Support\Facades\DB;
 
 class Diet extends Model
 {
@@ -21,13 +22,29 @@ class Diet extends Model
 
     public function times()
     {
-        return $this->hasMany(Time::class, 'idDiet', 'id')
-            ->with(['recipes' => function ($query) {
-                $query->with(['ingredients' => function ($query) {
-                    $query->withPivot('equivalent');
-                    $query->join('nutrition_unit as nu', 'nutrition_ingredients.idUnit', 'nu.id')
-                        ->select('nutrition_ingredients.id', 'nutrition_ingredients.name', 'nutrition_recipe_ingredient.equivalent', 'nutrition_ingredients.portionUnit', 'nutrition_ingredients.portionQuantity', 'nu.name as unit');
-                }]);
-            }]);
+        return $this->hasMany(Time::class, 'idDiet', 'id');
+    }
+
+    public function getTimesWithRecipes()
+    {
+        $idDiet = $this->id;
+
+        $times = $this->times()->with(['recipes' => function ($query) use ($idDiet) {}])->get();
+
+
+
+        foreach ($times as $time) {
+            $time->recipes = $time->recipes->map(function ($recipe) use ($time) {
+                $recipe->ingredients = $recipe->finalIngredients($time->id, $this->id);
+                return $recipe;
+            });
+        }
+
+        return $times;
+    }
+
+    public function ingredients()
+    {
+        return $this->belongsToMany(Ingredient::class, 'nutrition_diet_recipe_ingredients', 'idDiet', 'idIngredient');
     }
 }

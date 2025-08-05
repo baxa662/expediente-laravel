@@ -21,10 +21,17 @@ class NutrientController extends Controller
         });
     }
 
-    function show($idNutrient = 0)
+    function show(Request $request, $idNutrient = 0)
     {
-        $nutrients = Nutrient::where('idMedico', $this->idMedico)
-            ->get();
+        $query = $request->input('query');
+
+        $sql = Nutrient::where('idMedico', $this->idMedico);
+
+        if (!empty($query)) {
+            $sql->where('name', 'LIKE', "%$query%");
+        }
+
+        $nutrients = $sql->get();
 
         return response()->json([
             'success' => true,
