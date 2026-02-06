@@ -46,7 +46,7 @@ return [
     |
     */
 
-    'expiration' => 60 * 24,
+    'expiration' => null, // Se respetarán las fechas de expiración personalizadas en los controladores
 
     /*
     |--------------------------------------------------------------------------

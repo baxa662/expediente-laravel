@@ -1,0 +1,5432 @@
+﻿
+Deprecated: Composer\Util\ErrorHandler::register(): Implicitly marking parameter $io as nullable is deprecated, the explicit nullable type must be used instead in phar://C:/ProgramData/ComposerSetup/bin/composer.phar/src/Composer/Util/ErrorHandler.php on line 81
+composer : PHP Deprecated:  C
+omposer\Util\ErrorHandler::re
+gister(): Implicitly marking 
+parameter $io as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Erro
+rHandler.php on line 81
+En línea: 1 Carácter: 1
++ composer require 
+nunomaduro/collision 
+phpunit/phpunit 
+spatie/laravel- ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~
+    + CategoryInfo           
+   : NotSpecified: (PHP Dep  
+  recated:....php on line    
+ 81:String) [], RemoteExc    
+eption
+    + FullyQualifiedErrorId  
+   : NativeCommandError
+ 
+Deprecation Notice: Symfony\C
+omponent\Console\Command\Comm
+and::__construct(): 
+Implicitly marking parameter 
+$name as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/vendor/symfony/console
+/Command/Command.php:99
+Deprecation Notice: Symfony\C
+omponent\Console\Command\Comm
+and::setApplication(): 
+Implicitly marking parameter 
+$application as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/vendor/symfony/console
+/Command/Command.php:135
+Deprecation Notice: Symfony\C
+omponent\Console\Command\Comm
+and::addArgument(): 
+Implicitly marking parameter 
+$mode as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/vendor/symfony/console
+/Command/Command.php:436
+Deprecation Notice: Symfony\C
+omponent\Console\Command\Comm
+and::addOption(): Implicitly 
+marking parameter $mode as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/symfony
+/console/Command/Command.php:
+457
+Deprecation Notice: Symfony\C
+omponent\Console\Input\InputA
+rgument::__construct(): 
+Implicitly marking parameter 
+$mode as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/vendor/symfony/console
+/Input/InputArgument.php:41
+Deprecation Notice: Symfony\C
+omponent\Console\Input\InputO
+ption::__construct(): 
+Implicitly marking parameter 
+$mode as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/vendor/symfony/console
+/Input/InputOption.php:62
+Deprecation Notice: Composer\
+Command\BaseCommand::requireC
+omposer(): Implicitly 
+marking parameter 
+$disablePlugins as nullable 
+is deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Command/B
+aseCommand.php:91
+Deprecation Notice: Composer\
+Command\BaseCommand::requireC
+omposer(): Implicitly 
+marking parameter 
+$disableScripts as nullable 
+is deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Command/B
+aseCommand.php:91
+Deprecation Notice: Composer\
+Command\BaseCommand::tryCompo
+ser(): Implicitly marking 
+parameter $disablePlugins as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/src/Composer/C
+ommand/BaseCommand.php:117
+Deprecation Notice: Composer\
+Command\BaseCommand::tryCompo
+ser(): Implicitly marking 
+parameter $disableScripts as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/src/Composer/C
+ommand/BaseCommand.php:117
+Deprecation Notice: Composer\
+Command\CreateProjectCommand:
+:installProject(): 
+Implicitly marking parameter 
+$platformRequirementFilter 
+as nullable is deprecated, 
+the explicit nullable type 
+must be used instead in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Command/CreateProjectComm
+and.php:191
+Deprecation Notice: Composer\
+Command\CreateProjectCommand:
+:installRootPackage(): 
+Implicitly marking parameter 
+$repositories as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Command/C
+reateProjectCommand.php:360
+Deprecation Notice: Composer\
+Command\ShowCommand::printPac
+kageInfo(): Implicitly 
+marking parameter 
+$latestPackage as nullable 
+is deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Command/S
+howCommand.php:692
+Deprecation Notice: Composer\
+Command\ShowCommand::printMet
+a(): Implicitly marking 
+parameter $latestPackage as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/src/Composer/C
+ommand/ShowCommand.php:720
+Deprecation Notice: Composer\
+Command\ShowCommand::printLin
+ks(): Implicitly marking 
+parameter $title as nullable 
+is deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Command/S
+howCommand.php:817
+Deprecation Notice: Composer\
+Command\ShowCommand::printPac
+kageInfoAsJson(): Implicitly 
+marking parameter 
+$latestPackage as nullable 
+is deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Command/S
+howCommand.php:867
+Deprecation Notice: Composer\
+Command\DiagnoseCommand::getG
+ithubRateLimit(): Implicitly 
+marking parameter $token as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/src/Composer/C
+ommand/DiagnoseCommand.php:35
+1
+Deprecation Notice: Composer\
+Command\SelfUpdateCommand::se
+tLocalPhar(): Implicitly 
+marking parameter 
+$backupTarget as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Command/S
+elfUpdateCommand.php:452
+Deprecation Notice: Symfony\C
+omponent\Console\Helper\Proce
+ssHelper::run(): Implicitly 
+marking parameter $error as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/symfony
+/console/Helper/ProcessHelper
+.php:35
+Deprecation Notice: Symfony\C
+omponent\Console\Helper\Proce
+ssHelper::run(): Implicitly 
+marking parameter $callback 
+as nullable is deprecated, 
+the explicit nullable type 
+must be used instead in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/vendor/sy
+mfony/console/Helper/ProcessH
+elper.php:35
+Deprecation Notice: Symfony\C
+omponent\Console\Helper\Proce
+ssHelper::mustRun(): 
+Implicitly marking parameter 
+$error as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/vendor/symfony/console
+/Helper/ProcessHelper.php:101
+Deprecation Notice: Symfony\C
+omponent\Console\Helper\Proce
+ssHelper::mustRun(): 
+Implicitly marking parameter 
+$callback as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/vendor/symfony/console
+/Helper/ProcessHelper.php:101
+Deprecation Notice: Symfony\C
+omponent\Console\Helper\Proce
+ssHelper::wrapCallback(): 
+Implicitly marking parameter 
+$callback as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/vendor/symfony/console
+/Helper/ProcessHelper.php:115
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Composer\
+Util\Filesystem::__construct(
+): Implicitly marking 
+parameter $executor as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/src/Composer/U
+til/Filesystem.php:31
+Deprecation Notice: Composer\
+Config::prohibitUrlByConfig()
+: Implicitly marking 
+parameter $io as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Config.ph
+p:589
+Deprecation Notice: Composer\
+Json\JsonFile::__construct():
+ Implicitly marking 
+parameter $httpDownloader as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/src/Composer/J
+son/JsonFile.php:59
+Deprecation Notice: Composer\
+Json\JsonFile::__construct():
+ Implicitly marking 
+parameter $io as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Json/Json
+File.php:59
+Deprecation Notice: Composer\
+Json\JsonFile::parseJson(): 
+Implicitly marking parameter 
+$file as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Json/Json
+File.php:315
+Deprecation Notice: Composer\
+Json\JsonFile::validateSyntax
+(): Implicitly marking 
+parameter $file as nullable 
+is deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Json/Json
+File.php:337
+Deprecation Notice: Composer\
+Pcre\Preg::replace(): 
+Implicitly marking parameter 
+$count as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/vendor/composer/pcre/s
+rc/Preg.php:111
+Deprecation Notice: Composer\
+Pcre\Preg::replaceCallback():
+ Implicitly marking 
+parameter $count as nullable 
+is deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/vendor/composer/pcre/s
+rc/Preg.php:135
+Deprecation Notice: Composer\
+Pcre\Preg::replaceCallbackArr
+ay(): Implicitly marking 
+parameter $count as nullable 
+is deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/vendor/composer/pcre/s
+rc/Preg.php:163
+Deprecation Notice: JsonSchem
+a\Constraints\BaseConstraint:
+:__construct(): Implicitly 
+marking parameter $factory 
+as nullable is deprecated, 
+the explicit nullable type 
+must be used instead in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/vendor/ju
+stinrainbow/json-schema/src/J
+sonSchema/Constraints/BaseCon
+straint.php:41
+Deprecation Notice: JsonSchem
+a\Constraints\BaseConstraint:
+:addError(): Implicitly 
+marking parameter $path as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/justinr
+ainbow/json-schema/src/JsonSc
+hema/Constraints/BaseConstrai
+nt.php:46
+Deprecation Notice: JsonSchem
+a\Constraints\BaseConstraint:
+:addError(): Implicitly 
+marking parameter $more as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/justinr
+ainbow/json-schema/src/JsonSc
+hema/Constraints/BaseConstrai
+nt.php:46
+Deprecation Notice: JsonSchem
+a\Constraints\Factory::__cons
+truct(): Implicitly marking 
+parameter $schemaStorage as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/justinr
+ainbow/json-schema/src/JsonSc
+hema/Constraints/Factory.php:
+77
+Deprecation Notice: JsonSchem
+a\Constraints\Factory::__cons
+truct(): Implicitly marking 
+parameter $uriRetriever as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/justinr
+ainbow/json-schema/src/JsonSc
+hema/Constraints/Factory.php:
+78
+Deprecation Notice: JsonSchem
+a\Constraints\Constraint::inc
+rementPath(): Implicitly 
+marking parameter $path as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/justinr
+ainbow/json-schema/src/JsonSc
+hema/Constraints/Constraint.p
+hp:42
+Deprecation Notice: JsonSchem
+a\Constraints\Constraint::che
+ckArray(): Implicitly 
+marking parameter $path as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/justinr
+ainbow/json-schema/src/JsonSc
+hema/Constraints/Constraint.p
+hp:68
+Deprecation Notice: JsonSchem
+a\Constraints\Constraint::che
+ckObject(): Implicitly 
+marking parameter $path as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/justinr
+ainbow/json-schema/src/JsonSc
+hema/Constraints/Constraint.p
+hp:86
+Deprecation Notice: JsonSchem
+a\Constraints\Constraint::che
+ckType(): Implicitly marking 
+parameter $path as nullable 
+is deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/vendor/justinrainbow/j
+son-schema/src/JsonSchema/Con
+straints/Constraint.php:103
+Deprecation Notice: JsonSchem
+a\Constraints\Constraint::che
+ckUndefined(): Implicitly 
+marking parameter $path as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/justinr
+ainbow/json-schema/src/JsonSc
+hema/Constraints/Constraint.p
+hp:119
+Deprecation Notice: JsonSchem
+a\Constraints\Constraint::che
+ckString(): Implicitly 
+marking parameter $path as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/justinr
+ainbow/json-schema/src/JsonSc
+hema/Constraints/Constraint.p
+hp:136
+Deprecation Notice: JsonSchem
+a\Constraints\Constraint::che
+ckNumber(): Implicitly 
+marking parameter $path as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/justinr
+ainbow/json-schema/src/JsonSc
+hema/Constraints/Constraint.p
+hp:152
+Deprecation Notice: JsonSchem
+a\Constraints\Constraint::che
+ckEnum(): Implicitly marking 
+parameter $path as nullable 
+is deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/vendor/justinrainbow/j
+son-schema/src/JsonSchema/Con
+straints/Constraint.php:168
+Deprecation Notice: JsonSchem
+a\Constraints\Constraint::che
+ckFormat(): Implicitly 
+marking parameter $path as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/justinr
+ainbow/json-schema/src/JsonSc
+hema/Constraints/Constraint.p
+hp:184
+Deprecation Notice: JsonSchem
+a\Constraints\ConstraintInter
+face::addError(): Implicitly 
+marking parameter $path as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/justinr
+ainbow/json-schema/src/JsonSc
+hema/Constraints/ConstraintIn
+terface.php:43
+Deprecation Notice: JsonSchem
+a\Constraints\ConstraintInter
+face::addError(): Implicitly 
+marking parameter $more as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/justinr
+ainbow/json-schema/src/JsonSc
+hema/Constraints/ConstraintIn
+terface.php:43
+Deprecation Notice: JsonSchem
+a\Constraints\ConstraintInter
+face::check(): Implicitly 
+marking parameter $path as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/justinr
+ainbow/json-schema/src/JsonSc
+hema/Constraints/ConstraintIn
+terface.php:64
+Deprecation Notice: JsonSchem
+a\SchemaStorage::__construct(
+): Implicitly marking 
+parameter $uriRetriever as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/justinr
+ainbow/json-schema/src/JsonSc
+hema/SchemaStorage.php:20
+Deprecation Notice: JsonSchem
+a\SchemaStorage::__construct(
+): Implicitly marking 
+parameter $uriResolver as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/justinr
+ainbow/json-schema/src/JsonSc
+hema/SchemaStorage.php:21
+Deprecation Notice: JsonSchem
+a\Constraints\SchemaConstrain
+t::check(): Implicitly 
+marking parameter $path as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/justinr
+ainbow/json-schema/src/JsonSc
+hema/Constraints/SchemaConstr
+aint.php:31
+Deprecation Notice: JsonSchem
+a\Constraints\UndefinedConstr
+aint::check(): Implicitly 
+marking parameter $path as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/justinr
+ainbow/json-schema/src/JsonSc
+hema/Constraints/UndefinedCon
+straint.php:33
+Deprecation Notice: The 
+predefined locally scoped 
+$http_response_header 
+variable is deprecated, call 
+http_get_last_response_header
+s() instead in phar://C:/Prog
+ramData/ComposerSetup/bin/com
+poser.phar/vendor/justinrainb
+ow/json-schema/src/JsonSchema
+/Uri/Retrievers/FileGetConten
+ts.php:55
+Deprecation Notice: JsonSchem
+a\Constraints\TypeConstraint:
+:check(): Implicitly marking 
+parameter $path as nullable 
+is deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/vendor/justinrainbow/j
+son-schema/src/JsonSchema/Con
+straints/TypeConstraint.php:4
+2
+Deprecation Notice: JsonSchem
+a\Constraints\ObjectConstrain
+t::check(): Implicitly 
+marking parameter $path as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/justinr
+ainbow/json-schema/src/JsonSc
+hema/Constraints/ObjectConstr
+aint.php:30
+Deprecation Notice: JsonSchem
+a\Constraints\ObjectConstrain
+t::validatePatternProperties(
+): Implicitly marking 
+parameter $path as nullable 
+is deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/vendor/justinrainbow/j
+son-schema/src/JsonSchema/Con
+straints/ObjectConstraint.php
+:54
+Deprecation Notice: JsonSchem
+a\Constraints\ObjectConstrain
+t::validateElement(): 
+Implicitly marking parameter 
+$path as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/vendor/justinrainbow/j
+son-schema/src/JsonSchema/Con
+straints/ObjectConstraint.php
+:93
+Deprecation Notice: JsonSchem
+a\Constraints\ObjectConstrain
+t::validateProperties(): 
+Implicitly marking parameter 
+$path as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/vendor/justinrainbow/j
+son-schema/src/JsonSchema/Con
+straints/ObjectConstraint.php
+:135
+Deprecation Notice: JsonSchem
+a\Constraints\ObjectConstrain
+t::validateMinMaxConstraint()
+: Implicitly marking 
+parameter $path as nullable 
+is deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/vendor/justinrainbow/j
+son-schema/src/JsonSchema/Con
+straints/ObjectConstraint.php
+:177
+Deprecation Notice: JsonSchem
+a\Constraints\StringConstrain
+t::check(): Implicitly 
+marking parameter $path as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/justinr
+ainbow/json-schema/src/JsonSc
+hema/Constraints/StringConstr
+aint.php:25
+Deprecation Notice: JsonSchem
+a\Constraints\FormatConstrain
+t::check(): Implicitly 
+marking parameter $path as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/justinr
+ainbow/json-schema/src/JsonSc
+hema/Constraints/FormatConstr
+aint.php:27
+Deprecation Notice: JsonSchem
+a\Constraints\CollectionConst
+raint::check(): Implicitly 
+marking parameter $path as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/justinr
+ainbow/json-schema/src/JsonSc
+hema/Constraints/CollectionCo
+nstraint.php:25
+Deprecation Notice: JsonSchem
+a\Constraints\CollectionConst
+raint::validateItems(): 
+Implicitly marking parameter 
+$path as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/vendor/justinrainbow/j
+son-schema/src/JsonSchema/Con
+straints/CollectionConstraint
+.php:64
+Deprecation Notice: JsonSchem
+a\Constraints\NumberConstrain
+t::check(): Implicitly 
+marking parameter $path as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/justinr
+ainbow/json-schema/src/JsonSc
+hema/Constraints/NumberConstr
+aint.php:25
+Deprecation Notice: JsonSchem
+a\Constraints\EnumConstraint:
+:check(): Implicitly marking 
+parameter $path as nullable 
+is deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/vendor/justinrainbow/j
+son-schema/src/JsonSchema/Con
+straints/EnumConstraint.php:2
+5
+Deprecation Notice: Composer\
+Util\ProcessExecutor::__const
+ruct(): Implicitly marking 
+parameter $io as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Proc
+essExecutor.php:57
+Deprecation Notice: Composer\
+Util\StreamContextFactory::ge
+tTlsDefaults(): Implicitly 
+marking parameter $logger as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/src/Composer/U
+til/StreamContextFactory.php:
+137
+Deprecation Notice: Composer\
+CaBundle\CaBundle::getSystemC
+aRootBundlePath(): 
+Implicitly marking parameter 
+$logger as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/vendor/composer/ca-bun
+dle/src/CaBundle.php:67
+Deprecation Notice: Composer\
+CaBundle\CaBundle::validateCa
+File(): Implicitly marking 
+parameter $logger as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/compose
+r/ca-bundle/src/CaBundle.php:
+161
+Deprecation Notice: Composer\
+CaBundle\CaBundle::caFileUsab
+le(): Implicitly marking 
+parameter $logger as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/compose
+r/ca-bundle/src/CaBundle.php:
+341
+Deprecation Notice: Composer\
+CaBundle\CaBundle::caDirUsabl
+e(): Implicitly marking 
+parameter $logger as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/compose
+r/ca-bundle/src/CaBundle.php:
+354
+Deprecation Notice: Composer\
+CaBundle\CaBundle::isFile(): 
+Implicitly marking parameter 
+$logger as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/vendor/composer/ca-bun
+dle/src/CaBundle.php:367
+Deprecation Notice: Composer\
+CaBundle\CaBundle::isDir(): 
+Implicitly marking parameter 
+$logger as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/vendor/composer/ca-bun
+dle/src/CaBundle.php:382
+Deprecation Notice: Composer\
+CaBundle\CaBundle::isReadable
+(): Implicitly marking 
+parameter $logger as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/compose
+r/ca-bundle/src/CaBundle.php:
+397
+Deprecation Notice: Composer\
+CaBundle\CaBundle::glob(): 
+Implicitly marking parameter 
+$logger as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/vendor/composer/ca-bun
+dle/src/CaBundle.php:412
+Deprecation Notice: Composer\
+Util\RemoteFilesystem::__cons
+truct(): Implicitly marking 
+parameter $authHelper as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/src/Composer/U
+til/RemoteFilesystem.php:79
+Deprecation Notice: Composer\
+Util\RemoteFilesystem::get():
+ Implicitly marking 
+parameter $fileName as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/src/Composer/U
+til/RemoteFilesystem.php:220
+Deprecation Notice: Composer\
+Util\RemoteFilesystem::getRem
+oteContents(): Implicitly 
+marking parameter 
+$responseHeaders as nullable 
+is deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Remo
+teFilesystem.php:514
+Deprecation Notice: Composer\
+Util\RemoteFilesystem::getRem
+oteContents(): Implicitly 
+marking parameter 
+$maxFileSize as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Remo
+teFilesystem.php:514
+Deprecation Notice: Composer\
+Util\Loop::__construct(): 
+Implicitly marking parameter 
+$processExecutor as nullable 
+is deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Loop
+.php:33
+Deprecation Notice: 
+Composer\Util\Loop::wait(): 
+Implicitly marking parameter 
+$progress as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Loop
+.php:65
+Deprecation Notice: Composer\
+EventDispatcher\EventDispatch
+er::__construct(): 
+Implicitly marking parameter 
+$process as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/EventDisp
+atcher/EventDispatcher.php:70
+Deprecation Notice: Composer\
+EventDispatcher\EventDispatch
+er::dispatch(): Implicitly 
+marking parameter $event as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/src/Composer/E
+ventDispatcher/EventDispatche
+r.php:99
+Deprecation Notice: Composer\
+Repository\RepositoryFactory:
+:fromString(): Implicitly 
+marking parameter $rm as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/src/Composer/R
+epository/RepositoryFactory.p
+hp:67
+Deprecation Notice: Composer\
+Repository\RepositoryFactory:
+:createRepo(): Implicitly 
+marking parameter $rm as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/src/Composer/R
+epository/RepositoryFactory.p
+hp:80
+Deprecation Notice: Composer\
+Repository\RepositoryFactory:
+:defaultRepos(): Implicitly 
+marking parameter $io as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/src/Composer/R
+epository/RepositoryFactory.p
+hp:97
+Deprecation Notice: Composer\
+Repository\RepositoryFactory:
+:defaultRepos(): Implicitly 
+marking parameter $config as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/src/Composer/R
+epository/RepositoryFactory.p
+hp:97
+Deprecation Notice: Composer\
+Repository\RepositoryFactory:
+:defaultRepos(): Implicitly 
+marking parameter $rm as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/src/Composer/R
+epository/RepositoryFactory.p
+hp:97
+Deprecation Notice: Composer\
+Repository\RepositoryFactory:
+:manager(): Implicitly 
+marking parameter 
+$httpDownloader as nullable 
+is deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Repositor
+y/RepositoryFactory.php:126
+Deprecation Notice: Composer\
+Repository\RepositoryFactory:
+:manager(): Implicitly 
+marking parameter 
+$eventDispatcher as nullable 
+is deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Repositor
+y/RepositoryFactory.php:126
+Deprecation Notice: Composer\
+Repository\RepositoryFactory:
+:manager(): Implicitly 
+marking parameter $process 
+as nullable is deprecated, 
+the explicit nullable type 
+must be used instead in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Repository/RepositoryFact
+ory.php:126
+Deprecation Notice: Composer\
+Repository\RepositoryManager:
+:__construct(): Implicitly 
+marking parameter 
+$eventDispatcher as nullable 
+is deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Repositor
+y/RepositoryManager.php:48
+Deprecation Notice: Composer\
+Repository\RepositoryManager:
+:__construct(): Implicitly 
+marking parameter $process 
+as nullable is deprecated, 
+the explicit nullable type 
+must be used instead in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Repository/RepositoryMana
+ger.php:48
+Deprecation Notice: Composer\
+Repository\RepositoryManager:
+:createRepository(): 
+Implicitly marking parameter 
+$name as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Repositor
+y/RepositoryManager.php:131
+Deprecation Notice: Composer\
+Package\Loader\RootPackageLoa
+der::__construct(): 
+Implicitly marking parameter 
+$parser as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Package/L
+oader/RootPackageLoader.php:5
+2
+Deprecation Notice: Composer\
+Package\Loader\RootPackageLoa
+der::__construct(): 
+Implicitly marking parameter 
+$versionGuesser as nullable 
+is deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Package/L
+oader/RootPackageLoader.php:5
+2
+Deprecation Notice: Composer\
+Package\Loader\RootPackageLoa
+der::__construct(): 
+Implicitly marking parameter 
+$io as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Package/L
+oader/RootPackageLoader.php:5
+2
+Deprecation Notice: Composer\
+Package\Loader\ArrayLoader::_
+_construct(): Implicitly 
+marking parameter $parser as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/src/Composer/P
+ackage/Loader/ArrayLoader.php
+:40
+Deprecation Notice: Composer\
+Package\Loader\ValidatingArra
+yLoader::__construct(): 
+Implicitly marking parameter 
+$parser as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Package/L
+oader/ValidatingArrayLoader.p
+hp:48
+Deprecation Notice: Composer\
+Repository\PlatformRepository
+::__construct(): Implicitly 
+marking parameter $runtime 
+as nullable is deprecated, 
+the explicit nullable type 
+must be used instead in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Repository/PlatformReposi
+tory.php:75
+Deprecation Notice: Composer\
+Repository\PlatformRepository
+::__construct(): Implicitly 
+marking parameter 
+$hhvmDetector as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Repositor
+y/PlatformRepository.php:75
+Deprecation Notice: Symfony\C
+omponent\Process\Process::__c
+onstruct(): Implicitly 
+marking parameter $cwd as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/symfony
+/process/Process.php:143
+Deprecation Notice: Symfony\C
+omponent\Process\Process::__c
+onstruct(): Implicitly 
+marking parameter $env as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/symfony
+/process/Process.php:143
+Deprecation Notice: Symfony\C
+omponent\Process\Process::fro
+mShellCommandline(): 
+Implicitly marking parameter 
+$cwd as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/vendor/symfony/process
+/Process.php:192
+Deprecation Notice: Symfony\C
+omponent\Process\Process::fro
+mShellCommandline(): 
+Implicitly marking parameter 
+$env as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/vendor/symfony/process
+/Process.php:192
+Deprecation Notice: Symfony\C
+omponent\Process\Process::run
+(): Implicitly marking 
+parameter $callback as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/symfony
+/process/Process.php:250
+Deprecation Notice: Symfony\C
+omponent\Process\Process::mus
+tRun(): Implicitly marking 
+parameter $callback as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/symfony
+/process/Process.php:269
+Deprecation Notice: Symfony\C
+omponent\Process\Process::sta
+rt(): Implicitly marking 
+parameter $callback as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/symfony
+/process/Process.php:297
+Deprecation Notice: Symfony\C
+omponent\Process\Process::res
+tart(): Implicitly marking 
+parameter $callback as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/symfony
+/process/Process.php:388
+Deprecation Notice: Symfony\C
+omponent\Process\Process::wai
+t(): Implicitly marking 
+parameter $callback as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/symfony
+/process/Process.php:415
+Deprecation Notice: Symfony\C
+omponent\Process\Process::sto
+p(): Implicitly marking 
+parameter $signal as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/symfony
+/process/Process.php:917
+Deprecation Notice: Symfony\C
+omponent\Process\Process::bui
+ldCallback(): Implicitly 
+marking parameter $callback 
+as nullable is deprecated, 
+the explicit nullable type 
+must be used instead in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/vendor/sy
+mfony/process/Process.php:131
+3
+Deprecation Notice: Composer\
+Repository\ComposerRepository
+::__construct(): Implicitly 
+marking parameter 
+$eventDispatcher as nullable 
+is deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Repositor
+y/ComposerRepository.php:134
+Deprecation Notice: Composer\
+Repository\ComposerRepository
+::whatProvides(): Implicitly 
+marking parameter 
+$acceptableStabilities as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/src/Composer/R
+epository/ComposerRepository.
+php:704
+Deprecation Notice: Composer\
+Repository\ComposerRepository
+::whatProvides(): Implicitly 
+marking parameter 
+$stabilityFlags as nullable 
+is deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Repositor
+y/ComposerRepository.php:704
+Deprecation Notice: Composer\
+Repository\ComposerRepository
+::loadAsyncPackages(): 
+Implicitly marking parameter 
+$acceptableStabilities as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/src/Composer/R
+epository/ComposerRepository.
+php:875
+Deprecation Notice: Composer\
+Repository\ComposerRepository
+::loadAsyncPackages(): 
+Implicitly marking parameter 
+$stabilityFlags as nullable 
+is deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Repositor
+y/ComposerRepository.php:875
+Deprecation Notice: Composer\
+Repository\ComposerRepository
+::isVersionAcceptable(): 
+Implicitly marking parameter 
+$acceptableStabilities as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/src/Composer/R
+epository/ComposerRepository.
+php:985
+Deprecation Notice: Composer\
+Repository\ComposerRepository
+::isVersionAcceptable(): 
+Implicitly marking parameter 
+$stabilityFlags as nullable 
+is deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Repositor
+y/ComposerRepository.php:985
+Deprecation Notice: Composer\
+Cache::__construct(): 
+Implicitly marking parameter 
+$filesystem as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Cache.php
+:51
+Deprecation Notice: Composer\
+Repository\FilesystemReposito
+ry::__construct(): 
+Implicitly marking parameter 
+$rootPackage as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Repositor
+y/FilesystemRepository.php:52
+Deprecation Notice: Composer\
+Repository\FilesystemReposito
+ry::__construct(): 
+Implicitly marking parameter 
+$filesystem as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Repositor
+y/FilesystemRepository.php:52
+Deprecation Notice: Composer\
+Installer\InstallationManager
+::__construct(): Implicitly 
+marking parameter 
+$eventDispatcher as nullable 
+is deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Installer
+/InstallationManager.php:56
+Deprecation Notice: Composer\
+Downloader\DownloadManager::_
+_construct(): Implicitly 
+marking parameter 
+$filesystem as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Downloade
+r/DownloadManager.php:49
+Deprecation Notice: Composer\
+Downloader\DownloadManager::d
+ownload(): Implicitly 
+marking parameter 
+$prevPackage as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Downloade
+r/DownloadManager.php:187
+Deprecation Notice: Composer\
+Downloader\DownloadManager::p
+repare(): Implicitly marking 
+parameter $prevPackage as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/src/Composer/D
+ownloader/DownloadManager.php
+:253
+Deprecation Notice: Composer\
+Downloader\DownloadManager::c
+leanup(): Implicitly marking 
+parameter $prevPackage as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/src/Composer/D
+ownloader/DownloadManager.php
+:365
+Deprecation Notice: Composer\
+Downloader\DownloadManager::g
+etAvailableSources(): 
+Implicitly marking parameter 
+$prevPackage as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Downloade
+r/DownloadManager.php:403
+Deprecation Notice: Composer\
+Downloader\GitDownloader::__c
+onstruct(): Implicitly 
+marking parameter $process 
+as nullable is deprecated, 
+the explicit nullable type 
+must be used instead in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Downloader/GitDownloader.
+php:52
+Deprecation Notice: Composer\
+Downloader\GitDownloader::__c
+onstruct(): Implicitly 
+marking parameter $fs as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/src/Composer/D
+ownloader/GitDownloader.php:5
+2
+Deprecation Notice: Composer\
+Downloader\GitDownloader::doD
+ownload(): Implicitly 
+marking parameter 
+$prevPackage as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Downloade
+r/GitDownloader.php:61
+Deprecation Notice: Composer\
+Downloader\VcsDownloader::__c
+onstruct(): Implicitly 
+marking parameter $process 
+as nullable is deprecated, 
+the explicit nullable type 
+must be used instead in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Downloader/VcsDownloader.
+php:44
+Deprecation Notice: Composer\
+Downloader\VcsDownloader::__c
+onstruct(): Implicitly 
+marking parameter $fs as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/src/Composer/D
+ownloader/VcsDownloader.php:4
+4
+Deprecation Notice: Composer\
+Downloader\VcsDownloader::dow
+nload(): Implicitly marking 
+parameter $prevPackage as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/src/Composer/D
+ownloader/VcsDownloader.php:6
+3
+Deprecation Notice: Composer\
+Downloader\VcsDownloader::pre
+pare(): Implicitly marking 
+parameter $prevPackage as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/src/Composer/D
+ownloader/VcsDownloader.php:9
+6
+Deprecation Notice: Composer\
+Downloader\VcsDownloader::cle
+anup(): Implicitly marking 
+parameter $prevPackage as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/src/Composer/D
+ownloader/VcsDownloader.php:1
+13
+Deprecation Notice: Composer\
+Downloader\VcsDownloader::doD
+ownload(): Implicitly 
+marking parameter 
+$prevPackage as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Downloade
+r/VcsDownloader.php:300
+Deprecation Notice: Composer\
+Downloader\DownloaderInterfac
+e::download(): Implicitly 
+marking parameter 
+$prevPackage as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Downloade
+r/DownloaderInterface.php:39
+Deprecation Notice: Composer\
+Downloader\DownloaderInterfac
+e::prepare(): Implicitly 
+marking parameter 
+$prevPackage as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Downloade
+r/DownloaderInterface.php:55
+Deprecation Notice: Composer\
+Downloader\DownloaderInterfac
+e::cleanup(): Implicitly 
+marking parameter 
+$prevPackage as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Downloade
+r/DownloaderInterface.php:98
+Deprecation Notice: Composer\
+Downloader\SvnDownloader::doD
+ownload(): Implicitly 
+marking parameter 
+$prevPackage as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Downloade
+r/SvnDownloader.php:34
+Deprecation Notice: Composer\
+Downloader\SvnDownloader::exe
+cute(): Implicitly marking 
+parameter $cwd as nullable 
+is deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Downloade
+r/SvnDownloader.php:117
+Deprecation Notice: Composer\
+Downloader\SvnDownloader::exe
+cute(): Implicitly marking 
+parameter $path as nullable 
+is deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Downloade
+r/SvnDownloader.php:117
+Deprecation Notice: Composer\
+Downloader\FossilDownloader::
+doDownload(): Implicitly 
+marking parameter 
+$prevPackage as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Downloade
+r/FossilDownloader.php:28
+Deprecation Notice: Composer\
+Downloader\HgDownloader::doDo
+wnload(): Implicitly marking 
+parameter $prevPackage as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/src/Composer/D
+ownloader/HgDownloader.php:28
+Deprecation Notice: Composer\
+Downloader\PerforceDownloader
+::doDownload(): Implicitly 
+marking parameter 
+$prevPackage as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Downloade
+r/PerforceDownloader.php:31
+Deprecation Notice: Composer\
+Downloader\ZipDownloader::dow
+nload(): Implicitly marking 
+parameter $prevPackage as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/src/Composer/D
+ownloader/ZipDownloader.php:4
+3
+Deprecation Notice: Composer\
+Downloader\ArchiveDownloader:
+:prepare(): Implicitly 
+marking parameter 
+$prevPackage as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Downloade
+r/ArchiveDownloader.php:38
+Deprecation Notice: Composer\
+Downloader\ArchiveDownloader:
+:cleanup(): Implicitly 
+marking parameter 
+$prevPackage as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Downloade
+r/ArchiveDownloader.php:48
+Deprecation Notice: Composer\
+Downloader\FileDownloader::__
+construct(): Implicitly 
+marking parameter 
+$eventDispatcher as nullable 
+is deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Downloade
+r/FileDownloader.php:85
+Deprecation Notice: Composer\
+Downloader\FileDownloader::__
+construct(): Implicitly 
+marking parameter $cache as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/src/Composer/D
+ownloader/FileDownloader.php:
+85
+Deprecation Notice: Composer\
+Downloader\FileDownloader::__
+construct(): Implicitly 
+marking parameter 
+$filesystem as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Downloade
+r/FileDownloader.php:85
+Deprecation Notice: Composer\
+Downloader\FileDownloader::__
+construct(): Implicitly 
+marking parameter $process 
+as nullable is deprecated, 
+the explicit nullable type 
+must be used instead in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Downloader/FileDownloader
+.php:85
+Deprecation Notice: Composer\
+Downloader\FileDownloader::do
+wnload(): Implicitly marking 
+parameter $prevPackage as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/src/Composer/D
+ownloader/FileDownloader.php:
+114
+Deprecation Notice: Composer\
+Downloader\FileDownloader::pr
+epare(): Implicitly marking 
+parameter $prevPackage as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/src/Composer/D
+ownloader/FileDownloader.php:
+297
+Deprecation Notice: Composer\
+Downloader\FileDownloader::cl
+eanup(): Implicitly marking 
+parameter $prevPackage as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/src/Composer/D
+ownloader/FileDownloader.php:
+305
+Deprecation Notice: Composer\
+Downloader\PathDownloader::do
+wnload(): Implicitly marking 
+parameter $prevPackage as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/src/Composer/D
+ownloader/PathDownloader.php:
+42
+Deprecation Notice: Composer\
+Autoload\AutoloadGenerator::_
+_construct(): Implicitly 
+marking parameter $io as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/src/Composer/A
+utoload/AutoloadGenerator.php
+:80
+Deprecation Notice: Composer\
+Installer\BinaryInstaller::__
+construct(): Implicitly 
+marking parameter 
+$filesystem as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Installer
+/BinaryInstaller.php:50
+Deprecation Notice: Composer\
+Installer\LibraryInstaller::_
+_construct(): Implicitly 
+marking parameter 
+$filesystem as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Installer
+/LibraryInstaller.php:59
+Deprecation Notice: Composer\
+Installer\LibraryInstaller::_
+_construct(): Implicitly 
+marking parameter 
+$binaryInstaller as nullable 
+is deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Installer
+/LibraryInstaller.php:59
+Deprecation Notice: Composer\
+Installer\LibraryInstaller::d
+ownload(): Implicitly 
+marking parameter 
+$prevPackage as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Installer
+/LibraryInstaller.php:112
+Deprecation Notice: Composer\
+Installer\LibraryInstaller::p
+repare(): Implicitly marking 
+parameter $prevPackage as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/src/Composer/I
+nstaller/LibraryInstaller.php
+:123
+Deprecation Notice: Composer\
+Installer\LibraryInstaller::c
+leanup(): Implicitly marking 
+parameter $prevPackage as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/src/Composer/I
+nstaller/LibraryInstaller.php
+:134
+Deprecation Notice: Composer\
+Installer\InstallerInterface:
+:download(): Implicitly 
+marking parameter 
+$prevPackage as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Installer
+/InstallerInterface.php:53
+Deprecation Notice: Composer\
+Installer\InstallerInterface:
+:prepare(): Implicitly 
+marking parameter 
+$prevPackage as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Installer
+/InstallerInterface.php:68
+Deprecation Notice: Composer\
+Installer\InstallerInterface:
+:cleanup(): Implicitly 
+marking parameter 
+$prevPackage as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Installer
+/InstallerInterface.php:111
+Deprecation Notice: Composer\
+Installer\PluginInstaller::__
+construct(): Implicitly 
+marking parameter $fs as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/src/Composer/I
+nstaller/PluginInstaller.php:
+33
+Deprecation Notice: Composer\
+Installer\PluginInstaller::__
+construct(): Implicitly 
+marking parameter 
+$binaryInstaller as nullable 
+is deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Installer
+/PluginInstaller.php:33
+Deprecation Notice: Composer\
+Installer\PluginInstaller::pr
+epare(): Implicitly marking 
+parameter $prevPackage as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/src/Composer/I
+nstaller/PluginInstaller.php:
+49
+Deprecation Notice: Composer\
+Installer\PluginInstaller::do
+wnload(): Implicitly marking 
+parameter $prevPackage as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/src/Composer/I
+nstaller/PluginInstaller.php:
+62
+Deprecation Notice: Composer\
+Installer\MetapackageInstalle
+r::download(): Implicitly 
+marking parameter 
+$prevPackage as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Installer
+/MetapackageInstaller.php:56
+Deprecation Notice: Composer\
+Installer\MetapackageInstalle
+r::prepare(): Implicitly 
+marking parameter 
+$prevPackage as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Installer
+/MetapackageInstaller.php:65
+Deprecation Notice: Composer\
+Installer\MetapackageInstalle
+r::cleanup(): Implicitly 
+marking parameter 
+$prevPackage as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Installer
+/MetapackageInstaller.php:74
+Deprecation Notice: Composer\
+Package\Locker::__construct()
+: Implicitly marking 
+parameter $process as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/src/Composer/P
+ackage/Locker.php:63
+Deprecation Notice: Composer\
+Plugin\PluginManager::__const
+ruct(): Implicitly marking 
+parameter $globalComposer as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/src/Composer/P
+lugin/PluginManager.php:75
+Deprecation Notice: Composer\
+Plugin\PluginManager::addPlug
+in(): Implicitly marking 
+parameter $sourcePackage as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/src/Composer/P
+lugin/PluginManager.php:377
+Deprecation Notice: Composer\
+Platform\HhvmDetector::__cons
+truct(): Implicitly marking 
+parameter $executableFinder 
+as nullable is deprecated, 
+the explicit nullable type 
+must be used instead in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Platform/HhvmDetector.php
+:28
+Deprecation Notice: Composer\
+Platform\HhvmDetector::__cons
+truct(): Implicitly marking 
+parameter $processExecutor 
+as nullable is deprecated, 
+the explicit nullable type 
+must be used instead in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Platform/HhvmDetector.php
+:28
+Deprecation Notice: Composer\
+Repository\RepositorySet::fin
+dPackages(): Implicitly 
+marking parameter 
+$constraint as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Repositor
+y/RepositorySet.php:172
+Deprecation Notice: Composer\
+Repository\RepositorySet::cre
+atePool(): Implicitly 
+marking parameter 
+$eventDispatcher as nullable 
+is deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Repositor
+y/RepositorySet.php:248
+Deprecation Notice: Composer\
+Repository\RepositorySet::cre
+atePool(): Implicitly 
+marking parameter 
+$poolOptimizer as nullable 
+is deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Repositor
+y/RepositorySet.php:248
+Deprecation Notice: Composer\
+Repository\RepositorySet::cre
+atePoolForPackage(): 
+Implicitly marking parameter 
+$lockedRepo as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Repositor
+y/RepositorySet.php:307
+Deprecation Notice: Composer\
+Repository\RepositorySet::cre
+atePoolForPackages(): 
+Implicitly marking parameter 
+$lockedRepo as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Repositor
+y/RepositorySet.php:318
+Deprecation Notice: Composer\
+Package\Version\VersionSelect
+or::__construct(): 
+Implicitly marking parameter 
+$platformRepo as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Package/V
+ersion/VersionSelector.php:50
+Deprecation Notice: Composer\
+Package\Version\VersionSelect
+or::findBestCandidate(): 
+Implicitly marking parameter 
+$targetPackageVersion as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/src/Composer/P
+ackage/Version/VersionSelecto
+r.php:71
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: React\Pro
+mise\Promise::__construct(): 
+Implicitly marking parameter 
+$canceller as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/vendor/react/promise/s
+rc/Promise.php:16
+Deprecation Notice: React\Pro
+mise\Promise::then(): 
+Implicitly marking parameter 
+$onFulfilled as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/vendor/react/promise/s
+rc/Promise.php:28
+Deprecation Notice: React\Pro
+mise\Promise::then(): 
+Implicitly marking parameter 
+$onRejected as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/vendor/react/promise/s
+rc/Promise.php:28
+Deprecation Notice: React\Pro
+mise\Promise::then(): 
+Implicitly marking parameter 
+$onProgress as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/vendor/react/promise/s
+rc/Promise.php:28
+Deprecation Notice: React\Pro
+mise\Promise::done(): 
+Implicitly marking parameter 
+$onFulfilled as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/vendor/react/promise/s
+rc/Promise.php:58
+Deprecation Notice: React\Pro
+mise\Promise::done(): 
+Implicitly marking parameter 
+$onRejected as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/vendor/react/promise/s
+rc/Promise.php:58
+Deprecation Notice: React\Pro
+mise\Promise::done(): 
+Implicitly marking parameter 
+$onProgress as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/vendor/react/promise/s
+rc/Promise.php:58
+Deprecation Notice: React\Pro
+mise\Promise::resolver(): 
+Implicitly marking parameter 
+$onFulfilled as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/vendor/react/promise/s
+rc/Promise.php:115
+Deprecation Notice: React\Pro
+mise\Promise::resolver(): 
+Implicitly marking parameter 
+$onRejected as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/vendor/react/promise/s
+rc/Promise.php:115
+Deprecation Notice: React\Pro
+mise\Promise::resolver(): 
+Implicitly marking parameter 
+$onProgress as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/vendor/react/promise/s
+rc/Promise.php:115
+Deprecation Notice: React\Pro
+mise\ExtendedPromiseInterface
+::done(): Implicitly marking 
+parameter $onFulfilled as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/react/p
+romise/src/ExtendedPromiseInt
+erface.php:22
+Deprecation Notice: React\Pro
+mise\ExtendedPromiseInterface
+::done(): Implicitly marking 
+parameter $onRejected as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/react/p
+romise/src/ExtendedPromiseInt
+erface.php:22
+Deprecation Notice: React\Pro
+mise\ExtendedPromiseInterface
+::done(): Implicitly marking 
+parameter $onProgress as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/react/p
+romise/src/ExtendedPromiseInt
+erface.php:22
+Deprecation Notice: React\Pro
+mise\PromiseInterface::then()
+: Implicitly marking 
+parameter $onFulfilled as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/react/p
+romise/src/PromiseInterface.p
+hp:40
+Deprecation Notice: React\Pro
+mise\PromiseInterface::then()
+: Implicitly marking 
+parameter $onRejected as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/react/p
+romise/src/PromiseInterface.p
+hp:40
+Deprecation Notice: React\Pro
+mise\PromiseInterface::then()
+: Implicitly marking 
+parameter $onProgress as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/react/p
+romise/src/PromiseInterface.p
+hp:40
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: React\Pro
+mise\FulfilledPromise::then()
+: Implicitly marking 
+parameter $onFulfilled as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/react/p
+romise/src/FulfilledPromise.p
+hp:21
+Deprecation Notice: React\Pro
+mise\FulfilledPromise::then()
+: Implicitly marking 
+parameter $onRejected as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/react/p
+romise/src/FulfilledPromise.p
+hp:21
+Deprecation Notice: React\Pro
+mise\FulfilledPromise::then()
+: Implicitly marking 
+parameter $onProgress as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/react/p
+romise/src/FulfilledPromise.p
+hp:21
+Deprecation Notice: React\Pro
+mise\FulfilledPromise::done()
+: Implicitly marking 
+parameter $onFulfilled as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/react/p
+romise/src/FulfilledPromise.p
+hp:36
+Deprecation Notice: React\Pro
+mise\FulfilledPromise::done()
+: Implicitly marking 
+parameter $onRejected as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/react/p
+romise/src/FulfilledPromise.p
+hp:36
+Deprecation Notice: React\Pro
+mise\FulfilledPromise::done()
+: Implicitly marking 
+parameter $onProgress as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/react/p
+romise/src/FulfilledPromise.p
+hp:36
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Using version ^8.8 for 
+nunomaduro/collision
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Using version ^12.5 for 
+phpunit/phpunit
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Using version ^2.10 for 
+spatie/laravel-ignition
+./composer.json has been 
+updated
+Deprecation Notice: Composer\
+DependencyResolver\Request::_
+_construct(): Implicitly 
+marking parameter 
+$lockedRepository as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/src/Composer/D
+ependencyResolver/Request.php
+:58
+Deprecation Notice: Composer\
+DependencyResolver\Request::r
+equireName(): Implicitly 
+marking parameter 
+$constraint as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Dependenc
+yResolver/Request.php:67
+Running composer update 
+nunomaduro/collision 
+phpunit/phpunit 
+spatie/laravel-ignition 
+--with-all-dependencies
+Deprecation Notice: Composer\
+Installer::extractDevPackages
+(): Implicitly marking 
+parameter $lockedRepository 
+as nullable is deprecated, 
+the explicit nullable type 
+must be used instead in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Installer.php:607
+Deprecation Notice: Composer\
+Installer::createRequest(): 
+Implicitly marking parameter 
+$lockedRepository as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/src/Composer/I
+nstaller.php:894
+Deprecation Notice: Composer\
+Installer::requirePackagesFor
+Update(): Implicitly marking 
+parameter $lockedRepository 
+as nullable is deprecated, 
+the explicit nullable type 
+must be used instead in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Installer.php:931
+Deprecation Notice: Composer\
+Installer\SuggestedPackagesRe
+porter::output(): Implicitly 
+marking parameter 
+$installedRepo as nullable 
+is deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Installer
+/SuggestedPackagesReporter.ph
+p:107
+Deprecation Notice: Composer\
+Installer\SuggestedPackagesRe
+porter::output(): Implicitly 
+marking parameter 
+$onlyDependentsOf as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/src/Composer/I
+nstaller/SuggestedPackagesRep
+orter.php:107
+Deprecation Notice: Composer\
+Installer\SuggestedPackagesRe
+porter::outputMinimalistic():
+ Implicitly marking 
+parameter $installedRepo as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/src/Composer/I
+nstaller/SuggestedPackagesRep
+orter.php:173
+Deprecation Notice: Composer\
+Installer\SuggestedPackagesRe
+porter::outputMinimalistic():
+ Implicitly marking 
+parameter $onlyDependentsOf 
+as nullable is deprecated, 
+the explicit nullable type 
+must be used instead in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Installer/SuggestedPackag
+esReporter.php:173
+Deprecation Notice: Composer\
+Installer\SuggestedPackagesRe
+porter::getFilteredSuggestion
+s(): Implicitly marking 
+parameter $installedRepo as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/src/Composer/I
+nstaller/SuggestedPackagesRep
+orter.php:186
+Deprecation Notice: Composer\
+Installer\SuggestedPackagesRe
+porter::getFilteredSuggestion
+s(): Implicitly marking 
+parameter $onlyDependentsOf 
+as nullable is deprecated, 
+the explicit nullable type 
+must be used instead in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Installer/SuggestedPackag
+esReporter.php:186
+Loading composer 
+repositories with package 
+information
+Deprecation Notice: Composer\
+DependencyResolver\DefaultPol
+icy::selectPreferredPackages(
+): Implicitly marking 
+parameter $requiredPackage 
+as nullable is deprecated, 
+the explicit nullable type 
+must be used instead in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/DependencyResolver/Defaul
+tPolicy.php:68
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Composer\
+DependencyResolver\PoolBuilde
+r::__construct(): Implicitly 
+marking parameter 
+$eventDispatcher as nullable 
+is deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Dependenc
+yResolver/PoolBuilder.php:146
+Deprecation Notice: Composer\
+DependencyResolver\PoolBuilde
+r::__construct(): Implicitly 
+marking parameter 
+$poolOptimizer as nullable 
+is deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Dependenc
+yResolver/PoolBuilder.php:146
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: React\Pro
+mise\RejectedPromise::then():
+ Implicitly marking 
+parameter $onFulfilled as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/react/p
+romise/src/RejectedPromise.ph
+p:21
+Deprecation Notice: React\Pro
+mise\RejectedPromise::then():
+ Implicitly marking 
+parameter $onRejected as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/react/p
+romise/src/RejectedPromise.ph
+p:21
+Deprecation Notice: React\Pro
+mise\RejectedPromise::then():
+ Implicitly marking 
+parameter $onProgress as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/react/p
+romise/src/RejectedPromise.ph
+p:21
+Deprecation Notice: React\Pro
+mise\RejectedPromise::done():
+ Implicitly marking 
+parameter $onFulfilled as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/react/p
+romise/src/RejectedPromise.ph
+p:36
+Deprecation Notice: React\Pro
+mise\RejectedPromise::done():
+ Implicitly marking 
+parameter $onRejected as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/react/p
+romise/src/RejectedPromise.ph
+p:36
+Deprecation Notice: React\Pro
+mise\RejectedPromise::done():
+ Implicitly marking 
+parameter $onProgress as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/react/p
+romise/src/RejectedPromise.ph
+p:36
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Composer\
+DependencyResolver\Pool::what
+Provides(): Implicitly 
+marking parameter 
+$constraint as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Dependenc
+yResolver/Pool.php:146
+Deprecation Notice: Composer\
+DependencyResolver\Pool::comp
+uteWhatProvides(): 
+Implicitly marking parameter 
+$constraint as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Dependenc
+yResolver/Pool.php:162
+Deprecation Notice: Composer\
+DependencyResolver\Pool::matc
+h(): Implicitly marking 
+parameter $constraint as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/src/Composer/D
+ependencyResolver/Pool.php:21
+5
+Updating dependencies
+Deprecation Notice: Composer\
+DependencyResolver\Solver::so
+lve(): Implicitly marking 
+parameter 
+$platformRequirementFilter 
+as nullable is deprecated, 
+the explicit nullable type 
+must be used instead in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/DependencyResolver/Solver
+.php:193
+Deprecation Notice: Composer\
+DependencyResolver\RuleSetGen
+erator::addRule(): 
+Implicitly marking parameter 
+$newRule as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Dependenc
+yResolver/RuleSetGenerator.ph
+p:155
+Deprecation Notice: Composer\
+DependencyResolver\RuleSetGen
+erator::getRulesFor(): 
+Implicitly marking parameter 
+$platformRequirementFilter 
+as nullable is deprecated, 
+the explicit nullable type 
+must be used instead in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/DependencyResolver/RuleSe
+tGenerator.php:326
+Deprecation Notice: Composer\
+DependencyResolver\RuleSet::g
+etPrettyString(): Implicitly 
+marking parameter 
+$repositorySet as nullable 
+is deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Dependenc
+yResolver/RuleSet.php:184
+Deprecation Notice: Composer\
+DependencyResolver\RuleSet::g
+etPrettyString(): Implicitly 
+marking parameter $request 
+as nullable is deprecated, 
+the explicit nullable type 
+must be used instead in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/DependencyResolver/RuleSe
+t.php:184
+Deprecation Notice: Composer\
+DependencyResolver\RuleSet::g
+etPrettyString(): Implicitly 
+marking parameter $pool as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/src/Composer/D
+ependencyResolver/RuleSet.php
+:184
+Deprecation Notice: Composer\
+DependencyResolver\Rule::form
+atPackagesUnique(): 
+Implicitly marking parameter 
+$constraint as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Dependenc
+yResolver/Rule.php:488
+Deprecation Notice: Composer\
+DependencyResolver\Decisions:
+:toString(): Implicitly 
+marking parameter $pool as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/src/Composer/D
+ependencyResolver/Decisions.p
+hp:278
+Lock file operations: 31 
+installs, 0 updates, 0 
+removals
+  - Locking filp/whoops 
+(2.18.4)
+  - Locking 
+myclabs/deep-copy (1.13.4)
+  - Locking 
+nunomaduro/collision (v8.8.3)
+  - Locking phar-io/manifest 
+(2.0.4)
+  - Locking phar-io/version 
+(3.2.1)
+  - Locking 
+phpunit/php-code-coverage 
+(12.5.2)
+  - Locking 
+phpunit/php-file-iterator 
+(6.0.1)
+  - Locking 
+phpunit/php-invoker (6.0.0)
+  - Locking 
+phpunit/php-text-template 
+(5.0.0)
+  - Locking 
+phpunit/php-timer (8.0.0)
+  - Locking phpunit/phpunit 
+(12.5.8)
+  - Locking 
+sebastian/cli-parser (4.2.0)
+  - Locking 
+sebastian/comparator (7.1.4)
+  - Locking 
+sebastian/complexity (5.0.0)
+  - Locking sebastian/diff 
+(7.0.0)
+  - Locking 
+sebastian/environment (8.0.3)
+  - Locking 
+sebastian/exporter (7.0.2)
+  - Locking 
+sebastian/global-state 
+(8.0.2)
+  - Locking 
+sebastian/lines-of-code 
+(4.0.0)
+  - Locking 
+sebastian/object-enumerator 
+(7.0.0)
+  - Locking 
+sebastian/object-reflector 
+(5.0.0)
+  - Locking 
+sebastian/recursion-context 
+(7.0.1)
+  - Locking sebastian/type 
+(6.0.3)
+  - Locking 
+sebastian/version (6.0.0)
+  - Locking spatie/backtrace 
+(1.8.1)
+  - Locking 
+spatie/error-solutions 
+(1.1.3)
+  - Locking 
+spatie/flare-client-php 
+(1.10.1)
+  - Locking spatie/ignition 
+(1.15.1)
+  - Locking 
+spatie/laravel-ignition 
+(2.10.0)
+  - Locking 
+staabm/side-effects-detector 
+(1.0.5)
+  - Locking 
+theseer/tokenizer (2.0.1)
+Writing lock file
+Installing dependencies from 
+lock file (including 
+require-dev)
+Package operations: 31 
+installs, 0 updates, 0 
+removals
+Deprecation Notice: Symfony\C
+omponent\Process\ExecutableFi
+nder::find(): Implicitly 
+marking parameter $default 
+as nullable is deprecated, 
+the explicit nullable type 
+must be used instead in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/vendor/sy
+mfony/process/ExecutableFinde
+r.php:49
+  - Downloading 
+nunomaduro/collision (v8.8.3)
+  - Downloading 
+staabm/side-effects-detector 
+(1.0.5)
+  - Downloading 
+sebastian/version (6.0.0)
+  - Downloading 
+sebastian/type (6.0.3)
+  - Downloading 
+sebastian/recursion-context 
+(7.0.1)
+  - Downloading 
+sebastian/object-reflector 
+(5.0.0)
+  - Downloading 
+sebastian/object-enumerator 
+(7.0.0)
+  - Downloading 
+sebastian/global-state 
+(8.0.2)
+  - Downloading 
+sebastian/exporter (7.0.2)
+  - Downloading 
+sebastian/environment (8.0.3)
+  - Downloading 
+sebastian/diff (7.0.0)
+  - Downloading 
+sebastian/comparator (7.1.4)
+  - Downloading 
+sebastian/cli-parser (4.2.0)
+  - Downloading 
+phpunit/php-timer (8.0.0)
+  - Downloading 
+phpunit/php-text-template 
+(5.0.0)
+  - Downloading 
+phpunit/php-invoker (6.0.0)
+  - Downloading 
+phpunit/php-file-iterator 
+(6.0.1)
+  - Downloading 
+theseer/tokenizer (2.0.1)
+  - Downloading 
+sebastian/lines-of-code 
+(4.0.0)
+  - Downloading 
+sebastian/complexity (5.0.0)
+  - Downloading 
+phpunit/php-code-coverage 
+(12.5.2)
+  - Downloading 
+phar-io/manifest (2.0.4)
+  - Downloading 
+phpunit/phpunit (12.5.8)
+  - Downloading 
+spatie/flare-client-php 
+(1.10.1)
+Deprecation Notice: Symfony\C
+omponent\Console\Helper\Progr
+essBar::iterate(): 
+Implicitly marking parameter 
+$max as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/vendor/symfony/console
+/Helper/ProgressBar.php:297
+Deprecation Notice: Symfony\C
+omponent\Console\Helper\Progr
+essBar::start(): Implicitly 
+marking parameter $max as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/symfony
+/console/Helper/ProgressBar.p
+hp:315
+Deprecation Notice: Symfony\C
+omponent\String\UnicodeString
+::join(): Implicitly marking 
+parameter $lastGlue as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/symfony
+/string/UnicodeString.php:187
+Deprecation Notice: Symfony\C
+omponent\String\UnicodeString
+::slice(): Implicitly 
+marking parameter $length as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/symfony
+/string/UnicodeString.php:267
+Deprecation Notice: Symfony\C
+omponent\String\UnicodeString
+::splice(): Implicitly 
+marking parameter $length as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/symfony
+/string/UnicodeString.php:279
+Deprecation Notice: Symfony\C
+omponent\String\UnicodeString
+::split(): Implicitly 
+marking parameter $limit as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/symfony
+/string/UnicodeString.php:298
+Deprecation Notice: Symfony\C
+omponent\String\UnicodeString
+::split(): Implicitly 
+marking parameter $flags as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/symfony
+/string/UnicodeString.php:298
+Deprecation Notice: Symfony\C
+omponent\String\AbstractUnico
+deString::join(): Implicitly 
+marking parameter $lastGlue 
+as nullable is deprecated, 
+the explicit nullable type 
+must be used instead in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/vendor/sy
+mfony/string/AbstractUnicodeS
+tring.php:206
+Deprecation Notice: Symfony\C
+omponent\String\AbstractStrin
+g::join(): Implicitly 
+marking parameter $lastGlue 
+as nullable is deprecated, 
+the explicit nullable type 
+must be used instead in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/vendor/sy
+mfony/string/AbstractString.p
+hp:402
+Deprecation Notice: Symfony\C
+omponent\String\AbstractStrin
+g::slice(): Implicitly 
+marking parameter $length as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/symfony
+/string/AbstractString.php:48
+0
+Deprecation Notice: Symfony\C
+omponent\String\AbstractStrin
+g::splice(): Implicitly 
+marking parameter $length as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/symfony
+/string/AbstractString.php:49
+0
+Deprecation Notice: Symfony\C
+omponent\String\AbstractStrin
+g::split(): Implicitly 
+marking parameter $limit as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/symfony
+/string/AbstractString.php:49
+5
+Deprecation Notice: Symfony\C
+omponent\String\AbstractStrin
+g::split(): Implicitly 
+marking parameter $flags as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/vendor/symfony
+/string/AbstractString.php:49
+5
+Deprecation Notice: Symfony\C
+omponent\String\AbstractStrin
+g::toByteString(): 
+Implicitly marking parameter 
+$toEncoding as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/vendor/symfony/string/
+AbstractString.php:563
+  0/24 [>---------------]   
+0%Deprecation Notice: 
+Function curl_close() is 
+deprecated since 8.5, as it 
+has no effect since PHP 8.0 
+in phar://C:/ProgramData/Comp
+oserSetup/bin/composer.phar/s
+rc/Composer/Util/Http/CurlDow
+nloader.php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+
+  6/24 [====>-----------]  
+25%Deprecation Notice: 
+Function curl_close() is 
+deprecated since 8.5, as it 
+has no effect since PHP 8.0 
+in phar://C:/ProgramData/Comp
+oserSetup/bin/composer.phar/s
+rc/Composer/Util/Http/CurlDow
+nloader.php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+
+ 13/24 [========>-------]  
+54%Deprecation Notice: 
+Function curl_close() is 
+deprecated since 8.5, as it 
+has no effect since PHP 8.0 
+in phar://C:/ProgramData/Comp
+oserSetup/bin/composer.phar/s
+rc/Composer/Util/Http/CurlDow
+nloader.php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+
+ 15/24 [==========>-----]  
+62%Deprecation Notice: 
+Function curl_close() is 
+deprecated since 8.5, as it 
+has no effect since PHP 8.0 
+in phar://C:/ProgramData/Comp
+oserSetup/bin/composer.phar/s
+rc/Composer/Util/Http/CurlDow
+nloader.php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+
+ 20/24 [=============>--]  
+83%Deprecation Notice: 
+Function curl_close() is 
+deprecated since 8.5, as it 
+has no effect since PHP 8.0 
+in phar://C:/ProgramData/Comp
+oserSetup/bin/composer.phar/s
+rc/Composer/Util/Http/CurlDow
+nloader.php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+
+ 22/24 [==============>-]  
+91%Deprecation Notice: 
+Function curl_close() is 
+deprecated since 8.5, as it 
+has no effect since PHP 8.0 
+in phar://C:/ProgramData/Comp
+oserSetup/bin/composer.phar/s
+rc/Composer/Util/Http/CurlDow
+nloader.php:346
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+
+ 24/24 [================] 
+100%
+  - Installing filp/whoops 
+(2.18.4): Extracting archive
+Deprecation Notice: Symfony\C
+omponent\Finder\Comparator\Co
+mparator::__construct(): 
+Implicitly marking parameter 
+$target as nullable is 
+deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/vendor/symfony/finder/
+Comparator/Comparator.php:22
+  - Installing 
+nunomaduro/collision 
+(v8.8.3): Extracting archive
+  - Installing 
+staabm/side-effects-detector 
+(1.0.5): Extracting archive
+  - Installing 
+sebastian/version (6.0.0): 
+Extracting archive
+  - Installing 
+sebastian/type (6.0.3): 
+Extracting archive
+  - Installing 
+sebastian/recursion-context 
+(7.0.1): Extracting archive
+  - Installing 
+sebastian/object-reflector 
+(5.0.0): Extracting archive
+  - Installing 
+sebastian/object-enumerator 
+(7.0.0): Extracting archive
+  - Installing 
+sebastian/global-state 
+(8.0.2): Extracting archive
+  - Installing 
+sebastian/exporter (7.0.2): 
+Extracting archive
+  - Installing 
+sebastian/environment 
+(8.0.3): Extracting archive
+  - Installing 
+sebastian/diff (7.0.0): 
+Extracting archive
+  - Installing 
+sebastian/comparator 
+(7.1.4): Extracting archive
+  - Installing 
+sebastian/cli-parser 
+(4.2.0): Extracting archive
+  - Installing 
+phpunit/php-timer (8.0.0): 
+Extracting archive
+  - Installing 
+phpunit/php-text-template 
+(5.0.0): Extracting archive
+  - Installing 
+phpunit/php-invoker (6.0.0): 
+Extracting archive
+  - Installing 
+phpunit/php-file-iterator 
+(6.0.1): Extracting archive
+  - Installing 
+theseer/tokenizer (2.0.1): 
+Extracting archive
+  - Installing 
+sebastian/lines-of-code 
+(4.0.0): Extracting archive
+  - Installing 
+sebastian/complexity 
+(5.0.0): Extracting archive
+  - Installing 
+phpunit/php-code-coverage 
+(12.5.2): Extracting archive
+  - Installing 
+phar-io/version (3.2.1): 
+Extracting archive
+  - Installing 
+phar-io/manifest (2.0.4): 
+Extracting archive
+  - Installing 
+myclabs/deep-copy (1.13.4): 
+Extracting archive
+  - Installing 
+phpunit/phpunit (12.5.8): 
+Extracting archive
+  - Installing 
+spatie/error-solutions 
+(1.1.3): Extracting archive
+  - Installing 
+spatie/backtrace (1.8.1): 
+Extracting archive
+  - Installing 
+spatie/flare-client-php 
+(1.10.1): Extracting archive
+  - Installing 
+spatie/ignition (1.15.1): 
+Extracting archive
+  - Installing 
+spatie/laravel-ignition 
+(2.10.0): Extracting archive
+  0/31 [>---------------]   
+0%Deprecation Notice: 
+Constant E_STRICT is 
+deprecated since 8.4, the 
+error level was removed in ph
+ar://C:/ProgramData/ComposerS
+etup/bin/composer.phar/src/Co
+mposer/Util/Silencer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+
+ 10/31 [=====>----------]  
+32%Deprecation Notice: 
+Constant E_STRICT is 
+deprecated since 8.4, the 
+error level was removed in ph
+ar://C:/ProgramData/ComposerS
+etup/bin/composer.phar/src/Co
+mposer/Util/Silencer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+
+ 20/31 [==========>-----]  
+64%Deprecation Notice: 
+Constant E_STRICT is 
+deprecated since 8.4, the 
+error level was removed in ph
+ar://C:/ProgramData/ComposerS
+etup/bin/composer.phar/src/Co
+mposer/Util/Silencer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+
+ 22/31 [===========>----]  
+70%Deprecation Notice: 
+Constant E_STRICT is 
+deprecated since 8.4, the 
+error level was removed in ph
+ar://C:/ProgramData/ComposerS
+etup/bin/composer.phar/src/Co
+mposer/Util/Silencer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+
+ 27/31 [=============>--]  
+87%Deprecation Notice: 
+Constant E_STRICT is 
+deprecated since 8.4, the 
+error level was removed in ph
+ar://C:/ProgramData/ComposerS
+etup/bin/composer.phar/src/Co
+mposer/Util/Silencer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+
+ 30/31 [===============>]  
+96%Deprecation Notice: 
+Constant E_STRICT is 
+deprecated since 8.4, the 
+error level was removed in ph
+ar://C:/ProgramData/ComposerS
+etup/bin/composer.phar/src/Co
+mposer/Util/Silencer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+
+ 31/31 [================] 
+100%
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Function 
+curl_close() is deprecated 
+since 8.5, as it has no 
+effect since PHP 8.0 in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Util/Http/CurlDownloader.
+php:346
+Deprecation Notice: Composer\
+Repository\InstalledRepositor
+y::getDependents(): 
+Implicitly marking parameter 
+$packagesFound as nullable 
+is deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Repositor
+y/InstalledRepository.php:90
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+10 package suggestions were 
+added by new dependencies, 
+use `composer suggest` to 
+see details.
+Generating optimized 
+autoload files
+Deprecation Notice: Composer\
+Autoload\ClassMapGenerator::c
+reateMap(): Implicitly 
+marking parameter $excluded 
+as nullable is deprecated, 
+the explicit nullable type 
+must be used instead in phar:
+//C:/ProgramData/ComposerSetu
+p/bin/composer.phar/src/Compo
+ser/Autoload/ClassMapGenerato
+r.php:65
+Deprecation Notice: Composer\
+Autoload\ClassMapGenerator::c
+reateMap(): Implicitly 
+marking parameter $io as 
+nullable is deprecated, the 
+explicit nullable type must 
+be used instead in phar://C:/
+ProgramData/ComposerSetup/bin
+/composer.phar/src/Composer/A
+utoload/ClassMapGenerator.php
+:65
+Deprecation Notice: Composer\
+Autoload\PhpFileCleaner::matc
+h(): Implicitly marking 
+parameter $match as nullable 
+is deprecated, the explicit 
+nullable type must be used 
+instead in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Autoload/
+PhpFileCleaner.php:273
+Class 
+App\Auth\CustomSanctumGuard 
+located in C:/xampp/htdocs/ex
+pBackReact/app\auth\CustomSan
+ctumGuard.php does not 
+comply with psr-4 
+autoloading standard. 
+Skipping.
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+Deprecation Notice: Constant 
+E_STRICT is deprecated since 
+8.4, the error level was 
+removed in phar://C:/ProgramD
+ata/ComposerSetup/bin/compose
+r.phar/src/Composer/Util/Sile
+ncer.php:36
+> Illuminate\Foundation\Compo
+serScripts::postAutoloadDump
+> @php artisan 
+package:discover --ansi
+
+  [37;44m INFO [39;49m Discovering packages.  
+
+  intervention/image [90m.[39m[90m.[39m [32;1mDONE[39;22m
+  laravel/sail [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+  laravel/sanctum [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+  laravel/tinker [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+  nesbot/carbon [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m [32;1mDONE[39;22m
+  nunomaduro/collision  [32;1mDONE[39;22m
+  nunomaduro/termwind [90m.[39m [32;1mDONE[39;22m
+  spatie/laravel-ignition  [32;1mDONE[39;22m
+
+85 packages you are using 
+are looking for funding.
+Use the `composer fund` 
+command to find out more!
+> @php artisan 
+vendor:publish 
+--tag=laravel-assets --ansi 
+--force
+
+  [37;44m INFO [39;49m No publishable resources for tag [1m[laravel-assets][22m.  
+

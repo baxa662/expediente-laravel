@@ -2,6 +2,9 @@
 
 namespace App\Providers;
 
+use App\Auth\CustomSanctumGuard;
+
+
 // use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 
@@ -25,6 +28,12 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
+        $this->app['auth']->extend('custom-sanctum', function ($app, $name, array $config) {
+            return new CustomSanctumGuard(
+                $app['auth'],
+                $app['request']
+            );
+        });
         //
     }
 }

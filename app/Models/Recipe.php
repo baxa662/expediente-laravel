@@ -33,8 +33,8 @@ class Recipe extends Model
             ->leftJoin('nutrition_diet_recipe_ingredients as ndri', function ($join) use ($idTime, $idDiet) {
                 $join->on('nutrition_recipe_ingredient.idRecipe', '=', 'ndri.idRecipe')
                     ->on('nutrition_recipe_ingredient.idIngredient', '=', 'ndri.idIngredient')
-                    ->on('ndri.idTime', '=', DB::raw($idTime))
-                    ->on('ndri.idDiet', '=', DB::raw($idDiet));
+                    ->where('ndri.idTime', '=', $idTime)
+                    ->where('ndri.idDiet', '=', $idDiet);
             })
             ->selectRaw('COALESCE(ndri.equivalent, nutrition_recipe_ingredient.equivalent) as equivalent, nutrition_ingredients.*, nu.name as unit')
             ->get();

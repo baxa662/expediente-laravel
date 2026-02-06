@@ -258,4 +258,19 @@ class RecipeController extends Controller
             'data' => $recipe,
         ], 200);
     }
+
+    public function getRecipeDetailDiet($idDiet, $idTime, $id)
+    {
+        $recipe = Recipe::findOrFail($id);
+
+        $recipe->ingredients = $recipe->finalIngredients($idTime, $idDiet);
+
+        $recipe->image_path = asset(Storage::url($recipe->image_path));
+        $recipe->pdf_path = asset(Storage::url($recipe->pdf_path));
+
+        return response()->json([
+            'success' => true,
+            'data' => $recipe,
+        ], 200);
+    }
 }

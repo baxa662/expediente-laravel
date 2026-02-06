@@ -52,7 +52,15 @@ class UsuarioController extends Controller
             $user->telefono = $data['celNumber'];
             $user->email = $data['email'];
             $user->password = Hash::make($data['password']);
-            $user->rolid = $data['rol'];
+
+            // Only allow Admins (rolid 1) to set roles. 
+            // Others get default role (e.g., 2 for generic staff) or error.
+            if (Auth::user()->rolid == 1) {
+                 $user->rolid = $data['rol'];
+            } else {
+                 $user->rolid = 2; // Default or safe fallback
+            }
+
             $user->id_medico = $idMedico;
             $user->save();
             return response(true, Response::HTTP_ACCEPTED);
@@ -80,7 +88,12 @@ class UsuarioController extends Controller
             $user->apellido = $data['surname'];
             $user->telefono = $data['celNumber'];
             $user->email = $data['email'];
-            $user->rolid = $data['rol'];
+            
+            // Only allow Admins to update role
+            if (Auth::user()->rolid == 1) {
+                $user->rolid = $data['rol'];
+            }
+
             $user->save();
             return response(true, Response::HTTP_ACCEPTED);
         }

@@ -1,0 +1,79 @@
+﻿php : PHP Warning:  Module 
+"fileinfo" is already loaded 
+in Unknown on line 0
+En línea: 1 Carácter: 1
++ php artisan --version 2>&1 
+| Out-File -Encoding UTF8 
+error_l11.txt
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo           
+   : NotSpecified: (PHP War  
+  ning:  M...known on line   
+  0:String) [], RemoteExc    
+eption
+    + FullyQualifiedErrorId  
+   : NativeCommandError
+ 
+
+Warning: Module "fileinfo" is already loaded in Unknown on line 0
+PHP Fatal error:  Uncaught 
+Error: Interface "Symfony\Com
+ponent\Clock\ClockInterface" 
+not found in C:\xampp\htdocs\
+expBackReact\vendor\nesbot\ca
+rbon\src\Carbon\FactoryImmuta
+ble.php:132
+Stack trace:
+#0 C:\xampp\htdocs\expBackRea
+ct\vendor\composer\ClassLoade
+r.php(571): include()
+#1 C:\xampp\htdocs\expBackRea
+ct\vendor\composer\ClassLoade
+r.php(428): Composer\Autoload
+\includeFile('C:\\xampp\\htdo
+cs...')
+#2 C:\xampp\htdocs\expBackRea
+ct\vendor\nesbot\carbon\src\C
+arbon\Traits\LocalFactory.php
+(38): Composer\Autoload\Class
+Loader->loadClass('Carbon\\Fa
+ctoryI...')
+
+Fatal error: Uncaught Error: Interface "Symfony\Component\Clock\ClockInterface" not found in C:\xampp\htdocs\expBackReact\vendor\nesbot\carbon\src\Carbon\FactoryImmutable.php:132
+Stack trace:
+#0 C:\xampp\htdocs\expBackReact\vendor\composer\ClassLoader.php(571): include()
+#1 C:\xampp\htdocs\expBackReact\vendor\composer\ClassLoader.php(428): Composer\Autoload\includeFile('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\expBackReact\vendor\nesbot\carbon\src\Carbon\Traits\LocalFactory.php(38): Composer\Autoload\ClassLoader->loadClass('Carbon\\FactoryI...')
+#3 C:\xampp\htdocs\expBackReact\vendor\nesbot\carbon\src\Carbon\Traits\Creator.php(67): Carbon\Carbon->initLocalFactory()
+#4 C:\xampp\htdocs\expBackReact\vendor\nesbot\carbon\src\Carbon\Traits\Creator.php(247): Carbon\Carbon->__construct(NULL, NULL)
+#5 C:\xampp\htdocs\expBackReact\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(189): Carbon\Carbon::now()
+#6 C:\xampp\htdocs\expBackReact\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 {main}
+  thrown in C:\xampp\htdocs\expBackReact\vendor\nesbot\carbon\src\Carbon\FactoryImmutable.php on line 132
+#3 C:\xampp\htdocs\expBackRea
+ct\vendor\nesbot\carbon\src\C
+arbon\Traits\Creator.php(67):
+ Carbon\Carbon->initLocalFact
+ory()
+#4 C:\xampp\htdocs\expBackRea
+ct\vendor\nesbot\carbon\src\C
+arbon\Traits\Creator.php(247)
+: Carbon\Carbon->__construct(
+NULL, NULL)
+#5 C:\xampp\htdocs\expBackRea
+ct\vendor\laravel\framework\s
+rc\Illuminate\Foundation\Cons
+ole\Kernel.php(189): 
+Carbon\Carbon::now()
+#6 C:\xampp\htdocs\expBackRea
+ct\artisan(35): Illuminate\Fo
+undation\Console\Kernel->hand
+le(Object(Symfony\Component\C
+onsole\Input\ArgvInput), Obje
+ct(Symfony\Component\Console\
+Output\ConsoleOutput))
+#7 {main}
+  thrown in C:\xampp\htdocs\e
+xpBackReact\vendor\nesbot\car
+bon\src\Carbon\FactoryImmutab
+le.php on line 132

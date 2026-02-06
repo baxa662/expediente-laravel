@@ -18,6 +18,7 @@ use App\Http\Controllers\UsuarioController;
 use App\Models\ingredientUnit;
 use App\Models\Medico;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -165,8 +166,22 @@ Route::middleware('auth:sanctum')->controller(DietController::class)->group(func
     Route::delete('diets/{dietId}/remove-time/{timeId}', 'removeTimeFromDiet');
 });
 
-Route::post('/tokens/create', function (Request $request) {
-    $medico = Medico::find(2);
-    $token = $medico->createToken('Token-Juan');
-    return ['token' => $token->plainTextToken];
+
+
+
+Route::prefix('app')->group(function () {
+    Route::controller(AuthController::class)->group(function () {
+        Route::post('login', 'loginPaciente');
+        Route::post('register', 'register');
+        Route::post('send-verify-email', 'sendVerifyEmailPaciente');
+        Route::post('set-password', 'verifyAndSetPassword');
+    });
+
+    Route::middleware(['auth:sanctum'])->controller(PacienteController::class)->group(function () {
+        Route::post('diet/assigned', 'getAssignedDiet');
+    });
+
+    Route::middleware(['auth:sanctum'])->controller(RecipeController::class)->group(function () {
+        Route::get('recipe/{idDiet}/{idTime}/{id}', 'getRecipeDetailDiet');
+    });
 });

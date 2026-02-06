@@ -1,0 +1,19 @@
+﻿php : PHP Warning:  Module 
+"fileinfo" is already loaded 
+in Unknown on line 0
+En línea: 1 Carácter: 1
++ php artisan --version 2>&1 
+| Out-File -Encoding UTF8 
+error_output.txt
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo           
+   : NotSpecified: (PHP War  
+  ning:  M...known on line   
+  0:String) [], RemoteExc    
+eption
+    + FullyQualifiedErrorId  
+   : NativeCommandError
+ 
+
+Warning: Module "fileinfo" is already loaded in Unknown on line 0
+Laravel Framework 10.50.0

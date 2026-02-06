@@ -43,6 +43,10 @@ return [
         'api' => [
             'driver' => 'session',
             'provider' => 'api'
+        ],
+        'paciente' => [
+            'driver' => 'session',
+            'provider' => 'paciente'
         ]
     ],
 
@@ -72,10 +76,10 @@ return [
             'driver' => 'eloquent',
             'model' => App\Models\Medico::class,
         ],
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
+        'paciente' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Paciente::class,
+        ],
     ],
 
     /*

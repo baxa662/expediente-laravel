@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Diet;
 use App\Models\Paciente;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Validator;
 use Termwind\Components\Raw;
 
 class PacienteController extends Controller
@@ -103,7 +106,6 @@ class PacienteController extends Controller
             ->orderBy('fecha', 'asc')
             ->where('estado', 1)
             ->get();
-
 
         if (!empty($paciente[0])) {
             $data = (object)[
@@ -263,5 +265,68 @@ class PacienteController extends Controller
             'success' => true,
             'data' => $select,
         ]);
+    }
+
+    public function getAssignedDiet(Request $request)
+    {
+        $validatos = Validator::make($request->all(), [
+            'date' => 'required'
+        ]);
+
+        if ($validatos->fails()) {
+            return response()->json([
+                'success' => false,
+                'msg' => 'Validation Error',
+                'errors' => $validatos->errors()
+            ], Response::HTTP_BAD_REQUEST);
+        }
+
+        $date = $request->date;
+        $user = Auth::user();
+        $idMedico = $user->id_medico ?? $user->id_usuario;
+
+        $diet = DB::table('paciente_dieta as pd')
+            ->join('nutrition_diet as nd', 'pd.idDiet', 'nd.id')
+            ->select('pd.*', 'nd.name')
+            ->where('pd.idPaciente', $user->id_paciente)
+            ->where('pd.date', $date)
+            ->get()
+            ->first();
+
+        if ($diet) {
+            $diet = Diet::find($diet->idDiet);
+            $diet->times = $diet->getTimesWithRecipes();
+        }
+
+        return response()->json([
+            'success' => true,
+            'data' => $diet,
+        ], 200);
+    }
+
+    public function setConsumedMeal(Request $request)
+    {
+        $idPatientDiet = $request->idPatientDiet;
+        $idRecipe = $request->idRecipe;
+        $idIngredient = $request->idIngredient;
+        $idTime = $request->idTime;
+        $consumed = $request->consumed;
+        $quantity = $request->quantity;
+
+        DB::table('paciente_meals')
+            ->updateOrInsert([
+                'idPatientDiet' => $idPatientDiet,
+                'idRecipe' => $idRecipe,
+                'idIngredient' => $idIngredient,
+                'idTime' => $idTime,
+            ], [
+                'quantity' => $quantity,
+                'consumed' => $consumed,
+            ]);
+
+        return response()->json([
+            'success' => true,
+            'msg' => 'Comida consumida exitosamente',
+        ], 200);
     }
 }

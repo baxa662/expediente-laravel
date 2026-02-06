@@ -12,8 +12,6 @@ class Medico extends Authenticatable
 
     use HasApiTokens, HasFactory, Notifiable;
 
-    use HasFactory;
-
     protected $guard = "medico";
 
     protected $primaryKey = 'id_medico';
